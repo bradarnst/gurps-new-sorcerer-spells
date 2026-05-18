@@ -1,0 +1,390 @@
+{
+  "metadata": {
+    "source_report": "processed/full-probe-report.md",
+    "source_dataset": "processed/full-probe-spells.json",
+    "reference_builder": "tools/build_spell_pilot.py",
+    "hard_ceiling": 60,
+    "soft_target": "25-40 where natural",
+    "method": "Review-oriented heuristic partition of each oversized current bucket using the existing full-probe spell names, secondary types, and keywords. This is a structural proposal only; it does not rename spells.",
+    "current_assignment_total": 3355,
+    "current_oversized_buckets": [
+      "Meta",
+      "Knowledge",
+      "Protection",
+      "Mind Control",
+      "Transformation",
+      "Movement",
+      "Making & Breaking",
+      "Earth",
+      "Artillery",
+      "Body Control",
+      "Air",
+      "Light & Darkness",
+      "Plant",
+      "Fire",
+      "Necromantic",
+      "Water",
+      "Animal",
+      "Weather",
+      "Gate",
+      "Spirit"
+    ]
+  },
+  "split_proposals": {
+    "Meta": {
+      "current_count": 257,
+      "root_original_college": "Meta",
+      "child_types": [
+        { "type": "Lesser Hexes & Afflictions", "count": 53 },
+        { "type": "Great Works, Constructs, and Oddities", "count": 45 },
+        { "type": "Sorcerous Services & Rites", "count": 44 },
+        { "type": "Arcane Utilities & Implements", "count": 35 },
+        { "type": "Personal Arcana", "count": 33 },
+        { "type": "Mana, Ley, and Power", "count": 18 },
+        { "type": "Countermagic & Suppression", "count": 17 },
+        { "type": "Thefts, Vulnerabilities, and Doom", "count": 12 }
+      ]
+    },
+    "Knowledge": {
+      "current_count": 255,
+      "root_original_college": "Knowledge",
+      "child_types": [
+        { "type": "Readings & Analysis", "count": 57 },
+        { "type": "Senses & Vision", "count": 46 },
+        { "type": "Seekers & Trackers", "count": 43 },
+        { "type": "Detection & Appraisal", "count": 42 },
+        { "type": "Divination & Omens", "count": 37 },
+        { "type": "Thoughts & Memory", "count": 30 }
+      ]
+    },
+    "Protection": {
+      "current_count": 250,
+      "root_original_college": "Protection",
+      "child_types": [
+        { "type": "Battle Blessings & Readiness", "count": 54 },
+        { "type": "Resistances & Immunities", "count": 49 },
+        { "type": "Practical Safeguards & Reliefs", "count": 45 },
+        { "type": "Armor & Battle Shells", "count": 41 },
+        { "type": "Wards, Shields, and Barriers", "count": 32 },
+        { "type": "Subtle & Personal Safeguards", "count": 17 },
+        { "type": "Weapon Boons & Retaliations", "count": 12 }
+      ]
+    },
+    "Mind Control": {
+      "current_count": 176,
+      "root_original_college": "Mind Control",
+      "child_types": [
+        { "type": "Curses, Counterwill, and Ruin", "count": 35 },
+        { "type": "Memory, Thought, and Will", "count": 34 },
+        { "type": "Commands & Compulsion", "count": 32 },
+        { "type": "Pain, Stun, and Collapse", "count": 21 },
+        { "type": "Emotion & Morale", "count": 21 },
+        { "type": "Dreams, Sleep, and Delusion", "count": 18 },
+        { "type": "Possession & Identity", "count": 15 }
+      ]
+    },
+    "Transformation": {
+      "current_count": 174,
+      "root_original_college": null,
+      "child_types": [
+        { "type": "Shapeshifting & Polymorph", "count": 45 },
+        { "type": "Body Forms & Embodiments", "count": 42 },
+        { "type": "Creation, Shape, and Matter", "count": 33 },
+        { "type": "Transmutations & Other Forms", "count": 31 },
+        { "type": "Alteration, Growth, and Reduction", "count": 23 }
+      ]
+    },
+    "Movement": {
+      "current_count": 150,
+      "root_original_college": "Movement",
+      "child_types": [
+        { "type": "Speed, Haste, and Handling", "count": 58 },
+        { "type": "Forced Movement & Restraint", "count": 35 },
+        { "type": "Steps, Strides, and Passage", "count": 23 },
+        { "type": "Flight & Falling", "count": 18 },
+        { "type": "Teleportation & Long Passage", "count": 16 }
+      ]
+    },
+    "Making & Breaking": {
+      "current_count": 144,
+      "root_original_college": "Making & Breaking",
+      "child_types": [
+        { "type": "Weapons & Battlework", "count": 49 },
+        { "type": "Breaking, Shattering, and Ruin", "count": 39 },
+        { "type": "Locks, Seals, and Traps", "count": 24 },
+        { "type": "Crafting, Repair, and Stores", "count": 19 },
+        { "type": "Reshaping & Transmutation", "count": 13 }
+      ]
+    },
+    "Earth": {
+      "current_count": 138,
+      "root_original_college": "Earth",
+      "child_types": [
+        { "type": "Stone, Soil, and Sand", "count": 56 },
+        { "type": "Metal & Glass", "count": 49 },
+        { "type": "Earthshape, Passage, and Transmutation", "count": 33 }
+      ]
+    },
+    "Artillery": {
+      "current_count": 132,
+      "root_original_college": null,
+      "child_types": [
+        { "type": "Missiles, Jets, and Rays", "count": 55 },
+        { "type": "Bursts, Barrages, and Bombardment", "count": 33 },
+        { "type": "Hazards, Mines, and Persistent Zones", "count": 26 },
+        { "type": "Battlefield Fields & Wards", "count": 18 }
+      ]
+    },
+    "Body Control": {
+      "current_count": 126,
+      "root_original_college": "Body Control",
+      "child_types": [
+        { "type": "Vital Functions, Fatigue, and Internal Ruin", "count": 59 },
+        { "type": "Body Forms & Alteration", "count": 37 },
+        { "type": "Bodily Enhancements", "count": 16 },
+        { "type": "Limbs, Flesh, and Reach", "count": 14 }
+      ]
+    },
+    "Air": {
+      "current_count": 125,
+      "root_original_college": "Air",
+      "child_types": [
+        { "type": "Breath & Atmosphere", "count": 49 },
+        { "type": "Wind, Pressure, and Shaping", "count": 26 },
+        { "type": "Clouds, Vapors, and Smells", "count": 23 },
+        { "type": "Lightning of the Air", "count": 16 },
+        { "type": "Flight & Sky Passage", "count": 11 }
+      ]
+    },
+    "Light & Darkness": {
+      "current_count": 119,
+      "root_original_college": "Light",
+      "child_types": [
+        { "type": "Color, Prism, and Other Glamour", "count": 27 },
+        { "type": "Lightning & Radiant Assaults", "count": 27 },
+        { "type": "Light, Seeing, and Reflection", "count": 25 },
+        { "type": "Shadows & Obscurity", "count": 24 },
+        { "type": "Lightborne Passage", "count": 16 }
+      ]
+    },
+    "Plant": {
+      "current_count": 117,
+      "root_original_college": "Plant",
+      "child_types": [
+        { "type": "Growth, Blessing, and Husbandry", "count": 57 },
+        { "type": "Fungus, Wood, and Plant Forms", "count": 29 },
+        { "type": "Plant Lore, Speech, and Passage", "count": 17 },
+        { "type": "Vines, Thorns, and Restraint", "count": 14 }
+      ]
+    },
+    "Fire": {
+      "current_count": 115,
+      "root_original_college": "Fire",
+      "child_types": [
+        { "type": "Heat, Fuel, and Hearthwork", "count": 49 },
+        { "type": "Firebolts, Jets, and Strikes", "count": 31 },
+        { "type": "Battlefield Fire & Walls", "count": 23 },
+        { "type": "Banefire & Hellfire", "count": 12 }
+      ]
+    },
+    "Necromantic": {
+      "current_count": 100,
+      "root_original_college": "Necromantic",
+      "child_types": [
+        { "type": "Death Curses & Withering", "count": 51 },
+        { "type": "Undead Animation & Command", "count": 19 },
+        { "type": "Spirits of the Dead", "count": 12 },
+        { "type": "Deathflame & Banefire", "count": 10 },
+        { "type": "Ageing & Life-Draining", "count": 8 }
+      ]
+    },
+    "Water": {
+      "current_count": 90,
+      "root_original_college": "Water",
+      "child_types": [
+        { "type": "Ice, Snow, and Frost", "count": 30 },
+        { "type": "Drowning, Dehydration, and Fluid Assaults", "count": 25 },
+        { "type": "Water Shaping & Stores", "count": 20 },
+        { "type": "Aquatic Passage & Breathing", "count": 15 }
+      ]
+    },
+    "Animal": {
+      "current_count": 86,
+      "root_original_college": "Animal",
+      "child_types": [
+        { "type": "Animal Command & Repelling", "count": 51 },
+        { "type": "Beast Forms & Traits", "count": 25 },
+        { "type": "Animal Summons, Mounts, and Bonds", "count": 10 }
+      ]
+    },
+    "Weather": {
+      "current_count": 86,
+      "root_original_college": "Weather",
+      "child_types": [
+        { "type": "Rain, Wind, and Greater Weather", "count": 40 },
+        { "type": "Lightning Storms", "count": 32 },
+        { "type": "Snow, Ice, and Cold Fronts", "count": 14 }
+      ]
+    },
+    "Gate": {
+      "current_count": 67,
+      "root_original_college": "Gate",
+      "child_types": [
+        { "type": "Gates, Portals, and Planar Passage", "count": 29 },
+        { "type": "Gravity, Distance, and Other Ways", "count": 28 },
+        { "type": "Banishment, Locks, and Instability", "count": 10 }
+      ]
+    },
+    "Spirit": {
+      "current_count": 61,
+      "root_original_college": null,
+      "child_types": [
+        { "type": "Possession, Souls, and Bindings", "count": 25 },
+        { "type": "Spirit Sight, Wards, and the Undead", "count": 20 },
+        { "type": "Spirit Allies & Summons", "count": 16 }
+      ]
+    }
+  },
+  "unchanged_types": [
+    { "type": "Healing", "count": 51, "root_original_college": "Healing" },
+    { "type": "Force", "count": 49, "root_original_college": null },
+    { "type": "Energy", "count": 45, "root_original_college": null },
+    { "type": "Communication & Empathy", "count": 41, "root_original_college": "Communication & Empathy" },
+    { "type": "Food", "count": 41, "root_original_college": "Food" },
+    { "type": "Technological", "count": 39, "root_original_college": "Technological" },
+    { "type": "Poison", "count": 38, "root_original_college": null },
+    { "type": "Time", "count": 36, "root_original_college": null },
+    { "type": "Summoning", "count": 34, "root_original_college": null },
+    { "type": "Acid", "count": 28, "root_original_college": null },
+    { "type": "Gravity", "count": 27, "root_original_college": null },
+    { "type": "Space", "count": 24, "root_original_college": null },
+    { "type": "Stealth", "count": 24, "root_original_college": null },
+    { "type": "Illusion & Creation", "count": 23, "root_original_college": "Illusion & Creation" },
+    { "type": "Sound", "count": 23, "root_original_college": "Sound" },
+    { "type": "Holy", "count": 18, "root_original_college": null },
+    { "type": "Dream", "count": 16, "root_original_college": null },
+    { "type": "Ageing", "count": 11, "root_original_college": null },
+    { "type": "Enchantment", "count": 11, "root_original_college": "Enchantment" },
+    { "type": "Radiation", "count": 8, "root_original_college": null }
+  ],
+  "remaining_above_hard_ceiling": [],
+  "suspiciously_small_buckets": [
+    { "type": "Ageing & Life-Draining", "count": 8, "source": "split: Necromantic" },
+    { "type": "Radiation", "count": 8, "source": "unchanged" }
+  ],
+  "post_split_type_distribution": [
+    { "type": "Vital Functions, Fatigue, and Internal Ruin", "count": 59, "source": "split: Body Control" },
+    { "type": "Speed, Haste, and Handling", "count": 58, "source": "split: Movement" },
+    { "type": "Growth, Blessing, and Husbandry", "count": 57, "source": "split: Plant" },
+    { "type": "Readings & Analysis", "count": 57, "source": "split: Knowledge" },
+    { "type": "Stone, Soil, and Sand", "count": 56, "source": "split: Earth" },
+    { "type": "Missiles, Jets, and Rays", "count": 55, "source": "split: Artillery" },
+    { "type": "Battle Blessings & Readiness", "count": 54, "source": "split: Protection" },
+    { "type": "Lesser Hexes & Afflictions", "count": 53, "source": "split: Meta" },
+    { "type": "Animal Command & Repelling", "count": 51, "source": "split: Animal" },
+    { "type": "Death Curses & Withering", "count": 51, "source": "split: Necromantic" },
+    { "type": "Healing", "count": 51, "source": "unchanged" },
+    { "type": "Breath & Atmosphere", "count": 49, "source": "split: Air" },
+    { "type": "Force", "count": 49, "source": "unchanged" },
+    { "type": "Heat, Fuel, and Hearthwork", "count": 49, "source": "split: Fire" },
+    { "type": "Metal & Glass", "count": 49, "source": "split: Earth" },
+    { "type": "Resistances & Immunities", "count": 49, "source": "split: Protection" },
+    { "type": "Weapons & Battlework", "count": 49, "source": "split: Making & Breaking" },
+    { "type": "Senses & Vision", "count": 46, "source": "split: Knowledge" },
+    { "type": "Energy", "count": 45, "source": "unchanged" },
+    { "type": "Great Works, Constructs, and Oddities", "count": 45, "source": "split: Meta" },
+    { "type": "Practical Safeguards & Reliefs", "count": 45, "source": "split: Protection" },
+    { "type": "Shapeshifting & Polymorph", "count": 45, "source": "split: Transformation" },
+    { "type": "Sorcerous Services & Rites", "count": 44, "source": "split: Meta" },
+    { "type": "Seekers & Trackers", "count": 43, "source": "split: Knowledge" },
+    { "type": "Body Forms & Embodiments", "count": 42, "source": "split: Transformation" },
+    { "type": "Detection & Appraisal", "count": 42, "source": "split: Knowledge" },
+    { "type": "Armor & Battle Shells", "count": 41, "source": "split: Protection" },
+    { "type": "Communication & Empathy", "count": 41, "source": "unchanged" },
+    { "type": "Food", "count": 41, "source": "unchanged" },
+    { "type": "Rain, Wind, and Greater Weather", "count": 40, "source": "split: Weather" },
+    { "type": "Breaking, Shattering, and Ruin", "count": 39, "source": "split: Making & Breaking" },
+    { "type": "Technological", "count": 39, "source": "unchanged" },
+    { "type": "Poison", "count": 38, "source": "unchanged" },
+    { "type": "Body Forms & Alteration", "count": 37, "source": "split: Body Control" },
+    { "type": "Divination & Omens", "count": 37, "source": "split: Knowledge" },
+    { "type": "Time", "count": 36, "source": "unchanged" },
+    { "type": "Arcane Utilities & Implements", "count": 35, "source": "split: Meta" },
+    { "type": "Curses, Counterwill, and Ruin", "count": 35, "source": "split: Mind Control" },
+    { "type": "Forced Movement & Restraint", "count": 35, "source": "split: Movement" },
+    { "type": "Memory, Thought, and Will", "count": 34, "source": "split: Mind Control" },
+    { "type": "Summoning", "count": 34, "source": "unchanged" },
+    { "type": "Bursts, Barrages, and Bombardment", "count": 33, "source": "split: Artillery" },
+    { "type": "Creation, Shape, and Matter", "count": 33, "source": "split: Transformation" },
+    { "type": "Earthshape, Passage, and Transmutation", "count": 33, "source": "split: Earth" },
+    { "type": "Personal Arcana", "count": 33, "source": "split: Meta" },
+    { "type": "Commands & Compulsion", "count": 32, "source": "split: Mind Control" },
+    { "type": "Lightning Storms", "count": 32, "source": "split: Weather" },
+    { "type": "Wards, Shields, and Barriers", "count": 32, "source": "split: Protection" },
+    { "type": "Firebolts, Jets, and Strikes", "count": 31, "source": "split: Fire" },
+    { "type": "Transmutations & Other Forms", "count": 31, "source": "split: Transformation" },
+    { "type": "Ice, Snow, and Frost", "count": 30, "source": "split: Water" },
+    { "type": "Thoughts & Memory", "count": 30, "source": "split: Knowledge" },
+    { "type": "Fungus, Wood, and Plant Forms", "count": 29, "source": "split: Plant" },
+    { "type": "Gates, Portals, and Planar Passage", "count": 29, "source": "split: Gate" },
+    { "type": "Acid", "count": 28, "source": "unchanged" },
+    { "type": "Gravity, Distance, and Other Ways", "count": 28, "source": "split: Gate" },
+    { "type": "Color, Prism, and Other Glamour", "count": 27, "source": "split: Light & Darkness" },
+    { "type": "Gravity", "count": 27, "source": "unchanged" },
+    { "type": "Lightning & Radiant Assaults", "count": 27, "source": "split: Light & Darkness" },
+    { "type": "Hazards, Mines, and Persistent Zones", "count": 26, "source": "split: Artillery" },
+    { "type": "Wind, Pressure, and Shaping", "count": 26, "source": "split: Air" },
+    { "type": "Beast Forms & Traits", "count": 25, "source": "split: Animal" },
+    { "type": "Drowning, Dehydration, and Fluid Assaults", "count": 25, "source": "split: Water" },
+    { "type": "Light, Seeing, and Reflection", "count": 25, "source": "split: Light & Darkness" },
+    { "type": "Possession, Souls, and Bindings", "count": 25, "source": "split: Spirit" },
+    { "type": "Locks, Seals, and Traps", "count": 24, "source": "split: Making & Breaking" },
+    { "type": "Shadows & Obscurity", "count": 24, "source": "split: Light & Darkness" },
+    { "type": "Space", "count": 24, "source": "unchanged" },
+    { "type": "Stealth", "count": 24, "source": "unchanged" },
+    { "type": "Alteration, Growth, and Reduction", "count": 23, "source": "split: Transformation" },
+    { "type": "Battlefield Fire & Walls", "count": 23, "source": "split: Fire" },
+    { "type": "Clouds, Vapors, and Smells", "count": 23, "source": "split: Air" },
+    { "type": "Illusion & Creation", "count": 23, "source": "unchanged" },
+    { "type": "Sound", "count": 23, "source": "unchanged" },
+    { "type": "Steps, Strides, and Passage", "count": 23, "source": "split: Movement" },
+    { "type": "Emotion & Morale", "count": 21, "source": "split: Mind Control" },
+    { "type": "Pain, Stun, and Collapse", "count": 21, "source": "split: Mind Control" },
+    { "type": "Spirit Sight, Wards, and the Undead", "count": 20, "source": "split: Spirit" },
+    { "type": "Water Shaping & Stores", "count": 20, "source": "split: Water" },
+    { "type": "Crafting, Repair, and Stores", "count": 19, "source": "split: Making & Breaking" },
+    { "type": "Undead Animation & Command", "count": 19, "source": "split: Necromantic" },
+    { "type": "Battlefield Fields & Wards", "count": 18, "source": "split: Artillery" },
+    { "type": "Dreams, Sleep, and Delusion", "count": 18, "source": "split: Mind Control" },
+    { "type": "Flight & Falling", "count": 18, "source": "split: Movement" },
+    { "type": "Holy", "count": 18, "source": "unchanged" },
+    { "type": "Mana, Ley, and Power", "count": 18, "source": "split: Meta" },
+    { "type": "Countermagic & Suppression", "count": 17, "source": "split: Meta" },
+    { "type": "Plant Lore, Speech, and Passage", "count": 17, "source": "split: Plant" },
+    { "type": "Subtle & Personal Safeguards", "count": 17, "source": "split: Protection" },
+    { "type": "Bodily Enhancements", "count": 16, "source": "split: Body Control" },
+    { "type": "Dream", "count": 16, "source": "unchanged" },
+    { "type": "Lightborne Passage", "count": 16, "source": "split: Light & Darkness" },
+    { "type": "Lightning of the Air", "count": 16, "source": "split: Air" },
+    { "type": "Spirit Allies & Summons", "count": 16, "source": "split: Spirit" },
+    { "type": "Teleportation & Long Passage", "count": 16, "source": "split: Movement" },
+    { "type": "Aquatic Passage & Breathing", "count": 15, "source": "split: Water" },
+    { "type": "Possession & Identity", "count": 15, "source": "split: Mind Control" },
+    { "type": "Limbs, Flesh, and Reach", "count": 14, "source": "split: Body Control" },
+    { "type": "Snow, Ice, and Cold Fronts", "count": 14, "source": "split: Weather" },
+    { "type": "Vines, Thorns, and Restraint", "count": 14, "source": "split: Plant" },
+    { "type": "Reshaping & Transmutation", "count": 13, "source": "split: Making & Breaking" },
+    { "type": "Banefire & Hellfire", "count": 12, "source": "split: Fire" },
+    { "type": "Spirits of the Dead", "count": 12, "source": "split: Necromantic" },
+    { "type": "Thefts, Vulnerabilities, and Doom", "count": 12, "source": "split: Meta" },
+    { "type": "Weapon Boons & Retaliations", "count": 12, "source": "split: Protection" },
+    { "type": "Ageing", "count": 11, "source": "unchanged" },
+    { "type": "Enchantment", "count": 11, "source": "unchanged" },
+    { "type": "Flight & Sky Passage", "count": 11, "source": "split: Air" },
+    { "type": "Animal Summons, Mounts, and Bonds", "count": 10, "source": "split: Animal" },
+    { "type": "Banishment, Locks, and Instability", "count": 10, "source": "split: Gate" },
+    { "type": "Deathflame & Banefire", "count": 10, "source": "split: Necromantic" },
+    { "type": "Ageing & Life-Draining", "count": 8, "source": "split: Necromantic" },
+    { "type": "Radiation", "count": 8, "source": "unchanged" }
+  ]
+}
