@@ -296,7 +296,7 @@ ROLE_CODAS: dict[str, tuple[str, ...]] = {
 VARIANT_MARKERS = ("personal ", "mass ", "improved ", "lesser ", "greater ", "permanent ")
 
 
-PILOT_OVERRIDES: dict[str, dict[str, Any]] = {
+MANUAL_OVERRIDES: dict[str, dict[str, Any]] = {
     "Absorb Weapon": {
         "spell_types": ["Making & Breaking", "Stealth"],
         "keywords": ["Touch", "Utility", "Stealth", "Persistent"],
@@ -869,8 +869,8 @@ def pick_source_prose(raw_spell: dict[str, Any]) -> str:
 
 
 def generate_description(raw_spell: dict[str, Any], spell_types: list[str], keywords: list[str]) -> tuple[str, str]:
-    if raw_spell["spell_name"] in PILOT_OVERRIDES:
-        return PILOT_OVERRIDES[raw_spell["spell_name"]]["description"].strip(), "curated"
+    if raw_spell["spell_name"] in MANUAL_OVERRIDES:
+        return MANUAL_OVERRIDES[raw_spell["spell_name"]]["description"].strip(), "curated"
 
     original = pick_source_prose(raw_spell)
     if not original:
@@ -897,7 +897,7 @@ def generate_description(raw_spell: dict[str, Any], spell_types: list[str], keyw
 
 def build_record(raw_spell: dict[str, Any], index: int) -> dict[str, Any]:
     name = raw_spell["spell_name"]
-    override = PILOT_OVERRIDES.get(name)
+    override = MANUAL_OVERRIDES.get(name)
     parsed_source_keywords = parse_raw_keywords(raw_spell["keywords"])
 
     if override:
@@ -905,7 +905,7 @@ def build_record(raw_spell: dict[str, Any], index: int) -> dict[str, Any]:
         keywords = infer_role_keywords(raw_spell, spell_types, order_unique(override["keywords"], KEYWORD_ORDER))
         description = override["description"].strip()
         description_source = "curated"
-        dedupe = override.get("dedupe", {"status": "unique", "group": None, "reason": "No duplicate candidate identified in the pilot batch."})
+        dedupe = override.get("dedupe", {"status": "unique", "group": None, "reason": "No duplicate candidate identified during build."})
     else:
         spell_types = infer_spell_types(raw_spell, parsed_source_keywords)
         keywords = infer_role_keywords(raw_spell, spell_types, parsed_source_keywords)
@@ -1089,7 +1089,7 @@ def build_reports(records: list[dict[str, Any]]) -> tuple[dict[str, Any], str]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build curated or heuristic Sorcery spell batches.")
+    parser = argparse.ArgumentParser(description="Build Sorcery spell datasets from manual overrides and heuristics.")
     parser.add_argument("--count", type=int, default=50, help="Number of source spells to process.")
     parser.add_argument("--label", default="pilot", help="Output file label prefix.")
     args = parser.parse_args()
@@ -1097,11 +1097,6 @@ def main() -> None:
     raw_data = json.loads(RAW_PATH.read_text())
     count = max(1, min(args.count, len(raw_data["spells"])))
     source_spells = raw_data["spells"][:count]
-
-    curated_scope = source_spells[: min(50, len(source_spells))]
-    missing_overrides = [spell["spell_name"] for spell in curated_scope if spell["spell_name"] not in PILOT_OVERRIDES]
-    if missing_overrides:
-        raise SystemExit(f"Missing overrides for curated seed spells: {missing_overrides}")
 
     records = [build_record(spell, index + 1) for index, spell in enumerate(source_spells)]
     validation = validate(records)

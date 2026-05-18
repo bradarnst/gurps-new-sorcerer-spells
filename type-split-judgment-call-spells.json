@@ -1,0 +1,2086 @@
+{
+  "metadata": {
+    "basis": "Second-pass taxonomy review from the rebuilt processed corpus after targeted user-feedback adjustments.",
+    "targeted_feedback_adjustments": [
+      "Accelerate Pregnancy",
+      "Avatar",
+      "Badger Paws",
+      "Irresistible Dance",
+      "Keen Taste and Smell",
+      "Keen Touch",
+      "Mass Badger Paws",
+      "Personal Keen Taste and Smell",
+      "Personal Keen Touch"
+    ],
+    "judgment_calls": [
+      "Arcane Siphons & Frailties",
+      "Safeguards & Reliefs",
+      "Battle Blessings & Readiness",
+      "Body Forms, Limbs, and Alteration",
+      "Tempests, Lightning, and Winter Weather"
+    ],
+    "multi_type_policy": "Spells may belong to more than one spell_type list when that reflects real overlap."
+  },
+  "spell_lists": {
+    "Arcane Siphons & Frailties": {
+      "count": 11,
+      "spells": [
+        {
+          "spell_name": "Bloody Iron",
+          "current_spell_types": [
+            "Body Control",
+            "Earth",
+            "Making & Breaking",
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Metal Spells"
+          ]
+        },
+        {
+          "spell_name": "Cold Vulnerability",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Electricity Vulnerability",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Shock Vulnerability",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Sonic Vulnerability",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Steal Beauty",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Steal Grace",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Steal Might",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Steal Vigor",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Thirst",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Wrathful Doom",
+          "current_spell_types": [
+            "Meta"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        }
+      ]
+    },
+    "Safeguards & Reliefs": {
+      "count": 53,
+      "spells": [
+        {
+          "spell_name": "Adjustable Clothing",
+          "current_spell_types": [
+            "Enchantment",
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Enchantment Spells"
+          ]
+        },
+        {
+          "spell_name": "Analgesic",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Antiemetic",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Avatar",
+          "current_spell_types": [
+            "Protection",
+            "Communication & Empathy"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Birth Control",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Block",
+          "current_spell_types": [
+            "Making & Breaking",
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Assorted Spells"
+          ]
+        },
+        {
+          "spell_name": "Celestial Aid",
+          "current_spell_types": [
+            "Holy",
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Angelic Spells"
+          ]
+        },
+        {
+          "spell_name": "Cleanliness",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Cognitive Block",
+          "current_spell_types": [
+            "Knowledge",
+            "Making & Breaking",
+            "Mind Control",
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Psychic Spells as Normal Spells"
+          ]
+        },
+        {
+          "spell_name": "Diver’s Blessing",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Eat Crow",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Emotive Block",
+          "current_spell_types": [
+            "Knowledge",
+            "Making & Breaking",
+            "Mind Control",
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Psychic Spells as Normal Spells"
+          ]
+        },
+        {
+          "spell_name": "Endure Elements",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Buff Spells"
+          ]
+        },
+        {
+          "spell_name": "Fate of Oedipus",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Fool’s Banquet",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Gentle Repose",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Groom",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Impression Blocker",
+          "current_spell_types": [
+            "Making & Breaking",
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Insect Repellent",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Mana Leech",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Mass Coolness",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Might",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Monk’s Banquet",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Narrative Conveyance",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Oven Mitts",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Patience",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Alertness",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Bender Defender",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Emotive Block",
+          "current_spell_types": [
+            "Making & Breaking",
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Endure Elements",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Flee",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Forest Defense",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Preservation",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Tongues",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Phlogiston Sphere",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Preservation",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Assorted Spells"
+          ]
+        },
+        {
+          "spell_name": "Relieve Paralysis",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Relieve Sickness",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Resurrection",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Ritual of Reaping",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Safe Boarding",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Sea Legs",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Sink",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Slow Metabolism",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Sorcerous Signal",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Spell of Sowing",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Spotless Hands",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Suspended Animation",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Tongues",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Buff Spells"
+          ]
+        },
+        {
+          "spell_name": "Transparency",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Vigor",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Wallwalker",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Wizardly Workshop",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        }
+      ]
+    },
+    "Battle Blessings & Readiness": {
+      "count": 48,
+      "spells": [
+        {
+          "spell_name": "Accuracy",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Alertness",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Ambidexterity",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Ant Haul",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Assorted Spells"
+          ]
+        },
+        {
+          "spell_name": "Anticipate",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Antistatic",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Balance",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Ball of Annihilation",
+          "current_spell_types": [
+            "Energy",
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Energy Spells"
+          ]
+        },
+        {
+          "spell_name": "Bender Defender",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Bless",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Blessing of Freedom (2)",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Dungeon Fantasy Spells"
+          ]
+        },
+        {
+          "spell_name": "Cadence",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Delay Damage",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Effulgent Epuration",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Assorted Spells"
+          ]
+        },
+        {
+          "spell_name": "Emperor’s New Clothes",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Flee",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Flexibility",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Forest Defense",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Fortify",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Grace",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Ley Buffer",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Ley Float",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Lighten",
+          "current_spell_types": [
+            "Light & Darkness",
+            "Protection",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Magician’s Minion",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Mass Ant Haul",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Assorted Spells"
+          ]
+        },
+        {
+          "spell_name": "Mystic Mark",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Oath",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Persuasion",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Puissance",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Quick March",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Quick-Aim",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Redline",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Reflexes",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Slow Fall",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Sorcerer’s Stand-In",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Spark of Eros",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Stimulant",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Strike Numb",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Toughen",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Transfigure Object",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "True King",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Trusted Fellow",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Unbreakable Bones",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Wisdom",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Wraith",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Writer’s Block",
+          "current_spell_types": [
+            "Making & Breaking",
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Zeno’s Third Paradox",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Zombie Vehicle",
+          "current_spell_types": [
+            "Protection"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        }
+      ]
+    },
+    "Body Forms, Limbs, and Alteration": {
+      "count": 53,
+      "spells": [
+        {
+          "spell_name": "Alter Body",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Body of Air",
+          "current_spell_types": [
+            "Air",
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Elemental Body Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Earth",
+          "current_spell_types": [
+            "Body Control",
+            "Earth",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Elemental Body Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Flames",
+          "current_spell_types": [
+            "Body Control",
+            "Fire",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Elemental Body Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Fungus",
+          "current_spell_types": [
+            "Body Control",
+            "Plant",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Fungus Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Glass",
+          "current_spell_types": [
+            "Body Control",
+            "Earth",
+            "Making & Breaking",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Glass Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Ice",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "More Body of (Element) Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Illusion",
+          "current_spell_types": [
+            "Body Control",
+            "Energy",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Energy Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Leaves",
+          "current_spell_types": [
+            "Body Control",
+            "Plant",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Plant Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Lightning",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "More Body of (Element) Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Metal",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "More Body of (Element) Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Plastic",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "More Body of (Element) Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Shadow",
+          "current_spell_types": [
+            "Body Control",
+            "Light & Darkness"
+          ],
+          "source_spell_types": [
+            "More Body of (Element) Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Slime",
+          "current_spell_types": [
+            "Body Control",
+            "Plant",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Plant Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Stone",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "More Body of (Element) Spells"
+          ]
+        },
+        {
+          "spell_name": "Body of Water",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation",
+            "Water"
+          ],
+          "source_spell_types": [
+            "Elemental Body Spells"
+          ]
+        },
+        {
+          "spell_name": "Climbing",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Control Limb",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Limb Spells"
+          ]
+        },
+        {
+          "spell_name": "Decapitation",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Body Control Spells"
+          ]
+        },
+        {
+          "spell_name": "Dexterous Arm",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Body Control Spells"
+          ]
+        },
+        {
+          "spell_name": "Elemental Body",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Assorted Spells"
+          ]
+        },
+        {
+          "spell_name": "Ethereal Body",
+          "current_spell_types": [
+            "Body Control",
+            "Movement",
+            "Spirit"
+          ],
+          "source_spell_types": [
+            "Movement Spells"
+          ]
+        },
+        {
+          "spell_name": "Glasswraith",
+          "current_spell_types": [
+            "Body Control",
+            "Earth"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Lengthen Limb",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Limb Spells"
+          ]
+        },
+        {
+          "spell_name": "Paralyze Limb",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Body Blades",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Air",
+          "current_spell_types": [
+            "Air",
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Air Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Earth",
+          "current_spell_types": [
+            "Body Control",
+            "Earth",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Earth Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Flames",
+          "current_spell_types": [
+            "Body Control",
+            "Fire",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Fire Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Fungus",
+          "current_spell_types": [
+            "Body Control",
+            "Food",
+            "Force",
+            "Plant",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Food, Force, Fungus Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Glass",
+          "current_spell_types": [
+            "Body Control",
+            "Earth",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Earth Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Ice",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Leaves",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Lightning",
+          "current_spell_types": [
+            "Air",
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Air Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Metal",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Plastic",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Slime",
+          "current_spell_types": [
+            "Body Control",
+            "Food",
+            "Force",
+            "Plant",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Food, Force, Fungus Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Stone",
+          "current_spell_types": [
+            "Body Control",
+            "Earth",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Earth Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Water",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Body of Wind",
+          "current_spell_types": [
+            "Air",
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Air Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Climbing",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Personal Body Control Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Decapitation",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Personal Body Control Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Dexterous Arm",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Personal Body Control Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Ethereal Body",
+          "current_spell_types": [
+            "Body Control",
+            "Gate",
+            "Gravity",
+            "Movement",
+            "Spirit"
+          ],
+          "source_spell_types": [
+            "Personal Gate and Gravity Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Glasswraith",
+          "current_spell_types": [
+            "Body Control",
+            "Earth"
+          ],
+          "source_spell_types": [
+            "Personal Earth Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Steelwraith",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Personal Strong Arm",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Personal Body Control Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Transmogrification",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Personal Body Control Spells"
+          ]
+        },
+        {
+          "spell_name": "Project Limb",
+          "current_spell_types": [
+            "Body Control",
+            "Space"
+          ],
+          "source_spell_types": [
+            "Space Spells"
+          ]
+        },
+        {
+          "spell_name": "Steelwraith",
+          "current_spell_types": [
+            "Body Control",
+            "Earth"
+          ],
+          "source_spell_types": [
+            "Earth Spells"
+          ]
+        },
+        {
+          "spell_name": "Strong Arm",
+          "current_spell_types": [
+            "Body Control"
+          ],
+          "source_spell_types": [
+            "Body Control Spells"
+          ]
+        },
+        {
+          "spell_name": "Transform Body",
+          "current_spell_types": [
+            "Body Control",
+            "Transformation"
+          ],
+          "source_spell_types": [
+            "Transformation Spells"
+          ]
+        },
+        {
+          "spell_name": "Wither Limb",
+          "current_spell_types": [
+            "Body Control",
+            "Necromantic"
+          ],
+          "source_spell_types": [
+            "Limb Spells"
+          ]
+        }
+      ]
+    },
+    "Tempests, Lightning, and Winter Weather": {
+      "count": 44,
+      "spells": [
+        {
+          "spell_name": "Arc",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Ball Lightning",
+          "current_spell_types": [
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Forgotten Realms Spells"
+          ]
+        },
+        {
+          "spell_name": "Ball of Lightning",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Bladestorm",
+          "current_spell_types": [
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Call Lightning",
+          "current_spell_types": [
+            "Artillery",
+            "Summoning",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Blasting Spells"
+          ]
+        },
+        {
+          "spell_name": "Chain Lightning",
+          "current_spell_types": [
+            "Artillery",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Blasting Spells"
+          ]
+        },
+        {
+          "spell_name": "Create Ice",
+          "current_spell_types": [
+            "Transformation",
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Ice Spells"
+          ]
+        },
+        {
+          "spell_name": "Explosive Lightning",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Forked Lightning",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Freeze",
+          "current_spell_types": [
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Ice Spells"
+          ]
+        },
+        {
+          "spell_name": "Frost",
+          "current_spell_types": [
+            "Fire",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Weather Spells"
+          ]
+        },
+        {
+          "spell_name": "Frostburn",
+          "current_spell_types": [
+            "Fire",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Cyclic Elemental Spells"
+          ]
+        },
+        {
+          "spell_name": "Hail",
+          "current_spell_types": [
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Weather Spells"
+          ]
+        },
+        {
+          "spell_name": "Ice Slick",
+          "current_spell_types": [
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Ice Spells"
+          ]
+        },
+        {
+          "spell_name": "Ice Sphere",
+          "current_spell_types": [
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Ice Spells"
+          ]
+        },
+        {
+          "spell_name": "Ice Storm",
+          "current_spell_types": [
+            "Artillery",
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Artillery Spells"
+          ]
+        },
+        {
+          "spell_name": "Icewalking",
+          "current_spell_types": [
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Ice Spells"
+          ]
+        },
+        {
+          "spell_name": "Improved Explosive Lightning",
+          "current_spell_types": [
+            "Artillery",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Artillery Spells"
+          ]
+        },
+        {
+          "spell_name": "Incarnum Bladestorm",
+          "current_spell_types": [
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Lethal Lightning",
+          "current_spell_types": [
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Lightning Armor",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Protection",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Lightning Missiles",
+          "current_spell_types": [
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Unmerged Spells"
+          ]
+        },
+        {
+          "spell_name": "Lightning Stare",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Space",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Lightning Whip",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Mana Storm",
+          "current_spell_types": [
+            "Artillery",
+            "Energy",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Artillery Spells"
+          ]
+        },
+        {
+          "spell_name": "Melt Ice",
+          "current_spell_types": [
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Ice Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Reflect Lightning",
+          "current_spell_types": [
+            "Air",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Personal Air Spells"
+          ]
+        },
+        {
+          "spell_name": "Personal Snow Shoes",
+          "current_spell_types": [
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Rain of Ice Daggers",
+          "current_spell_types": [
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Reflect Lightning",
+          "current_spell_types": [
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Sandstorm",
+          "current_spell_types": [
+            "Earth",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Earth Spells"
+          ]
+        },
+        {
+          "spell_name": "Shocking Touch",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Snow",
+          "current_spell_types": [
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Weather Spells"
+          ]
+        },
+        {
+          "spell_name": "Snow Jet",
+          "current_spell_types": [
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Water Spells"
+          ]
+        },
+        {
+          "spell_name": "Snow Shoes",
+          "current_spell_types": [
+            "Water",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Water Spells"
+          ]
+        },
+        {
+          "spell_name": "Spark Cloud",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Spark Storm",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Sparks",
+          "current_spell_types": [
+            "Air",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Air Spells"
+          ]
+        },
+        {
+          "spell_name": "Storm",
+          "current_spell_types": [
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Weather Spells"
+          ]
+        },
+        {
+          "spell_name": "Storm Shelter",
+          "current_spell_types": [
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Least Spells"
+          ]
+        },
+        {
+          "spell_name": "Stroke of Lightning",
+          "current_spell_types": [
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Thunderous Armor",
+          "current_spell_types": [
+            "Protection",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Individual Spell"
+          ]
+        },
+        {
+          "spell_name": "Wall of Lightning",
+          "current_spell_types": [
+            "Air",
+            "Energy",
+            "Light & Darkness",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Lightning Spells"
+          ]
+        },
+        {
+          "spell_name": "Windstorm",
+          "current_spell_types": [
+            "Air",
+            "Weather"
+          ],
+          "source_spell_types": [
+            "Air Spells"
+          ]
+        }
+      ]
+    }
+  }
+}

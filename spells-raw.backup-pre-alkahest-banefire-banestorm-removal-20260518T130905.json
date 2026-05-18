@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "totalSpells": 2193,
+    "totalSpells": 2207,
     "scrapedAt": "2026-04-24T10:14:06.305Z",
     "sourceUrl": "https://enragedeggplant.blogspot.com/feeds/posts/default/-/sorcery",
     "scrapingMethod": "dynamic",
@@ -13,27 +13,7 @@
     "previousMainTotalSpells": 1650,
     "retryTotalSpells": 557,
     "exactDuplicatesRemoved": 0,
-    "revisionsLabeled": 0,
-    "previousTotalSpells": 2207,
-    "taxonomyFilterBackupFile": "spells-raw.backup-pre-alkahest-banefire-banestorm-removal-20260518T130905.json",
-    "taxonomyFilterAppliedAt": "2026-05-18T13:09:05+02:00",
-    "taxonomyFilterNote": "Removed Alkahest, Banefire, and Banestorm spells by spell name or source spell type for taxonomy review.",
-    "taxonomyFilterRemovedSpellNames": [
-      "Alkahest Jet",
-      "Alkahest Sphere",
-      "Banefire",
-      "Banefire Dart",
-      "Banefire Jet",
-      "Banefire Shield",
-      "Banefire Weapon",
-      "Detect Banestorm",
-      "Identify Newcomer",
-      "Personal Banefire Shield",
-      "Rain of Alkahest",
-      "Rain of Banefire",
-      "Seek Banestorm",
-      "Spit Alkahest"
-    ]
+    "revisionsLabeled": 0
   },
   "spells": [
     {
@@ -637,6 +617,62 @@
       "duration": "10 seconds. Create a circular windstorm with an “eye” of calm inside (a good place for the caster to stand). The radius of the eye can be up to half that of the storm – or smaller, if the caster wishes. The caster may move the area at Move 1 with a Concentrate maneuver. Roll 4d as for crushing damage, determine knockback, and then double the distance; however, the victim suffers no actual damage or blunt trauma from the effect – just the consequences of being hurled around. As a special effect, knockback from this moves victims sideways (all clockwise or all anticlockwise; decide when triggering the attack) rather than away from the storm. Second, Dodge values of all creatures within the area of effect is increased by 2 against projectile attacks.",
       "description": "",
       "statistics": "Crushing Attack 4d (Area Effect, 2 yards, +50%; Double Knockback, +20%; Environmental, Air, -5%; Link, +10%; Magical, -10%; Mobile 1, +40%; No Blunt Trauma, -20%; No Wounding, -50%; Persistent, +40%; Selective Area, Only to create an “eye”, +10%) [37] + Enhanced Dodge 2 (Affects Others 1, +50%; Area Effect, 2 yards, +50%; Environmental, Air, -5%; Force Field, +20%; Limited, Projectiles, -40%; Link, +10%; Mobile 1, +40%; Persistent, +40%; Ranged, +50%; Sorcery, -15%) [89]. Additional levels add further levels of Area Effect (+50%) to all advantages [+25]."
+    },
+    {
+      "spell_id": "019e07b7-7aaa-74b6-a373-dcbcabf4cfa9",
+      "spell_name": "Alkahest Jet",
+      "spell_types": [
+        "Alkahest Spells"
+      ],
+      "keywords": "Jet, Obvious.",
+      "full_cost": "25 points/level.",
+      "casting_roll": "None. Use Innate Attack (Beam) to hit.",
+      "range": "10 yards.",
+      "duration": "One second.",
+      "description": "A 10-yard jet of alkahest erupts from the caster’s hand. It can be dodged or blocked, but not parried. Treat this as a long melee weapon rather than a ranged attack, and do not apply range or speed penalties. The jet deals 1d corrosion damage per level of this spell, but it has 1/2D 5. This damage leaves a lingering effect that deals 1 point of corrosion damage per second, for a number of seconds equal to the number of dice. This effect can only be removed by rinsing the targeted zone with Essential Water. Resist Acid only halves the damage of this spell, instead of rendering the target immune. The jet lasts until the beginning of the sorcerer’s next turn, allowing the user to parry incoming attacks with it. If a parry is successful, the jet automatically damages the incoming weapon or limb, much like a force sword. Though this spell cannot be maintained, if cast every turn, the alkahest stream is not interrupted and the caster may continue to attack with it normally.",
+      "statistics": "Corrosion Attack (Cosmic, Lingering Effect, +100%; Destructive Parry, +10%; Jet, +0%; Melee-Capable, Reach 1, +15%; Reflexive, +40%; Sorcery, -15%) [25/level]. Note: Melee-Capable and Reflexive allow a jet to parry in this particular combination despite a jet normally being unable to do so."
+    },
+    {
+      "spell_id": "019e07b7-7aaa-7f9a-80f6-ae8e61fde36a",
+      "spell_name": "Alkahest Sphere",
+      "spell_types": [
+        "Alkahest Spells"
+      ],
+      "keywords": "Missile, Obvious.",
+      "full_cost": "17 points/level.",
+      "casting_roll": "None. Use Innate Attack (Projectile) to hit.",
+      "range": "20 yards.",
+      "duration": "Instantaneous.",
+      "description": "You launch an orb of alkahest at the target. It does 1d corrosion damage per level. This damage leaves a lingering effect that deals 1 point of corrosion damage per second, for a number of seconds equal to the number of dice. This effect can only be removed by rinsing the targeted zone with Essential Water. Resist Acid only halves the damage of this spell, instead of rendering the target immune. The target can dodge or block the orb. This spell’s 1/2D range is 10 yards.",
+      "statistics": "Corrosion Attack (Blockable, -5%; Cosmic, Lingering Effect, +100%; Increased 1/2D, 5x, +10%; Reduced Range, 1/5, -20%; Sorcery, -15%) [17/level]."
+    },
+    {
+      "spell_id": "019e07b7-7aaa-7bd9-a24f-058cb0e17c70",
+      "spell_name": "Rain of Alkahest",
+      "spell_types": [
+        "Alkahest Spells"
+      ],
+      "keywords": "Area (Leveled).",
+      "full_cost": "22.4 points for level 1 + 3.5 points/level.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "30 seconds.",
+      "description": "You cause alkahest to rain down upon an area. Use Innate Attack (Gaze), at +4, to center the area; see Scatter (p. B414) if you miss. Everyone who spends even part of their turn in the area is attacked with an effective skill of 12, modified only for their SM. Anyone hit takes 1d-1 corrosion damage. This damage leaves a lingering effect that deals 1 point of corrosion damage per second, for a number of seconds equal to the number of dice. This effect can only be removed by rinsing the targeted zone with Essential Water. Resist Acid only halves the damage of this spell, instead of rendering the target immune. Victims may raise their shields as cover, at the risk of damaging them (p. B484). You may always choose (when casting) to scale back the area affected.",
+      "statistics": "Corrosion Attack 1d-1 (Area Effect, 2 yards, +50%; Bombardment, Skill-12, -10%; Cosmic, Lingering Effect, +100%; Extended Duration, 3x, +20%; Overhead, +30%; Persistent, +40%; Sorcery, -15%; Variable, Area, +5%) [22.4]. Further levels add Area Effect, +50% [+3.5]."
+    },
+    {
+      "spell_id": "019e07b7-7aaa-7f78-886a-248894a571ea",
+      "spell_name": "Spit Alkahest",
+      "spell_types": [
+        "Alkahest Spells"
+      ],
+      "keywords": "Jet, Obvious.",
+      "full_cost": "19 points/level.",
+      "casting_roll": "None. Use Innate Attack (Breath) to hit.",
+      "range": "10 yards.",
+      "duration": "Instantaneous.",
+      "description": "A 10-yard jet of alkahest erupts from your mouth. Use Innate Attack (Breath) to hit. Don’t apply range penalties; treat this as a long melee weapon rather than a ranged attack. It does corrosion damage with dice equal to your level of this spell. This damage leaves a lingering effect that deals 1 point of corrosion damage per second, for a number of seconds equal to the number of dice. This effect can only be removed by rinsing the targeted zone with Essential Water. Resist Acid only halves the damage of this spell, instead of rendering the target immune. The GM must determine what the maximum level available in the campaign is.",
+      "statistics": "Corrosion Attack 1d (Cosmic, Lingering Effect, +100%; Increased 1/2D, 2x, +5%; Jet, +0%; Sorcery, -15%) [19/level]."
     },
     {
       "spell_id": "019e07b7-7aaa-7370-a37f-43c432bc273a",
@@ -3199,6 +3235,118 @@
       "duration": "Instantaneous.",
       "description": "You conjure a sticky web in an area. Placing the effect requires a roll against Innate Attack (Gaze) plus Talent; if you miss, see Scatter (p. B414). Anyone covered by the web is grappled with ST 10 and rooted in place. They cannot select the Move or Change Posture maneuvers or change facing, and are at -4 to DX. Each additional web cast over the area increases the ST by 1. Anyone who touches a victim grappled by the Web within 10 seconds of the casting sticks to him, becoming grappled as well! To break free, the victim must win a Quick Contest of ST or Escape skill against the ST of the Web. Each attempt takes one second. If the victim fails to break free, he loses 1 FP but may try again. Alternatively, he may try to destroy the Web. Innate Attacks hit automatically; other attacks are at -4. External attacks on the Web take no penalty, but risk hitting the victim on a miss (see Striking Into a Close Combat, p. B392). The Web has DR 3. Each point of damage reduces ST by one. At ST 0, the Web is destroyed and the victims are freed. The Web can only be damaged by cutting and burning attacks.",
       "statistics": "Binding 10 (Area Effect, 2 yards, +50%; Only Damaged By Cutting and Burning, +20%; Sorcery, -15%; Sticky, +20%) [35]. Each additional level adds more Area Effect [+10]."
+    },
+    {
+      "spell_id": "019e07b7-7ab0-7942-aed5-e1027a3e09d3",
+      "spell_name": "Banefire",
+      "spell_types": [
+        "Banefire Spells"
+      ],
+      "keywords": "Area (Fixed), Missile, Obvious.",
+      "full_cost": "76 points.",
+      "casting_roll": "None. Use Innate Attack (Projectile) to hit.",
+      "range": "100 yards.",
+      "duration": "Instantaneous.",
+      "description": "You throw a ball of sickly green fire – fire from the Realms of the Dead - that expands to cover an area; it is not technically an explosion, but the term has long since entered common use. Banefire only affects living creatures, causing them to age rapidly. Use Innate Attack (Projectile) to hit, applying normal range penalties, but at +4 for targeting an area. Everyone within four yards of that spot takes 1d burning damage and ages 1d years. The banefire sticks to the target, damaging him again every 10 second for 4 more cycles. Each instance of damage, including the initial one, can be negated with a successful Will roll. If a victim successfully resists, the flames go out. If your foe is within one yard of you, he may attempt to parry this attack (actually parrying your hand). If such a parry is successful, you must roll against DX to avoid dropping this at your own feet, where it detonates!",
+      "statistics": "Ageing Attack 1d (Accessibility, Only on living, -10%; Area Effect, 4 yards, +100%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Link, +10%; Nuisance Effect, Dangerous to be parried, -5%; Resistible, Will, -30%; Sorcery, -15%) [63] + Burning Attack 1d (Accessibility, Only on living, -10%; Area Effect, 4 yards, +100%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Magical, -10%; Link, +10%; Nuisance Effect, Dangerous to be parried, -5%; Resistible, Will, -30%) [13]."
+    },
+    {
+      "spell_id": "019e07b7-7ab0-7b4e-85c2-eb25b581b78d",
+      "spell_name": "Banefire Dart",
+      "spell_types": [
+        "Banefire Spells"
+      ],
+      "keywords": "Missile, Obvious.",
+      "full_cost": "45 points.",
+      "casting_roll": "None. Use Innate Attack (Projectile) to hit.",
+      "range": "100 yards.",
+      "duration": "Instantaneous.",
+      "description": "You throw a dart of sickly green banefire – fire from the Realms of the Dead - at a single target. The dart can be blocked or dodged. Banefire only affects living creatures, causing them to age rapidly. Use Innate Attack (Projectile) to hit, applying normal range penalties. It does 1d burning damage and ages the victim 1d years. The banefire sticks to the target, damaging him again every 10 second for 4 more cycles. The cycles can be stopped by dousing the flames with holy water. This is injury that comes right off HP – not damage that must penetrate DR again, be multiplied for damage type, and so forth. Each instance of damage, including the initial one, can be negated with a successful Will roll. If a victim successfully resists, the flames go out.",
+      "statistics": "Ageing Attack 1d (Accessibility, Only on living, -10%; Blockable, -5%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Link, +10%; Resistible, Will, -30%; Sorcery, -15%) [37] + Burning Attack 1d (Accessibility, Only on living, -10%; Blockable, -5%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Link, +10%; Magical, -10%; Resistible, Will, -30%) [8]."
+    },
+    {
+      "spell_id": "019e07b7-7ab0-7154-9d90-5f93242cb23b",
+      "spell_name": "Banefire Jet",
+      "spell_types": [
+        "Banefire Spells"
+      ],
+      "keywords": "Jet, Obvious.",
+      "full_cost": "67 points.",
+      "casting_roll": "None. Use Innate Attack (Beam) to hit.",
+      "range": "10 yards.",
+      "duration": "One second.",
+      "description": "A 10-yard jet of sickly green flame erupts from your hand, much like the long tongue of a flamethrower. Banefire only affects living creatures, causing them to age rapidly. Use Innate Attack (Beam) to hit. Don’t apply range penalties; treat this as a long melee weapon rather than a ranged attack. It does 1d burning damage and ages the victim 1d years, but has 1/2D 5. The banefire sticks to the target, damaging him again every 10 second for 4 more cycles. The cycles can be stopped by dousing the flames with holy water. This is injury that comes right off HP – not damage that must penetrate DR again, be multiplied for damage type, and so forth. Each instance of damage, including the initial one, can be negated with a successful Will roll. If a victim successfully resists, the flames go out. The jet lasts until the beginning of the sorcerer’s next turn, allowing the user to parry incoming attacks with it. If a parry is successful, the jet automatically damages the incoming weapon or limb, much like a force sword. Though this spell cannot be maintained, if cast every turn, the acid stream is not interrupted and the caster may continue to attack with it normally.",
+      "statistics": "Ageing Attack 1d (Accessibility, Only on living, -10%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Destructive Parry, +10%; Jet, +0%; Link, +10%; Melee-Capable, Reach 1, +15%; Reflexive, +40%; Resistible, Will, -30%; Sorcery, -15%) [55] + Burning Attack 1d (Accessibility, Only on living, -10%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Destructive Parry, +10%; Jet, +0%; Link, +10%; Magical, -10%; Melee-Capable, Reach 1, +15%; Reflexive, +40%; Resistible, Will, -30%) [12]. Note: Melee-Capable and Reflexive allow a jet to parry in this particular combination despite a jet normally being unable to do so."
+    },
+    {
+      "spell_id": "019e07b7-7ab0-7cc9-b0a1-bc03da463af8",
+      "spell_name": "Banefire Shield",
+      "spell_types": [
+        "Banefire Spells"
+      ],
+      "keywords": "Buff.",
+      "full_cost": "60 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "3 minutes.",
+      "description": "The subject is sheathed in banefire – sickly green fire from the Realms of the Dead - that deals 1d-1 burning damage to enemies who touch his body and ages them 1d-1 years. Banefire only affects living creatures, causing them to age rapidly. The banefire sticks to the target, damaging him again every 10 second for 4 more cycles. The cycles can be stopped by dousing the flames with holy water. This is injury that comes right off HP – not damage that must penetrate DR again, be multiplied for damage type, and so forth. Each instance of damage, including the initial one, can be negated with a successful Will roll. If a victim successfully resists, the flames go out.",
+      "statistics": "Affliction 1 (HT; Advantage, Banefire Shield, +480%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; No Signature, +20%; Sorcery, 15%) [60]. Note: “Banefire Shield” is Ageing Attack 1d-1 (Accessibility, Only on living, -10%; Aura, +80%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Magical, -10%; Melee Attack, Reach C, -30%; Resistible, Will, -30%) [38] + Burning Attack 1d-1 (Accessibility, Only on living, -10%; Aura, +80%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Magical, -10%; Melee Attack, Reach C, -30%; Resistible, Will, -30%) [9] + Illumination (Magical, -10%) [1]."
+    },
+    {
+      "spell_id": "019e07b7-7ab0-75b2-b172-5869a4fa139f",
+      "spell_name": "Rain of Banefire",
+      "spell_types": [
+        "Banefire Spells"
+      ],
+      "keywords": "Area (Leveled).",
+      "full_cost": "65 points for level 1 + 11 points/additional level.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "30 seconds.",
+      "description": "You cause sickly green flames to rain down upon an area. Banefire only affects living creatures, causing them to age rapidly. Use Innate Attack (Gaze), at +4, to center the area; see Scatter (p. B414) if you miss. Everyone who spends even part of their turn in the area is attacked with an effective skill of 12, modified only for their SM. Anyone hit takes 1d-1 burning damage and ages 1d-1 years. Victims may raise their shields as cover, at the risk of damaging them (p. B484). You may always choose (when casting) to scale back the damage or the area affected. The banefire sticks to the target, damaging him again every 10 second for 4 more cycles. The cycles can be stopped by dousing the flames with holy water. This is injury that comes right off HP – not damage that must penetrate DR again, be multiplied for damage type, and so forth. Each instance of damage, including the initial one, can be negated with a successful Will roll. If a victim successfully resists, the flames go out.",
+      "statistics": "Ageing Attack 1d-1 (Accessibility, Only on living, -10%; Area Effect, 2 yards, +50%; Bombardment, Skill-12, -10%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Extended Duration, 3x, +20%; Link, +10%; Overhead, +30%; Persistent, +40%; Resistible, Will, -30%; Sorcery, -15%; Variable, Area, +5%) [53] + Burning Attack 1d-1 (Accessibility, Only on living, -10%; Area Effect, 2 yards, +50%; Bombardment, Skill-12, -10%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Extended Duration, 3x, +20%; Link, +10%; Magical, -10%; Overhead, +30%; Persistent, +40%; Resistible, Will, -30%; Variable, Area, +5%) [12]. Additional levels add more Area Effect (+50%) [+11]."
+    },
+    {
+      "spell_id": "019e07b7-7ab0-7bc9-a917-f0bd3005890a",
+      "spell_name": "Detect Banestorm",
+      "spell_types": [
+        "Banestorm Spells"
+      ],
+      "keywords": "Information.",
+      "full_cost": "6 points.",
+      "casting_roll": "Per.",
+      "range": "Unlimited.",
+      "duration": "Instantaneous. After casting, the GM rolls against the sorcerer’s Per, with a long-distance (p. B421) penalty based on the distance to the nearest banestorm. If successful, this spell confirms or denies any current banestorm activity within the range, specified by the caster. Any known sources of magic may be excluded if the caster mentions them before casting.",
+      "description": "",
+      "statistics": "Detect Banestorm (Long-Range 1, +50%; Selective Effect, +20%; Sorcery, -15%; Vague, -50%) [6]."
+    },
+    {
+      "spell_id": "019e07b7-7ab0-779c-80ca-69103ff17dc1",
+      "spell_name": "Identify Newcomer",
+      "spell_types": [
+        "Banestorm Spells"
+      ],
+      "keywords": "Information.",
+      "full_cost": "1 points.",
+      "casting_roll": "IQ.",
+      "range": "Unlimited.",
+      "duration": "Instantaneous.",
+      "description": "This spell, when cast on a person or object that the caster can see or touch, tells whether and when a banestorm brought it to Yrth.",
+      "statistics": "Detect (Banestorm Newcomers; Analysis Only, -50%; Sorcery, -15%; Touch- or Vision-Based, -15%) [1]."
+    },
+    {
+      "spell_id": "019e07b7-7ab0-79fa-b2c6-12d84ffc556c",
+      "spell_name": "Seek Banestorm",
+      "spell_types": [
+        "Banestorm Spells"
+      ],
+      "keywords": "Information.",
+      "full_cost": "12 points.",
+      "casting_roll": "Per.",
+      "range": "Unlimited.",
+      "duration": "Instantaneous. After casting, the GM rolls against the sorcerer’s Per, with a penalty based on the distance to the nearest banestorm, using the long-distance modifiers. If successful, the caster knows the exact distance and direction to the banestorm. Any known passes may be excluded if the caster mentions them before casting.",
+      "description": "",
+      "statistics": "Detect Banestorm (Cannot Analyze, -10%; Long-Range 1, +50%; Precise, +100%; Sorcery, -15%) [12]."
     },
     {
       "spell_id": "019e07b7-7ab0-7dd7-b59a-a828eb262ceb",
@@ -9121,6 +9269,20 @@
       "duration": "Instantaneous.",
       "description": "A 10-yard jet of flame erupts from your eyes, much like the long tongue of a flamethrower. Use Innate Attack (Gaze) to hit. Don’t apply range penalties; treat this as a long melee weapon rather than a ranged attack. It does burning damage with dice equal to your level of this spell. The spell treats the ﬂammability class (Making Things Burn, p. B433) of the subject as one step higher than it actually is. The GM must determine what the maximum level available in the campaign is.",
       "statistics": "Burning Attack (Cosmic, Higher Incendiary Level, +50%; Incendiary 1, +10%; Increased 1/2D, 2x, +5%; Jet, +0%; Sorcery, -15%) [7.5/level*]. * Calculate the total cost, then round up."
+    },
+    {
+      "spell_id": "019e07b7-7abe-7da7-81dc-4092c4e5a67d",
+      "spell_name": "Banefire Weapon",
+      "spell_types": [
+        "Individual Spell"
+      ],
+      "keywords": "Weapon Buff.",
+      "full_cost": "57 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "Three minutes.",
+      "description": "The target weapon is sheathed in banefire – sickly green fire from the Realms of the Dead - that deals 1d follow-up burning damage to living enemies and ages them 1d years. The banefire sticks to the target, damaging him again every 10 second for 4 more cycles. The cycles can be stopped by dousing the flames with holy water. This is injury that comes right off HP – not damage that must penetrate DR again, be multiplied for damage type, and so forth. Each instance of damage, including the initial one, can be negated with a successful Will roll. If a victim successfully resists, the flames go out. The wielder will find the weapon hot to the touch, but not uncomfortable to use. The weapon also will give off light as a torch.",
+      "statistics": "Affliction 1 (HT; Accessibility, Only on weapons, -20%; Advantage, Banefire Weapon, +470%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; No Signature, +20%; Sorcery, -15%) [59]. Note: “Banefire Weapon” is Ageing Attack 1d (Accessibility, Only on living, -10%; Follow-Up, This weapon, +0%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Magical, -10%; Resistible, Will, -30%; Visible, -10%) [38] + Burning Attack 1d (Accessibility, Only on living, -10%; Follow-Up, This weapon, +0%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Magical, -10%; Resistible, Will, -30%; Visible, -10%) [8] + Illumination (Magical, -10%) [1]."
     },
     {
       "spell_id": "019e07b7-7abe-7c91-94a5-faba8057d045",
@@ -26873,6 +27035,20 @@
       "duration": "Indefinite.",
       "description": "You become able to pass through dirt, clay, mud, and sand as if they were not even there. You do not automatically sink into the ground; the earth beneath your feet is as solid as you wish it to be. You will need to hold your breath on long trips (this spell does not provide air) and gain no special ability to see through earth. You may carry up to Light encumbrance while doing this.",
       "statistics": "Permeation (Earth; Can Carry Objects, Light Encumbrance, +20%; Sorcery, -15%) [42]."
+    },
+    {
+      "spell_id": "019e07b7-7adf-7c54-9fe7-3c7d835f11ee",
+      "spell_name": "Personal Banefire Shield",
+      "spell_types": [
+        "Personal Fire Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "47 points.",
+      "casting_roll": "None.",
+      "range": "Self.",
+      "duration": "Indefinite.",
+      "description": "You become sheathed in banefire – sickly green fire from the Realms of the Dead - that deals 1d-1 burning damage to enemies who touch your body and ages them 1d-1 years. Banefire only affects living creatures, causing them to age rapidly. The banefire sticks to the target, damaging it again every 10 second for 4 more cycles. The cycles can be stopped by dousing the flames with holy water. This is injury that comes right off HP – not damage that must penetrate DR again, be multiplied for damage type, and so forth. Each instance of damage, including the initial one, can be negated with a successful Will roll. If a victim successfully resists, the flames go out.",
+      "statistics": "Ageing Attack 1d-1 (Accessibility, Only on living, -10%; Aura, +80%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Link, +10%; Melee Attack, Reach C, -30%; Resistible, Will, -30%; Sorcery, -15%) [37] + Burning Attack 1d-1 (Accessibility, Only on living, -10%; Aura, +80%; Cyclic, 4 cycles, 10 second intervals, Resistible, +100%; Link, +10%; Magical, -10%; Melee Attack, Reach C, -30%; Resistible, Will, -30%) [9] + Illumination (Magical, -10%) [1]."
     },
     {
       "spell_id": "019e07b7-7adf-745c-836b-588ceddc9dc1",

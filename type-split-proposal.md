@@ -1,406 +1,366 @@
-# Type Split Proposal
+# Type Split Proposal — Second Structural Review
 
-## Scope and method
-- Source of truth for this pass: `/home/brad/.local/share/kilo/plans/1779065784000-maester-taxonomy-continuation.md`.
-- Corpus and reports inspected: `processed/full-probe-report.md`, `processed/full-probe-spells.json`, and `tools/build_spell_pilot.py`.
-- `build_spell_pilot.py` currently infers the 40 working canonical types and reports only which current buckets exceed 60; it does not yet model post-split child taxonomy.
-- This proposal is a **review pass only**. It partitions oversized current buckets by the current spell names, secondary types, and keywords, but it does **not** mass-rename spells and it does **not** do the final prose pass.
-- Constraints used here:
-  - hard ceiling: **60**
-  - soft target: **25-40 where natural**
-  - avoid artificial micro-types unless a small bucket exposes a real mechanical seam worth reviewing on its own.
+## Scope and source of truth
+- Source documents:
+  - `/home/brad/.local/share/kilo/plans/1779065784000-maester-taxonomy-continuation.md`
+  - `/home/brad/.local/share/kilo/plans/1779065784000-maester-taxonomy-next-pass-addendum.md`
+- Working corpus references:
+  - `spells-raw.json`
+  - `processed/full-probe-spells.json`
+  - `tools/build_spell_pilot.py`
+- No `AGENTS.md` or ADR files are present in this repository.
+- This remains a **structural review pass only**. It does **not** do Westerosi spell renaming or Westerosi description/example writing yet.
 
-## Split-first priority order
-### First review tier
-These are the largest and noisiest buckets and should be reviewed first even if the rest of the proposal is accepted provisionally:
-1. **Meta (257)**
-2. **Knowledge (255)**
-3. **Protection (250)**
-4. **Mind Control (176)**
+## Corpus cleanup applied for this pass
+### Raw source backup and filter
+- Original backup created:
+  - `/home/brad/gaming/gurps-new-sorcerer-spells/spells-raw.backup-pre-alkahest-banefire-banestorm-removal-20260518T130905.json`
+- Active source file updated:
+  - `/home/brad/gaming/gurps-new-sorcerer-spells/spells-raw.json`
+- Removed from the raw source list:
+  - all `Alkahest` spells
+  - all `Banefire` spells
+  - all `Banestorm` spells
+- Total raw spells:
+  - before: **2207**
+  - after removal: **2193**
 
-### Second review tier
-These are structurally important but cleaner once the first tier is settled:
-- **Transformation (174)**
-- **Movement (150)**
-- **Making & Breaking (144)**
-- **Earth (138)**
-- **Artillery (132)**
-- **Body Control (126)**
-- **Air (125)**
+### Spells excluded from this review pass
+- `Alkahest Jet`
+- `Alkahest Sphere`
+- `Rain of Alkahest`
+- `Spit Alkahest`
+- `Banefire`
+- `Banefire Dart`
+- `Banefire Jet`
+- `Banefire Shield`
+- `Banefire Weapon`
+- `Personal Banefire Shield`
+- `Rain of Banefire`
+- `Detect Banestorm`
+- `Identify Newcomer`
+- `Seek Banestorm`
 
-### Third review tier
-These still need first-pass splitting, but their seams are more legible already:
-- **Light & Darkness (119)**
-- **Plant (117)**
-- **Fire (115)**
-- **Necromantic (100)**
-- **Water (90)**
-- **Animal (86)**
-- **Weather (86)**
-- **Gate (67)**
-- **Spirit (61)**
+## Rebuild status
+- `tools/build_spell_pilot.py` was updated so manual overrides remain optional and the old first-50 curated-seed gate no longer blocks rebuilds.
+- `processed/full-probe-*` was rebuilt successfully from the filtered `spells-raw.json`.
+- The counts below are based on that rebuilt processed corpus.
 
-## Proposed first-pass splits
+## Structural adjustments applied before splitting
+1. **Dissolved `Ageing` entirely**
+   - Body Control: `Age (Variant)`, `Animal Ageing`, `Decrepify`, `Progeria`, `Temporary Ageing`
+   - Healing: `Halt Ageing`, `Personal Halt Ageing`
+   - Protection: `Protection from Ageing`
+   - Necromantic: `Age`, `Burden of Time`, `Reaper’s Embrace`
 
-### Meta (257)
-**Roll-up root original college:** `Meta`
+2. **Contracted `Meta` before splitting it**
+   - Reassigned **33** `Personal ...` Meta spillover records to clearer disciplines where an exact or manual counterpart exists.
+   - Projected result: `Meta` contracts from **257** to **225**.
 
-**Proposed child types**
-- Lesser Hexes & Afflictions (53)
-- Great Works, Constructs, and Oddities (45)
-- Sorcerous Services & Rites (44)
+3. **Contracted `Gate` before judging whether it still needed a split**
+   - After Banestorm removal, `Gate` stood at **64**.
+   - Removed **32** obvious distance/gravity or threshold-summoning spillover assignments from the Gate type.
+   - Projected result: `Gate` contracts from **64** to **32** and no longer needs a child split.
+
+4. **Applied targeted review feedback while preserving multi-type membership**
+   - Spells may belong to more than one `spell_type` list when the overlap is real.
+   - `Avatar` now sits in both `Communication & Empathy` and `Protection`.
+   - `Badger Paws` and `Mass Badger Paws` were removed from `Protection` and treated as `Earth` plus `Transformation` spells.
+   - `Keen Taste and Smell`, `Personal Keen Taste and Smell`, `Keen Touch`, and `Personal Keen Touch` were moved from `Protection` into `Knowledge`.
+   - `Accelerate Pregnancy` was moved from `Protection` into `Body Control`.
+   - `Irresistible Dance` was moved from `Protection` into `Mind Control`.
+   - `Mass Coolness` remains in `Protection`, but now sits under `Safeguards & Reliefs` instead of `Battle Blessings & Readiness`.
+
+## Second-pass decision rule
+A `spell_type` survives only if it reads as a **real sorcerous discipline**, not just a convenient review bucket.
+
+That means this pass rejects labels such as:
+- `Personal Arcana`
+- `Banishment, Locks, and Instability`
+- `Gravity, Distance, and Other Ways`
+- `Threshold Summons & Callings`
+
+These may still be useful during analysis, but they are **not** recommended as final spell types.
+
+## Biggest structural outcomes from this pass
+- `Ageing` is gone.
+- all `Alkahest`, `Banefire`, and `Banestorm` spells are excluded from the taxonomy pass.
+- `Gate` no longer needs splitting after contraction.
+- `Sorcerous Services & Rites` is retained as a real candidate type and is **not** auto-split.
+- `Weapon Boons & Retaliations` is also retained as a real candidate type and is **not** auto-split.
+- no proposed resulting spell type is above the hard ceiling of **60**.
+
+## Contracted types that no longer need a child split
+### Gate (64 → projected 32)
+**Recommendation:** keep Gate as a single stable spell type after contraction.
+
+**Why**
+- once the obvious Movement/Gravity/Space/Summoning spillover is removed, Gate becomes a much cleaner threshold-and-planar discipline
+- this is better than preserving artificial child buckets under Gate
+
+**What leaves Gate**
+- most distance/gravity travel spillover
+- threshold summons better handled by `Summoning`
+- several teleport/distance tracing effects that read more naturally outside Gate
+
+## Refined split proposals
+
+### Meta (257 → projected 225)
+**Proposed child spell types**
+- Lesser Hexes & Afflictions (54)
+- Grand Arcana & Constructs (45)
+- Sorcerous Services & Rites (45)
 - Arcane Utilities & Implements (35)
-- Personal Arcana (33)
 - Mana, Ley, and Power (18)
 - Countermagic & Suppression (17)
-- Thefts, Vulnerabilities, and Doom (12)
+- Arcane Siphons & Frailties (11)
 
-**Why this split is mechanically useful**
-- This is the noisiest bucket in the whole corpus.
-- It separates countermagic, mana economy, personal upkeep workings, and nuisance hexes into reviewable queues instead of leaving everything magic-adjacent in one bucket.
-- The split also exposes where the current probe is using `Meta` as a catch-all, which is valuable before any naming pass.
+**Why this split is better than the first pass**
+- it removes `Personal Arcana` as a fake type
+- it keeps `Sorcerous Services & Rites` together, as requested
+- it replaces the more review-bucketish `Great Works, Constructs, and Oddities` with `Grand Arcana & Constructs`
+- it keeps the narrow siphoning-and-frailty seam visible without forcing it into a miscellaneous pile
 
-**Naming confidence**
-- Medium.
-- `Sorcerous Services & Rites` and `Great Works, Constructs, and Oddities` are useful placeholders but worth user review.
-
-### Knowledge (255)
-**Roll-up root original college:** `Knowledge`
-
-**Proposed child types**
+### Knowledge (projected 258)
+**Proposed child spell types**
 - Readings & Analysis (57)
-- Senses & Vision (46)
-- Seekers & Trackers (43)
-- Detection & Appraisal (42)
+- Senses & Perception (52)
+- Detection & Appraisal (41)
+- Seekers & Trackers (41)
 - Divination & Omens (37)
 - Thoughts & Memory (30)
 
-**Why this split is mechanically useful**
-- It cleanly separates passive sensory buffs, active seeking magic, omen/divination rituals, and mind-reading or memory work.
-- At the table, these are different use cases: scouting, diagnosis, tracking, prophecy, and mental inquiry do not want to live in the same lookup bucket.
+**Why this split still holds**
+- the Knowledge boundaries remain strong after cleanup
+- these remain distinct browse disciplines: sensing, seeking, testing, prophecy, and mental inquiry
 
-**Naming confidence**
-- High on the split seams, medium on the exact names.
-- `Readings & Analysis` versus `Detection & Appraisal` is the main wording seam to review.
-
-### Protection (250)
-**Roll-up root original college:** `Protection`
-
-**Proposed child types**
-- Battle Blessings & Readiness (54)
+### Protection (projected 252)
+**Proposed child spell types**
+- Safeguards & Reliefs (53)
+- Battle Blessings & Readiness (48)
 - Resistances & Immunities (49)
-- Practical Safeguards & Reliefs (45)
-- Armor & Battle Shells (41)
-- Wards, Shields, and Barriers (32)
-- Subtle & Personal Safeguards (17)
+- Armor & Battle Shells (43)
+- Wards, Shields, and Barriers (30)
+- Concealments & Counter-Senses (17)
 - Weapon Boons & Retaliations (12)
 
-**Why this split is mechanically useful**
-- The current bucket mixes armor, elemental resistance, defensive blessings, stealthy screening, battlefield wards, and retaliatory weapon-side defenses.
-- Those are distinct shopping lists for players: “make me harder to hit,” “let me ignore fire,” “stop scrying,” and “prepare for travel or illness” should not all be the same type.
+**Why this split is better than the first pass**
+- `Concealments & Counter-Senses` is clearer than `Subtle & Personal Safeguards`
+- `Weapon Boons & Retaliations` stays intact, as requested
+- `Safeguards & Reliefs` is shorter and cleaner than `Practical Safeguards & Reliefs`
+- several obvious non-battle edge cases were moved out of `Battle Blessings & Readiness`, which leaves that label meaningfully cleaner for the MVP pass
 
-**Naming confidence**
-- Medium.
-- `Battle Blessings & Readiness` and `Practical Safeguards & Reliefs` are accurate but may want shorter final labels.
-
-### Mind Control (176)
-**Roll-up root original college:** `Mind Control`
-
-**Proposed child types**
-- Curses, Counterwill, and Ruin (35)
-- Memory, Thought, and Will (34)
-- Commands & Compulsion (32)
+### Mind Control (projected 179)
+**Proposed child spell types**
+- Mental Curses & Counterwill (35)
+- Commands & Compulsion (33)
+- Memory, Thought, and Will (32)
+- Emotion & Morale (22)
 - Pain, Stun, and Collapse (21)
-- Emotion & Morale (21)
+- Possession & Identity (18)
 - Dreams, Sleep, and Delusion (18)
-- Possession & Identity (15)
 
-**Why this split is mechanically useful**
-- This separates command spells, morale/emotion effects, dream or sleep effects, memory/will manipulation, and hard mental shutdown effects.
-- Players and GMs usually search these by consequence: obedience, terror, sleep, confusion, or possession.
+**Why this split is better than the first pass**
+- `Mental Curses & Counterwill` reads more like a real discipline than the earlier wording
+- the branch remains one of the cleanest both mechanically and thematically
 
-**Naming confidence**
-- High on the mechanical split.
-- `Curses, Counterwill, and Ruin` is the label most likely to need a second wording pass.
-
-### Transformation (174)
-**Roll-up root original college:** none; this remains a cross-college functional family.
-
-**Proposed child types**
+### Transformation (projected 176)
+**Proposed child spell types**
+- Alteration, Growth, and Other Transmutations (56)
 - Shapeshifting & Polymorph (45)
 - Body Forms & Embodiments (42)
 - Creation, Shape, and Matter (33)
-- Transmutations & Other Forms (31)
-- Alteration, Growth, and Reduction (23)
 
-**Why this split is mechanically useful**
-- It separates identity-changing form magic from elemental body states, matter-shaping magic, and size/alteration effects.
-- That distinction matters because those spells solve very different problems in play.
+**Why this split is better than the first pass**
+- it merges thin transformation seams into fewer, stronger disciplines
+- it avoids creating an extra marginal type just to shave counts
 
-**Naming confidence**
-- High.
+### Movement (projected 152)
+**Proposed child spell types**
+- Speed, Haste, and Handling (60)
+- Ways, Passage, and Travel (53)
+- Forced Movement & Restraint (39)
 
-### Movement (150)
-**Roll-up root original college:** `Movement`
+**Why this split is better than the first pass**
+- it merges roads, traversal, relocation, teleportation, and related conveyance magic into one stronger movement discipline
+- it is a good example of combining closely related thin groups into a better overall list
 
-**Proposed child types**
-- Speed, Haste, and Handling (58)
-- Forced Movement & Restraint (35)
-- Steps, Strides, and Passage (23)
-- Flight & Falling (18)
-- Teleportation & Long Passage (16)
+**Review caution**
+- `Speed, Haste, and Handling` lands exactly on the ceiling and should be watched in later growth
 
-**Why this split is mechanically useful**
-- It isolates speed buffs from repositioning control, terrain-passage magic, flight, and true relocation magic.
-- A character looking for haste, teleportation, or battlefield drag effects should not have to search the same flat bucket.
-
-**Naming confidence**
-- High on the seams.
-- `Steps, Strides, and Passage` is the main wording choice to review.
-
-### Making & Breaking (144)
-**Roll-up root original college:** `Making & Breaking`
-
-**Proposed child types**
-- Weapons & Battlework (49)
+### Making & Breaking (projected 143)
+**Proposed child spell types**
+- Weapons & Battlework (48)
 - Breaking, Shattering, and Ruin (39)
+- Crafting, Repair, and Reshaping (32)
 - Locks, Seals, and Traps (24)
-- Crafting, Repair, and Stores (19)
-- Reshaping & Transmutation (13)
 
-**Why this split is mechanically useful**
-- It pulls apart weapon enhancement, destructive object magic, lock/trap work, repair/crafting, and object reshaping.
-- Those are natural shopping categories for both players and worldbuilding notes.
+**Why this split is better than the first pass**
+- `Crafting, Repair, and Reshaping` is a better consolidated discipline than separate tiny crafting and reshaping branches
 
-**Naming confidence**
-- High.
-
-### Earth (138)
-**Roll-up root original college:** `Earth`
-
-**Proposed child types**
-- Stone, Soil, and Sand (56)
+### Earth (projected 140)
+**Proposed child spell types**
+- Stone, Soil, and Sand (58)
 - Metal & Glass (49)
 - Earthshape, Passage, and Transmutation (33)
 
-**Why this split is mechanically useful**
-- The material seam is clean: raw earth/stone/sand behaves differently from metal and glass magic.
-- The remaining shape, travel, and transmutation effects form a coherent utility group instead of producing tiny artificial slices.
-
-**Naming confidence**
-- High.
-
-### Artillery (132)
-**Roll-up root original college:** none; this remains a cross-college functional family.
-
-**Proposed child types**
+### Artillery (projected 132)
+**Proposed child spell types**
 - Missiles, Jets, and Rays (55)
+- Battlefield Zones & Fields (44)
 - Bursts, Barrages, and Bombardment (33)
-- Hazards, Mines, and Persistent Zones (26)
-- Battlefield Fields & Wards (18)
 
-**Why this split is mechanically useful**
-- It separates direct ranged attacks from area barrages, placed hazards, and battlefield-scale field effects.
-- Those distinctions matter immediately in encounter prep and in player browsing.
+**Why this split is better than the first pass**
+- it folds hazards and field-scale effects into one stronger battlefield-control discipline
 
-**Naming confidence**
-- High.
+### Body Control (projected 133)
+**Proposed child spell types**
+- Internal Ruin, Fatigue, and Decline (54)
+- Body Forms, Limbs, and Alteration (53)
+- Vital Functions & Augmentation (26)
 
-### Body Control (126)
-**Roll-up root original college:** `Body Control`
+**Why this split is better than the first pass**
+- it absorbs the dissolved `Ageing` spells cleanly
+- it avoids preserving age-magic as its own specialty
+- it merges the old limbs branch into a broader flesh-working discipline
+- it now handles `Accelerate Pregnancy` as bodily process magic instead of forcing it into a protection branch
 
-**Proposed child types**
-- Vital Functions, Fatigue, and Internal Ruin (59)
-- Body Forms & Alteration (37)
-- Bodily Enhancements (16)
-- Limbs, Flesh, and Reach (14)
-
-**Why this split is mechanically useful**
-- It separates body-form magic from stat and mobility enhancement, limb-specific manipulation, and harsh internal afflictions.
-- Combining breath and other internal-function magic with fatigue and ruin keeps this pass from creating a contrived micro-type.
-
-**Naming confidence**
-- High.
-
-### Air (125)
-**Roll-up root original college:** `Air`
-
-**Proposed child types**
-- Breath & Atmosphere (49)
-- Wind, Pressure, and Shaping (26)
-- Clouds, Vapors, and Smells (23)
+### Air (projected 125)
+**Proposed child spell types**
+- Winds, Vapors, and Sky Passage (58)
+- Breath & Atmosphere (51)
 - Lightning of the Air (16)
-- Flight & Sky Passage (11)
 
-**Why this split is mechanically useful**
-- It cleanly distinguishes respiration/air-quality effects, wind control, cloud or vapor hazards, lightning, and airborne travel.
-- That is a practical table split and also keeps the air/weather boundary readable.
+**Why this split is better than the first pass**
+- it avoids a tiny standalone sky-passage type
+- it keeps air- and weather-adjacent seams readable without oversplitting
 
-**Naming confidence**
-- High on the structure, medium on whether `Lightning of the Air` should stay under Air versus leaning harder into Weather.
-
-### Light & Darkness (119)
-**Roll-up root original college:** `Light`
-
-**Proposed child types**
-- Color, Prism, and Other Glamour (27)
+### Light & Darkness (projected 120)
+**Proposed child spell types**
+- Radiance, Sight, and Reflection (42)
+- Glamour, Color, and Prism (27)
 - Lightning & Radiant Assaults (27)
-- Light, Seeing, and Reflection (25)
 - Shadows & Obscurity (24)
-- Lightborne Passage (16)
 
-**Why this split is mechanically useful**
-- It separates sensory/illumination play, shadow play, lightning attacks, and light-based movement tricks.
-- The current mixed bucket is especially hard to search because it contains both visibility tools and aggressive storm-lightning effects.
-
-**Naming confidence**
-- Medium.
-- `Color, Prism, and Other Glamour` is a useful provisional name but not yet elegant.
-
-### Plant (117)
-**Roll-up root original college:** `Plant`
-
-**Proposed child types**
-- Growth, Blessing, and Husbandry (57)
-- Fungus, Wood, and Plant Forms (29)
+### Plant (projected 119)
+**Proposed child spell types**
+- Growth, Blessing, and Husbandry (59)
+- Wood, Vines, and Plant Forms (43)
 - Plant Lore, Speech, and Passage (17)
-- Vines, Thorns, and Restraint (14)
 
-**Why this split is mechanically useful**
-- It separates agrarian growth magic from combat entanglement, plant communication/knowledge, and fungal or wooden form magic.
-- Those are distinct enough in play that a single plant bucket is doing too much work.
+**Why this split is better than the first pass**
+- it merges vine/thorn restraint into the stronger physical-plant branch
 
-**Naming confidence**
-- High.
-
-### Fire (115)
-**Roll-up root original college:** `Fire`
-
-**Proposed child types**
+### Fire (projected 108)
+**Proposed child spell types**
+- Flame Assaults & Battlefire (59)
 - Heat, Fuel, and Hearthwork (49)
-- Firebolts, Jets, and Strikes (31)
-- Battlefield Fire & Walls (23)
-- Banefire & Hellfire (12)
 
-**Why this split is mechanically useful**
-- It separates practical heat/fuel manipulation, direct fire attacks, battlefield fire zones, and cursed/deathly flame.
-- The banefire/hellfire seam is mechanically real and worth isolating before naming review.
+**Why this split changed**
+- the former `Banefire & Hellfire` child is gone because all Banefire spells were removed from the corpus
+- the remaining fire split is cleaner and still stays below the ceiling
 
-**Naming confidence**
-- High.
-
-### Necromantic (100)
-**Roll-up root original college:** `Necromantic`
-
-**Proposed child types**
-- Death Curses & Withering (51)
+### Necromantic (projected 91)
+**Proposed child spell types**
+- Death Curses & Withering (60)
 - Undead Animation & Command (19)
 - Spirits of the Dead (12)
-- Deathflame & Banefire (10)
-- Ageing & Life-Draining (8)
 
-**Why this split is mechanically useful**
-- It separates generic deathly afflictions from undead command, spirit dealings, cursed flame, and explicit ageing effects.
-- `Ageing & Life-Draining` is small, but it exposes a real mechanical seam that already overlaps with the existing Ageing type.
+**Why this split changed**
+- the dissolved `Ageing` material is gone
+- the former deathflame/banefire seam is gone because Banefire was removed
+- the remaining necromantic structure is simpler and still fits under the ceiling
 
-**Naming confidence**
-- High on the split seam, medium on whether the ageing child should remain distinct this early.
-
-### Water (90)
-**Roll-up root original college:** `Water`
-
-**Proposed child types**
-- Ice, Snow, and Frost (30)
+### Water (projected 92)
+**Proposed child spell types**
+- Water Shaping & Passage (35)
+- Ice, Snow, and Frost (32)
 - Drowning, Dehydration, and Fluid Assaults (25)
-- Water Shaping & Stores (20)
-- Aquatic Passage & Breathing (15)
 
-**Why this split is mechanically useful**
-- It separates cold/ice effects, fluid attack magic, matter-shaping water utility, and aquatic adaptation.
-- Those are distinct enough in use that they should not remain a single 90-spell bucket.
-
-**Naming confidence**
-- High.
-
-### Animal (86)
-**Roll-up root original college:** `Animal`
-
-**Proposed child types**
+### Animal (projected 86)
+**Proposed child spell types**
 - Animal Command & Repelling (51)
 - Beast Forms & Traits (25)
-- Animal Summons, Mounts, and Bonds (10)
+- Animal Companions, Mounts, and Summons (10)
 
-**Why this split is mechanically useful**
-- It separates commanding or repelling creatures from trait grafting/shapeshifting and from companion or mount creation/bonding.
-- That is a natural player-facing distinction even if the last child stays small.
+### Weather (projected 82)
+**Proposed child spell types**
+- Tempests, Lightning, and Winter Weather (44)
+- Rain, Wind, and Greater Weather (38)
 
-**Naming confidence**
-- High.
+**Why this split is better than the first pass**
+- it merges the earlier lightning and cold-front seams into one stronger severe-weather discipline
+- it remains a cleaner example of merging closely related thin types
 
-### Weather (86)
-**Roll-up root original college:** `Weather`
+### Spirit (projected 61)
+**Proposed child spell types**
+- Spirits, Wards, and the Dead (36)
+- Souls, Possession, and Bindings (25)
 
-**Proposed child types**
-- Rain, Wind, and Greater Weather (40)
-- Lightning Storms (32)
-- Snow, Ice, and Cold Fronts (14)
+**Why this split is better than the first pass**
+- it keeps Spirit to two stronger disciplines instead of three thinner ones
 
-**Why this split is mechanically useful**
-- It cleanly separates storm-lightning from broad weather shaping and from cold-front magic.
-- The resulting three-way split is strong enough to use at the table without manufacturing niche subfamilies.
+## Stable existing spell types after cleanup
+These do not need a new split in this pass:
+- Gate (32 after contraction)
+- Healing (52)
+- Force (49)
+- Communication & Empathy (48)
+- Energy (45)
+- Food (41)
+- Technological (39)
+- Poison (38)
+- Time (37)
+- Summoning (34)
+- Gravity (27)
+- Stealth (26)
+- Acid (24 after Alkahest removal)
+- Sound (24)
+- Space (24)
+- Illusion & Creation (23)
+- Holy (18)
+- Dream (16)
+- Enchantment (11)
+- Radiation (8)
 
-**Naming confidence**
-- High.
+## Small spell types intentionally retained
+These stay because they still read as real, useful disciplines rather than report debris:
+- Enchantment (11)
+- Radiation (8)
+- Arcane Siphons & Frailties (11)
+- Animal Companions, Mounts, and Summons (10)
+- Weapon Boons & Retaliations (12)
 
-### Gate (67)
-**Roll-up root original college:** `Gate`
-
-**Proposed child types**
-- Gates, Portals, and Planar Passage (29)
-- Gravity, Distance, and Other Ways (28)
-- Banishment, Locks, and Instability (10)
-
-**Why this split is mechanically useful**
-- It isolates actual gate/portal travel from the current gravity-distance subfamily and from hostile lock/banishment magic.
-- That makes the current mixed gate bucket much easier to browse.
-
-**Naming confidence**
-- Medium.
-- `Gravity, Distance, and Other Ways` is a holding name for the current personal gravity/distance seam and should be reviewed.
-
-### Spirit (61)
-**Roll-up root original college:** none; this remains a cross-college thematic family.
-
-**Proposed child types**
-- Possession, Souls, and Bindings (25)
-- Spirit Sight, Wards, and the Undead (20)
-- Spirit Allies & Summons (16)
-
-**Why this split is mechanically useful**
-- It separates soul/possession play, spirit detection or warding, and actual spirit allies or summoned dead.
-- The parent bucket is only barely over the line, so a three-way split is enough.
-
-**Naming confidence**
-- Medium.
-- `Spirit Sight, Wards, and the Undead` is clear but a bit composite.
-
-## Buckets still above 60 after the first pass
+## Buckets still above 60 after this pass
 - None.
 
-## Buckets intentionally left small enough to review, not auto-merged away
-- `Ageing & Life-Draining` under Necromantic (8): small, but it exposes a real mechanical seam shared with the existing Ageing family.
-- `Radiation` (8): unchanged pre-existing type; still small, but not part of this split pass.
-- `Animal Summons, Mounts, and Bonds` (10): small, but it is a practical table-facing subfamily if the user wants companions and mount magic isolated.
-- `Banishment, Locks, and Instability` (10): small, but it is clearer than burying those spells back inside generic gate travel.
+## Judgment-call spell membership lists
+Exact spell membership for the remaining judgment calls is written to:
+- `/home/brad/gaming/gurps-new-sorcerer-spells/type-split-judgment-call-spells.json`
 
-## Naming choices that need explicit review
-- **Meta:** `Sorcerous Services & Rites` and `Great Works, Constructs, and Oddities` are functional but not final-grade names.
-- **Protection:** `Battle Blessings & Readiness` and `Practical Safeguards & Reliefs` may want a shorter final phrasing.
-- **Light & Darkness:** `Color, Prism, and Other Glamour` is the least settled child label in that branch.
-- **Gate:** `Gravity, Distance, and Other Ways` is a placeholder-quality name for a real subfamily.
-- **Spirit:** `Spirit Sight, Wards, and the Undead` may be too composite for the final taxonomy.
+That file now reflects the targeted feedback adjustments above and preserves multi-type membership where applicable.
 
-## Recommendation before any spell renaming
-- Review and approve the **first-tier splits** first: Meta, Knowledge, Protection, and Mind Control.
-- Then review the naming uncertainty list above.
-- Only after that should any large spell-name pass begin.
+Included there:
+- `Arcane Siphons & Frailties`
+- `Safeguards & Reliefs`
+- `Battle Blessings & Readiness`
+- `Body Forms, Limbs, and Alteration`
+- `Tempests, Lightning, and Winter Weather`
+
+Each entry includes:
+- `spell_name`
+- `current_spell_types`
+- `source_spell_types`
+
+## Main review points before Westerosi naming begins
+1. **Meta:** whether `Arcane Siphons & Frailties` feels like a true narrow discipline or should be folded elsewhere.
+2. **Protection:** whether the boundary between `Safeguards & Reliefs` and `Battle Blessings & Readiness` is convincing.
+3. **Body Control:** whether `Body Forms, Limbs, and Alteration` is the right label for that combined branch.
+4. **Weather:** whether `Tempests, Lightning, and Winter Weather` is the right severe-weather name.
+5. `Sorcerous Services & Rites` and `Weapon Boons & Retaliations` are intentionally retained intact in this pass and should be approved or revised as whole disciplines, not auto-fragmented.
+
+## Recommendation before any Westerosi renaming or description pass
+- Approve this structural pass first.
+- Resolve the remaining naming and boundary judgments above.
+- Then move on to Westerosi spell renaming.
+- Only after renaming is stable should the Westerosi description/example pass begin.
