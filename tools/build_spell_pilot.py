@@ -2067,7 +2067,7 @@ def build_record(raw_spell: dict[str, Any], index: int, split_assignments: dict[
         "description": description,
         "description_source": description_source,
         "statistics": raw_spell["statistics"],
-        "use_example": "",
+        "archmagisters_counsel": "",
         "aliases": aliases,
         "dedupe": dedupe,
         "source_lineage": {
@@ -2104,8 +2104,8 @@ def validate(records: list[dict[str, Any]]) -> dict[str, Any]:
             errors.append(f"{record['spell_name']}: blank description")
         if "source_spell_name" not in record.get("source_lineage", {}):
             errors.append(f"{record['spell_name']}: source_spell_name missing from source_lineage")
-        if "use_example" not in record or record["use_example"] != "":
-            errors.append(f"{record['spell_name']}: use_example missing or not blank")
+        if "archmagisters_counsel" not in record or record["archmagisters_counsel"] != "":
+            errors.append(f"{record['spell_name']}: archmagisters_counsel missing or not blank")
     return {
         "record_count": len(records),
         "errors": errors,

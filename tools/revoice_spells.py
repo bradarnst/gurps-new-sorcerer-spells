@@ -19,18 +19,20 @@ DEFAULT_REPORT = ROOT / "processed" / "final-voicing-report.json"
 DEFAULT_MODEL = os.environ.get("LLM_MODEL") or os.environ.get("OPENAI_MODEL") or "gpt-5.4"
 DEFAULT_BASE_URL = os.environ.get("LLM_BASE_URL") or os.environ.get("OPENAI_BASE_URL") or "https://api.openai.com/v1"
 API_KEY_ENV_CANDIDATES = ("LLM_API_KEY", "KILO_API_KEY", "OPENAI_API_KEY")
+FINAL_COUNSEL_FIELD = "archmagisters_counsel"
+LEGACY_COUNSEL_FIELD = "use_example"
 
 SYSTEM_INSTRUCTIONS = """You are rewriting GURPS Sorcery spell records.
 
 Your job for each spell is to return exactly two fields:
 - description
-- use_example
+- archmagisters_counsel
 
 Hard requirements:
 - Preserve the spell's existing game mechanics and factual constraints.
 - Do not invent new mechanics, modifiers, durations, resistances, or side effects.
 - Keep the description concise, precise, and useful at the table.
-- Keep the use_example practical and specific, as a brief example of how a player or NPC might use the spell in play.
+- Keep the archmagisters_counsel practical and specific, as a brief example of how a player or NPC might use the spell in play.
 - Do not mention points about the underlying editing task, dataset, JSON, schema, or prompt.
 - Do not rename the spell.
 - Do not change spell types, keywords, costs, ranges, durations, statistics, or source lineage.
@@ -45,9 +47,9 @@ OUTPUT_SCHEMA: dict[str, Any] = {
         "additionalProperties": False,
         "properties": {
             "description": {"type": "string"},
-            "use_example": {"type": "string"},
+            "archmagisters_counsel": {"type": "string"},
         },
-        "required": ["description", "use_example"],
+        "required": ["description", FINAL_COUNSEL_FIELD],
     },
 }
 
@@ -69,7 +71,7 @@ class GenerationError(RuntimeError):
 
 
 def parse_args() -> ScriptConfig:
-    parser = argparse.ArgumentParser(description="Rewrite final spell descriptions and fill use_example fields using an OpenAI-compatible LLM API.")
+    parser = argparse.ArgumentParser(description="Rewrite final spell descriptions and fill archmagisters_counsel fields using an OpenAI-compatible LLM API.")
     parser.add_argument("--input", default=str(DEFAULT_INPUT), help="Input spell dataset JSON path.")
     parser.add_argument("--output", default=str(DEFAULT_OUTPUT), help="Output spell dataset JSON path.")
     parser.add_argument("--report", default=str(DEFAULT_REPORT), help="Output report JSON path.")
@@ -194,22 +196,23 @@ def extract_response_json(api_response: dict[str, Any]) -> dict[str, Any]:
 
 def validate_generated_fields(spell_name: str, payload: dict[str, Any]) -> tuple[str, str]:
     description = payload.get("description")
-    use_example = payload.get("use_example")
+    archmagisters_counsel = payload.get(FINAL_COUNSEL_FIELD)
     if not isinstance(description, str) or not description.strip():
         raise GenerationError(f"{spell_name}: description was missing or blank.")
-    if not isinstance(use_example, str) or not use_example.strip():
-        raise GenerationError(f"{spell_name}: use_example was missing or blank.")
-    return normalize_ws(description), normalize_ws(use_example)
+    if not isinstance(archmagisters_counsel, str) or not archmagisters_counsel.strip():
+        raise GenerationError(f"{spell_name}: {FINAL_COUNSEL_FIELD} was missing or blank.")
+    return normalize_ws(description), normalize_ws(archmagisters_counsel)
 
 
 def rewrite_spell(spell: dict[str, Any], style_prompt: str, config: ScriptConfig) -> dict[str, Any]:
     user_prompt = build_user_prompt(spell, style_prompt)
     api_response = post_chat_completion(config, SYSTEM_INSTRUCTIONS, user_prompt)
     generated = extract_response_json(api_response)
-    description, use_example = validate_generated_fields(spell["spell_name"], generated)
+    description, archmagisters_counsel = validate_generated_fields(spell["spell_name"], generated)
     updated_spell = dict(spell)
     updated_spell["description"] = description
-    updated_spell["use_example"] = use_example
+    updated_spell.pop(LEGACY_COUNSEL_FIELD, None)
+    updated_spell[FINAL_COUNSEL_FIELD] = archmagisters_counsel
     return updated_spell
 
 
@@ -266,8 +269,8 @@ def validate_output_spells(spells: list[dict[str, Any]]) -> None:
     for spell in spells:
         if not isinstance(spell.get("description"), str) or not spell["description"].strip():
             raise SystemExit(f"Spell '{spell.get('spell_name', '<unknown>')}' has a blank description after rewriting.")
-        if not isinstance(spell.get("use_example"), str) or not spell["use_example"].strip():
-            raise SystemExit(f"Spell '{spell.get('spell_name', '<unknown>')}' has a blank use_example after rewriting.")
+        if not isinstance(spell.get(FINAL_COUNSEL_FIELD), str) or not spell[FINAL_COUNSEL_FIELD].strip():
+            raise SystemExit(f"Spell '{spell.get('spell_name', '<unknown>')}' has a blank {FINAL_COUNSEL_FIELD} after rewriting.")
 
 
 def validate_input_payload(payload: dict[str, Any]) -> list[dict[str, Any]]:
@@ -286,13 +289,16 @@ def validate_input_payload(payload: dict[str, Any]) -> list[dict[str, Any]]:
         "duration",
         "description",
         "statistics",
-        "use_example",
         "source_lineage",
     }
     for spell in spells:
         missing = sorted(required_keys - set(spell))
         if missing:
             raise SystemExit(f"Spell '{spell.get('spell_name', '<unknown>')}' is missing keys: {missing}")
+        if FINAL_COUNSEL_FIELD not in spell and LEGACY_COUNSEL_FIELD not in spell:
+            raise SystemExit(
+                f"Spell '{spell.get('spell_name', '<unknown>')}' is missing both {FINAL_COUNSEL_FIELD!r} and {LEGACY_COUNSEL_FIELD!r}."
+            )
     return spells
 
 

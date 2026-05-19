@@ -23,7 +23,7 @@ REQUIRED_RECORD_KEYS = {
     "duration",
     "description",
     "statistics",
-    "use_example",
+    "archmagisters_counsel",
     "source_lineage",
 }
 BANNED_RECORD_KEYS = {
@@ -169,7 +169,7 @@ def build_final_record(raw_spell: dict[str, Any], split_assignments: dict[tuple[
         "duration": raw_spell["duration"],
         "description": description,
         "statistics": raw_spell["statistics"],
-        "use_example": "",
+        "archmagisters_counsel": "",
         "source_lineage": {
             "source_spell_name": source_name,
             "source_spell_types": raw_spell["spell_types"],
@@ -211,8 +211,8 @@ def validate_final_records(records: list[dict[str, Any]]) -> dict[str, Any]:
 
         if not record["description"].strip():
             errors.append(f"{record['spell_name']}: blank description")
-        if "use_example" not in record or record["use_example"] != "":
-            errors.append(f"{record['spell_name']}: use_example missing or not blank")
+        if "archmagisters_counsel" not in record or record["archmagisters_counsel"] != "":
+            errors.append(f"{record['spell_name']}: archmagisters_counsel missing or not blank")
 
         source_lineage = record.get("source_lineage", {})
         source_lineage_keys = set(source_lineage)
