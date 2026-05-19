@@ -13,7 +13,6 @@ RAW_PATH = pilot.RAW_PATH
 OUTPUT_DIR = pilot.OUTPUT_DIR
 
 REQUIRED_RECORD_KEYS = {
-    "record_index",
     "spell_id",
     "spell_name",
     "spell_types",
@@ -28,17 +27,18 @@ REQUIRED_RECORD_KEYS = {
     "source_lineage",
 }
 BANNED_RECORD_KEYS = {
+    "record_index",
     "spell_type_display_names",
     "description_source",
     "aliases",
     "dedupe",
 }
 REQUIRED_SOURCE_LINEAGE_KEYS = {
-    "source_spell_id",
     "source_spell_name",
     "source_spell_types",
 }
 BANNED_SOURCE_LINEAGE_KEYS = {
+    "source_spell_id",
     "source_keywords",
     "parsed_source_keywords",
     "inferred_parent_spell_types",
@@ -144,7 +144,7 @@ FRAMEWORK_BANNED_DESCRIPTION_TERMS = (
 )
 
 
-def build_final_record(raw_spell: dict[str, Any], index: int, split_assignments: dict[tuple[str, str], str]) -> dict[str, Any]:
+def build_final_record(raw_spell: dict[str, Any], split_assignments: dict[tuple[str, str], str]) -> dict[str, Any]:
     source_name = raw_spell["spell_name"]
     parent_spell_types, parsed_source_keywords, override, display_name = pilot.build_parent_type_info(raw_spell)
     keyword_seed = pilot.order_unique(override.get("keywords", parsed_source_keywords), pilot.KEYWORD_ORDER)
@@ -159,7 +159,6 @@ def build_final_record(raw_spell: dict[str, Any], index: int, split_assignments:
     spell_types = pilot.finalize_spell_types(raw_spell, parent_spell_types, parsed_source_keywords, display_name, split_assignments)
 
     return {
-        "record_index": index,
         "spell_id": raw_spell["spell_id"],
         "spell_name": display_name,
         "spell_types": spell_types,
@@ -172,7 +171,6 @@ def build_final_record(raw_spell: dict[str, Any], index: int, split_assignments:
         "statistics": raw_spell["statistics"],
         "use_example": "",
         "source_lineage": {
-            "source_spell_id": raw_spell["spell_id"],
             "source_spell_name": source_name,
             "source_spell_types": raw_spell["spell_types"],
         },
@@ -307,7 +305,7 @@ def main() -> None:
         source_spells,
         enforce_target_distribution=count == total_spells,
     )
-    records = [build_final_record(spell, index + 1, split_assignments) for index, spell in enumerate(source_spells)]
+    records = [build_final_record(spell, split_assignments) for spell in source_spells]
     validation = validate_final_records(records)
     dataset_payload = build_dataset_payload(raw_data, records, args.label)
     framework_payload = build_framework_payload()
