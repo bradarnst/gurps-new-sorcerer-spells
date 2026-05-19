@@ -15,7 +15,6 @@ OUTPUT_DIR = ROOT / "processed"
 
 CANONICAL_TYPES = {
     "Acid": "Secondary functional type for alkahest and other persistent corrosive attack families.",
-    "Ageing": "Secondary functional type for spells whose defining mechanic is magical aging or immunity to it.",
     "Air": "Core college for atmosphere, wind, gas, lightning-in-air, and aerial movement.",
     "Animal": "Core college for beasts, animal minds, and animal enhancement.",
     "Artillery": "Secondary functional type for large-area bombardment, battlefields, mines, and indirect magical fire.",
@@ -133,7 +132,6 @@ RAW_LABEL_HINTS: list[tuple[str, list[str]]] = [
     ("essential earth", ["Earth", "Making & Breaking"]),
     ("psychic", ["Mind Control", "Knowledge"]),
     ("communication", ["Communication & Empathy"]),
-    ("ageing", ["Ageing", "Necromantic"]),
     ("alkahest", ["Acid"]),
     ("acid", ["Acid"]),
     ("air", ["Air"]),
@@ -215,7 +213,6 @@ RAW_LABEL_HINTS: list[tuple[str, list[str]]] = [
 
 TEXT_TYPE_HINTS: dict[str, tuple[str, ...]] = {
     "Acid": ("acid", "alkahest", "corrosion"),
-    "Ageing": ("ageing", "aging", "older", "younger", "year older", "senescence"),
     "Air": ("air", "wind", "aerial", "cloud", "breath", "smoke", "fog", "gas", "odor", "scent", "oxygen", "vortex"),
     "Animal": ("animal", "beast", "hybrid", "hound", "horse", "falcon", "spider", "serpent", "snake", "egg", "mount"),
     "Artillery": ("barrage", "blast", "mine", "minefield", "bombardment", "dome", "circle", "swarm", "field", "towering inferno", "cone"),
@@ -310,7 +307,7 @@ MANUAL_OVERRIDES: dict[str, dict[str, Any]] = {
     "Exacting Shot": {
         "spell_types": ["Knowledge"],
         "keywords": ["Buff", "Leveled", "No-Signature", "Utility"],
-        "description": "For three minutes, a ranged weapon flies truer than its maker had any right to expect. It grants +1 to hit per spell level, though any sensible lord or GM will set a ceiling according to the campaign's TL.",
+        "description": "For three minutes, a ranged weapon flies truer than its maker had any right to expect. It grants +1 to hit per spell level, though prudent keepers of the rules may still cap the bonus by the setting's TL.",
     },
     "Healthful Rest": {
         "spell_types": ["Healing"],
@@ -325,7 +322,7 @@ MANUAL_OVERRIDES: dict[str, dict[str, Any]] = {
     "Nature’s Favor": {
         "spell_types": ["Animal"],
         "keywords": ["Buff", "No-Signature", "Utility"],
-        "description": "For three minutes, bestow Luck upon a single animal. Kennelmasters, falconers, and fools overfond of warhounds will all find uses for that.",
+        "description": "For three minutes, bestow Luck upon a single animal. Kennelmasters, falconers, and huntsmen alike will find the use of it plain enough.",
     },
     "Train Animal": {
         "spell_types": ["Animal", "Knowledge"],
@@ -333,38 +330,40 @@ MANUAL_OVERRIDES: dict[str, dict[str, Any]] = {
         "description": "Raise an animal's effective IQ for training by 1 per level, to no more than IQ 5, and do so in a fashion that truly lasts. Dispel Magic, Remove Curse, and no-mana ground will not unteach the beast.",
     },
     "Age (Variant)": {
-        "spell_types": ["Ageing", "Necromantic"],
+        "spell_types": ["Body Control"],
         "keywords": ["Malediction", "Resisted-HT", "Debuff", "No-Signature"],
         "description": "Should the subject fail HT, it is made one year older at once, with no gaudy display to warn the hall. Time, when summoned so neatly, can be quite rude.",
         "dedupe": {"status": "variant", "group": "ageing-single-year", "reason": "Keep distinct from Temporary Ageing because this version is permanent."},
     },
     "Burden of Time": {
-        "spell_types": ["Ageing", "Necromantic"],
+        "spell_types": ["Necromantic"],
         "keywords": ["Area", "Leveled", "Damage", "Persistent", "Unresisted", "No-Signature"],
         "description": "Set a wandering patch of withering years upon the field for 10 seconds. All living creatures within age 1d-1 years each second, though the loss is temporary and may be shed later by successful Original HT rolls made when healing would otherwise be wasted.",
     },
     "Decrepify": {
-        "spell_types": ["Ageing", "Necromantic"],
+        "spell_types": ["Body Control"],
         "keywords": ["Touch", "Melee", "Malediction", "Resisted-HT", "Debuff", "Leveled"],
         "description": "A mere touch, if it lands and the subject fails HT, lays 1d years per spell level upon living flesh forever. It is close work and ugly work, as such arts commonly are.",
     },
     "Progeria": {
-        "spell_types": ["Ageing", "Necromantic"],
+        "spell_types": ["Body Control"],
+        "display_name": "Premature Ageing",
         "keywords": ["Malediction", "Resisted-HT", "Debuff", "Cyclic", "No-Signature", "Persistent", "Leveled"],
         "description": "Lay a curse that ages a living subject by one year at once and again each day for 9 days more. Each extra level adds 10 further daily cycles, and only Remove Curse or its peers will cut the thread early.",
     },
     "Protection from Ageing": {
-        "spell_types": ["Ageing", "Protection"],
+        "spell_types": ["Protection"],
+        "display_name": "Ward Against Ageing",
         "keywords": ["Buff", "Defense", "No-Signature"],
         "description": "For three minutes, the subject bears Unaging and may meet magical senescence without bowing to it. Useful whenever rival sorcerers grow too fond of the calendar.",
     },
     "Reaper’s Embrace": {
-        "spell_types": ["Ageing", "Necromantic"],
+        "spell_types": ["Necromantic"],
         "keywords": ["Buff", "Aura", "Damage", "Unresisted", "No-Signature"],
         "description": "For three minutes, the subject is mantled in a black aura that ages anyone who touches him by one year. It is a persuasive answer to grapplers and all others who mistake proximity for safety.",
     },
     "Temporary Ageing": {
-        "spell_types": ["Ageing", "Necromantic"],
+        "spell_types": ["Body Control"],
         "keywords": ["Malediction", "Resisted-HT", "Debuff", "No-Signature"],
         "description": "Should the subject fail HT, one year is laid upon him for a time only. The stolen year returns later, one by one, through successful Original HT rolls made when healing would otherwise avail nothing.",
         "dedupe": {"status": "variant", "group": "ageing-single-year", "reason": "Keep distinct from Age (Variant) because this version is temporary and self-correcting."},
@@ -377,13 +376,13 @@ MANUAL_OVERRIDES: dict[str, dict[str, Any]] = {
     "Aerial Flight": {
         "spell_types": ["Air", "Movement"],
         "keywords": ["Buff", "Travel", "No-Signature"],
-        "description": "For three minutes, the subject may fly and hover at Basic Speed × 2, provided there is proper air to bear him. In vacuum, trace atmosphere, or water, the spell proves as useful as a maester's chain in a sword fight.",
+        "description": "For three minutes, the subject may fly and hover at Basic Speed × 2, provided there is proper air to bear him. In vacuum, trace atmosphere, or water, the working affords no help at all.",
         "dedupe": {"status": "variant", "group": "aerial-flight", "reason": "Keep distinct from Personal Aerial Flight because this version is ranged and temporary on another subject."},
     },
     "Aerial Servant": {
         "spell_types": ["Air", "Summoning"],
         "keywords": ["Summoning", "Control", "Utility", "Persistent"],
-        "description": "After an hour's ritual and a Quick Contest of Will, you may compel an unwilling aerial servant worth up to 150% of your points to appear. It serves for hours equal to your margin of victory, but neglect the spell and the creature will remember precisely why it hates you.",
+        "description": "After an hour's ritual and a Quick Contest of Will, you may compel an unwilling aerial servant of considerable potency to appear. It serves for hours equal to your margin of victory, but neglect the spell and the creature will remember precisely why it hates you.",
     },
     "Air Vision": {
         "spell_types": ["Air", "Knowledge"],
@@ -558,7 +557,527 @@ MANUAL_OVERRIDES: dict[str, dict[str, Any]] = {
         "keywords": ["Touch", "Healing", "Utility"],
         "description": "By touch and a successful IQ roll, cure one disease in a living subject. Repeated attempts on the same patient grow harder, failure costs 1d FP, and success costs FP according to the severity of the illness, as every healer eventually learns to his annoyance.",
     },
+    "Age": {
+        "spell_types": ["Necromantic"],
+    },
+    "Accelerate Pregnancy": {
+        "spell_types": ["Body Control"],
+        "display_name": "Quicken Pregnancy",
+    },
+    "Animal Ageing": {
+        "spell_types": ["Body Control"],
+    },
+    "Avatar": {
+        "spell_types": ["Communication & Empathy", "Protection"],
+    },
+    "Badger Paws": {
+        "spell_types": ["Earth", "Transformation"],
+    },
+    "Create Implausible Material": {
+        "display_name": "Conjure Unlikely Matter",
+        "description": "Conjure solid but unnatural matter from the proper raw conditions: lightning from a storm, screams from a living throat, and the like. Such matter is unstable and vanishes after 10 seconds unless further effort is spent to make it endure.",
+    },
+    "Halt Ageing": {
+        "spell_types": ["Healing"],
+        "description": "For one month, the subject does not age.",
+    },
+    "I decided to go with the following two:Blessing of Magic": {
+        "spell_types": ["Protection", "Holy"],
+        "display_name": "Blessing of Magic",
+    },
+    "Irresistible Dance": {
+        "spell_types": ["Mind Control"],
+    },
+    "Keen Taste and Smell": {
+        "spell_types": ["Knowledge"],
+    },
+    "Keen Touch": {
+        "spell_types": ["Knowledge"],
+    },
+    "Mass Badger Paws": {
+        "spell_types": ["Earth", "Transformation"],
+    },
+    "My suggestion is to rework Cold as follows: Cold (Unofficial Sorcery Errata)": {
+        "display_name": "Cold",
+    },
+    "My suggestion is to rework Heat as follows: Heat (Unofficial Sorcery Errata)": {
+        "display_name": "Heat",
+    },
+    "Personal Halt Ageing": {
+        "spell_types": ["Healing"],
+        "description": "You do not age while this spell endures. Unlike most indefinite workings, it costs 1 FP per hour rather than per minute to maintain.",
+    },
+    "Personal Keen Taste and Smell": {
+        "spell_types": ["Knowledge"],
+    },
+    "Personal Keen Touch": {
+        "spell_types": ["Knowledge"],
+    },
+    "Personal Protection from Force": {
+        "spell_types": ["Force", "Protection"],
+        "display_name": "Personal Ward Against Force",
+    },
+    "Personal Protection from Incarnum": {
+        "display_name": "Personal Ward Against Incarnum",
+        "description": "You gain a +3 bonus on HT rolls made to resist incarnum abilities, including soulmeld effects.",
+    },
+    "Personal Protection from Magic": {
+        "spell_types": ["Meta", "Protection"],
+        "display_name": "Personal Ward Against Magic",
+    },
+    "Protection from (Ethical Category)": {
+        "display_name": "Ward Against the Chosen Ethic",
+    },
+    "Protection from Force": {
+        "display_name": "Ward Against Force",
+    },
+    "Protection from Incarnum": {
+        "display_name": "Ward Against Incarnum",
+        "description": "For three minutes, the subject gains a +3 bonus on HT rolls made to resist incarnum abilities, including soulmeld effects.",
+    },
+    "Protection from Magic": {
+        "display_name": "Ward Against Magic",
+    },
+    "Protection from Nuclear Explosions": {
+        "display_name": "Ward Against Nuclear Explosions",
+    },
+    "SAMPLE SPELL Detect Magic": {
+        "display_name": "Detect Magic",
+        "description": "Discern nearby magic at once by the ordinary principles of sight- or touch-borne detection.",
+    },
+    "SAMPLE SPELLS Explosive Runes": {
+        "display_name": "Explosive Runes",
+    },
+    "Stop Bleeding": {
+        "display_name": "Staunch Bleeding",
+    },
+    "The resulting spell looks like the following: Resist Cold": {
+        "display_name": "Resist Cold",
+    },
+    "The resulting spell looks like the following: Resist Fire (Unofficial Sorcery Errata)": {
+        "display_name": "Resist Fire",
+    },
+    "To make the spell scale and be closer to what is found in other books, replace it with the following: Fast Fire (Unofficial Sorcery Errata)": {
+        "display_name": "Fast Fire",
+    },
+    "To make the spell scale and be closer to what is found in other books, replace it with the following: Slow Fire (Unofficial Sorcery Errata)": {
+        "display_name": "Slow Fire",
+    },
 }
+
+
+EDITORIAL_NAME_PREFIXES = (
+    "I decided to go with the following two:",
+    "My suggestion is to rework Cold as follows:",
+    "My suggestion is to rework Heat as follows:",
+    "The resulting spell looks like the following:",
+    "To make the spell scale and be closer to what is found in other books, replace it with the following:",
+    "SAMPLE SPELL ",
+    "SAMPLE SPELLS ",
+)
+
+EXACT_DISPLAY_NAME_OVERRIDES: dict[str, str] = {
+    "Age (Variant)": "One-Year Ageing",
+    "All-Eater": "Universal Appetite",
+    "Bedtime Reading": "Reading in Sleep",
+    "Beast-Rouser": "Rouse Beast",
+    "Beast-Soother": "Soothe Beast",
+    "Bind Spirit (Type)": "Bind Spirit of a Chosen Kind",
+    "Blessing of Freedom (2)": "Blessing of Freedom",
+    "Bender Defender": "Drunkard’s Ease",
+    "Command Spirit (Type)": "Command Spirit of a Chosen Kind",
+    "Dispel (Ethical Category)": "Dispelling of the Chosen Ethic",
+    "Exclude (Ethical Category)": "Exclusion of the Chosen Ethic",
+    "File Transfer": "Transfer of Records",
+    "Loyalty of (Ethical Category)": "Loyalty of the Chosen Ethic",
+    "Magic Manager": "Arcane Quickening",
+    "Magic Missile": "Arcane Dart",
+    "Melee Manager": "Battle Quickening",
+    "Mouth-Goes-Away": "Sealed Mouth",
+    "No-Taste": "Tastelessness",
+    "Numerology/Arithmancy": "Numerology",
+    "Personal All-Eater": "Personal Universal Appetite",
+    "Personal Bender Defender": "Personal Drunkard’s Ease",
+    "Personal Melee Manager": "Personal Battle Quickening",
+    "Personal No-Smell": "Personal Scentlessness",
+    "Personal No-Taste": "Personal Tastelessness",
+    "Quick-Aim": "Swift Aim",
+    "Quick-Draw": "Swift Draw",
+    "Rail Communication": "Messages Along the Rail",
+    "Rail Teleport": "Passage Along the Rail",
+    "Rail Teleport Other": "Send Another Along the Rail",
+    "Rebuke (Ethical Category)": "Rebuke of the Chosen Ethic",
+    "Repel (Ethical Category)": "Repulsion of the Chosen Ethic",
+    "See Invisible": "See the Unseen",
+    "Seek (Ethical Category)": "Seeking of the Chosen Ethic",
+    "Sense (Ethical Category)": "Sensing of the Chosen Ethic",
+    "Self-Destruct": "Self-Detonation",
+    "Shadow Magic (Spell)": "Shadow of a Chosen Spell",
+    "Snekrobolt": "Necrotic Serpent Bolt",
+    "Sorcerer’s Stand-In": "Sorcerous Proxy",
+    "Sorcerous Screwdriver": "Turning Finger",
+    "Sorcerous Silencer": "Silencing Weapon",
+    "Speak with Dead": "Speak with the Dead",
+    "Sunburst (2)": "Blinding Sunburst",
+    "System Switch": "Passage Between Rail Lines",
+    "Train Teleport": "Passage of the Train",
+    "Ubiquitous Touchscreen": "Touch Upon Glass",
+}
+
+POWER_WORD_DISPLAY_NAMES: dict[str, str] = {
+    "Blind": "Word of Blindness",
+    "Deafen": "Word of Deafness",
+    "Disable": "Word of Disablement",
+    "Distract": "Word of Distraction",
+    "Fatigue": "Word of Fatigue",
+    "Kill": "Word of Slaying",
+    "Maladroit": "Word of Clumsiness",
+    "Nauseate": "Word of Nausea",
+    "Pain": "Word of Pain",
+    "Petrify": "Word of Petrification",
+    "Sicken": "Word of Sickness",
+    "Stun": "Word of Stunning",
+    "Weaken": "Word of Weakness",
+}
+
+CURSE_MISSILE_DISPLAY_TAILS: dict[str, str] = {
+    "Clumsiness": "Clumsiness",
+    "Curse": "Curses",
+    "Frailty": "Frailty",
+    "Hunger": "Hunger",
+    "Itch": "Itching",
+    "Pain": "Pain",
+    "Perfume": "Perfume",
+    "Retch": "Retching",
+    "Spasm": "Spasm",
+    "Strike Anosmic": "Scentlessness",
+    "Strike Barren": "Barrenness",
+    "Strike Blind": "Blindness",
+    "Strike Deaf": "Deafness",
+    "Strike Dumb": "Muteness",
+    "Strike Numb": "Numbness",
+    "Thirst": "Thirst",
+}
+
+EXACT_DESCRIPTION_OVERRIDES: dict[str, str] = {
+    "Ambidexterity": "For three minutes, the subject gains Ambidexterity.",
+    "Balance": "For three minutes, the subject gains Perfect Balance.",
+    "Beast Summoning": "Seek out the nearest animal, learn its direction and distance, and call it to you for three minutes. If it reaches you, it remains nearby and docile unless you or your companions strike first.",
+    "Bedtime Reading": "For a single period of sleep, the caster reads a dreamed copy of a touched book, scroll, or like text and may count that sleep as study.",
+    "Call Monster": "Seek out the nearest non-sapient monster, learn its direction and distance, and call it to you for three minutes. It comes as swiftly as it can until it arrives or the spell ends.",
+    "Cloud-Walking": "For three minutes, clouds bear the subject as solid ground at his ordinary Move. If he slips or is knocked down, a DX roll may let him catch himself upon the clouds again before he falls in earnest.",
+    "Hold Breath": "For one minute, the subject gains Doesn’t Breathe. It does not provide air, but only delays suffocation long enough to reach safer conditions.",
+    "Instant Regeneration": "By touch, restore one lost limb or organ at once. It mends living flesh only and must be laid upon the subject directly.",
+    "Measure Gravity": "The caster instantly learns the local strength of gravity in the measure he best understands.",
+    "Null Sphere": "The caster hurls a small sphere of black nothingness, a momentary gate to a realm hostile to common matter. All within six yards of impact must resist with HT, and those nearest the center suffer the harshest ruin.",
+    "Personal Cloud-Walking": "So long as the spell is maintained, clouds bear the caster as solid ground at his ordinary Move. If he slips or is knocked down, a DX roll may let him catch himself upon the clouds again before he falls in earnest.",
+    "Personal Hide Thoughts": "So long as the spell is maintained, the caster’s thoughts cannot be read or bent by workings of mind and will.",
+    "Personal Hold Breath": "So long as the spell is maintained, the caster does not breathe. It does not provide air, but only delays suffocation long enough to reach safer conditions.",
+    "Reflexes": "For three minutes, the subject gains Combat Reflexes.",
+    "See Plant Health": "So long as the spell is maintained, sick or damaged plants stand out plainly in the caster’s sight.",
+    "Simple Illusion": "Lay a visual illusion over an area for so long as it is maintained. It deceives sight alone, unlike the fuller and dearer Complex Illusion.",
+    "Sorcerer’s Stand-In": "For one day, the subject may stand in an assistant’s place during a slow enchantment and may also bear the burden of Personal Sacrifice in the sorcerous method. The proxy contributes no mage-days of his own, and the replaced worker cannot labor elsewhere without breaking the original effort.",
+    "Spatial Stability": "For three minutes, the subject is anchored in space and cannot be moved or harmed by teleportation and like spatial workings.",
+    "Tell Weight": "With a touch, the caster instantly learns the weight of the subject.",
+    "Zombie Summoning": "Seek out the nearest zombie, learn its direction and distance, and call it to you for three minutes. If it reaches you, it lingers nearby and does not attack unless you or your companions strike first.",
+}
+
+
+TYPE_DISPLAY_NAMES: dict[str, str] = {
+    "Acid": "Acid",
+    "Air": "Air",
+    "Animal": "Animal",
+    "Artillery": "Artillery",
+    "Body Control": "Body Control",
+    "Communication & Empathy": "Messages, Persuasion, and Fellow Feeling",
+    "Dream": "Dream",
+    "Earth": "Earth",
+    "Energy": "Energy",
+    "Enchantment": "Enchantment",
+    "Fire": "Fire",
+    "Food": "Victuals, Preservation, and Plenty",
+    "Force": "Force",
+    "Gate": "Gate",
+    "Gravity": "Gravity",
+    "Healing": "Healing",
+    "Holy": "Holy",
+    "Illusion & Creation": "Glamours, Phantoms, and Conjurings",
+    "Knowledge": "Knowledge",
+    "Light & Darkness": "Light, Shadow, and Radiance",
+    "Making & Breaking": "Making & Breaking",
+    "Meta": "The Higher Mysteries",
+    "Mind Control": "Command, Influence, and Subjugation",
+    "Movement": "Movement",
+    "Necromantic": "Necromantic",
+    "Plant": "Plant",
+    "Poison": "Poison",
+    "Protection": "Protection",
+    "Radiation": "Radiation",
+    "Sound": "Sound",
+    "Space": "Space",
+    "Spirit": "Spirit",
+    "Stealth": "Stealth",
+    "Summoning": "Summoning",
+    "Technological": "Engines, Powder, and Devices",
+    "Time": "Time",
+    "Transformation": "Transformation",
+    "Water": "Water",
+    "Weather": "Weather",
+}
+
+
+APPROVED_CHILD_TYPE_DISPLAY_NAMES: dict[str, str] = {
+    "Lesser Hexes & Afflictions": "Lesser Hexes & Afflictions",
+    "Grand Arcana & Constructs": "Grand Arcana & Constructs",
+    "Sorcerous Services & Rites": "Sorcerous Services & Rites",
+    "Arcane Utilities & Implements": "Arcane Utilities & Implements",
+    "Mana, Ley, and Power": "Mana, Leys, and Power",
+    "Countermagic & Suppression": "Countermagic & Suppression",
+    "Arcane Siphons & Frailties": "Arcane Siphons & Frailties",
+    "Readings & Analysis": "Readings & Examinations",
+    "Senses & Perception": "Senses & Perception",
+    "Detection & Appraisal": "Detection & Appraisal",
+    "Seekers & Trackers": "Seekers & Trackers",
+    "Divination & Omens": "Divination & Omens",
+    "Thoughts & Memory": "Thoughts & Memory",
+    "Safeguards & Reliefs": "Safeguards & Reliefs",
+    "Resistances & Immunities": "Resistances & Immunities",
+    "Battle Blessings & Readiness": "Battle Blessings & Readiness",
+    "Armor & Battle Shells": "Armor & Battle Shells",
+    "Wards, Shields, and Barriers": "Wards, Shields, and Barriers",
+    "Concealments & Counter-Senses": "Concealments & Counter-Senses",
+    "Weapon Boons & Retaliations": "Weapon Boons & Retaliations",
+    "Mental Curses & Counterwill": "Mental Curses & Counterwill",
+    "Commands & Compulsion": "Commands & Compulsion",
+    "Memory, Thought, and Will": "Memory, Thought, and Will",
+    "Emotion & Morale": "Emotion & Morale",
+    "Pain, Stun, and Collapse": "Pain, Stun, and Collapse",
+    "Dreams, Sleep, and Delusion": "Dreams, Sleep, and Delusion",
+    "Possession & Identity": "Possession & Identity",
+    "Alteration, Growth, and Other Transmutations": "Alteration, Growth, and Other Transmutations",
+    "Shapeshifting & Polymorph": "Shapeshifting & Polymorph",
+    "Body Forms & Embodiments": "Body Forms & Embodiments",
+    "Creation, Shape, and Matter": "Creation, Shape, and Matter",
+    "Speed, Haste, and Handling": "Speed, Haste, and Handling",
+    "Ways, Passage, and Travel": "Ways, Passage, and Travel",
+    "Forced Movement & Restraint": "Forced Movement & Restraint",
+    "Weapons & Battlework": "Weapons & Battlework",
+    "Breaking, Shattering, and Ruin": "Breaking, Shattering, and Ruin",
+    "Crafting, Repair, and Reshaping": "Crafting, Repair, and Reshaping",
+    "Locks, Seals, and Traps": "Locks, Seals, and Traps",
+    "Stone, Soil, and Sand": "Stone, Soil, and Sand",
+    "Metal & Glass": "Metal & Glass",
+    "Earthshape, Passage, and Transmutation": "Earthshape, Passage, and Transmutation",
+    "Missiles, Jets, and Rays": "Missiles, Jets, and Rays",
+    "Battlefield Zones & Fields": "Battlefield Zones & Fields",
+    "Bursts, Barrages, and Bombardment": "Bursts, Barrages, and Bombardment",
+    "Internal Ruin, Fatigue, and Decline": "Internal Ruin, Fatigue, and Decline",
+    "Body Forms, Limbs, and Alteration": "Body Forms, Limbs, and Alteration",
+    "Vital Functions & Augmentation": "Vital Functions & Augmentation",
+    "Winds, Vapors, and Sky Passage": "Winds, Vapors, and Sky Passage",
+    "Breath & Atmosphere": "Breath & Atmosphere",
+    "Lightning of the Air": "Lightning of the Air",
+    "Radiance, Sight, and Reflection": "Radiance, Sight, and Reflection",
+    "Glamour, Color, and Prism": "Glamour, Color, and Prism",
+    "Lightning & Radiant Assaults": "Lightning & Radiant Assaults",
+    "Shadows & Obscurity": "Shadows & Obscurity",
+    "Growth, Blessing, and Husbandry": "Growth, Blessing, and Husbandry",
+    "Wood, Vines, and Plant Forms": "Wood, Vines, and Plant Forms",
+    "Plant Lore, Speech, and Passage": "Plant Lore, Speech, and Passage",
+    "Flame Assaults & Battlefire": "Flame Assaults & Battlefire",
+    "Heat, Fuel, and Hearthwork": "Heat, Fuel, and Hearthwork",
+    "Death Curses & Withering": "Death Curses & Withering",
+    "Undead Animation & Command": "Undead Animation & Command",
+    "Spirits of the Dead": "Spirits of the Dead",
+    "Water Shaping & Passage": "Water Shaping & Passage",
+    "Ice, Snow, and Frost": "Ice, Snow, and Frost",
+    "Drowning, Dehydration, and Fluid Assaults": "Drowning, Dehydration, and Fluid Assaults",
+    "Animal Command & Repelling": "Animal Command & Repelling",
+    "Beast Forms & Traits": "Beast Forms & Traits",
+    "Animal Companions, Mounts, and Summons": "Animal Companions, Mounts, and Summons",
+    "Tempests, Lightning, and Winter Weather": "Tempests, Lightning, and Winter Weather",
+    "Rain, Wind, and Greater Weather": "Rain, Wind, and Greater Weather",
+    "Spirits, Wards, and the Dead": "Spirits, Wards, and the Dead",
+    "Souls, Possession, and Bindings": "Souls, Possession, and Bindings",
+}
+
+
+APPROVED_SPLIT_CHILD_TYPES: dict[str, list[str]] = {
+    "Meta": [
+        "Lesser Hexes & Afflictions",
+        "Grand Arcana & Constructs",
+        "Sorcerous Services & Rites",
+        "Arcane Utilities & Implements",
+        "Mana, Ley, and Power",
+        "Countermagic & Suppression",
+        "Arcane Siphons & Frailties",
+    ],
+    "Knowledge": [
+        "Readings & Analysis",
+        "Senses & Perception",
+        "Detection & Appraisal",
+        "Seekers & Trackers",
+        "Divination & Omens",
+        "Thoughts & Memory",
+    ],
+    "Protection": [
+        "Safeguards & Reliefs",
+        "Resistances & Immunities",
+        "Battle Blessings & Readiness",
+        "Armor & Battle Shells",
+        "Wards, Shields, and Barriers",
+        "Concealments & Counter-Senses",
+        "Weapon Boons & Retaliations",
+    ],
+    "Mind Control": [
+        "Mental Curses & Counterwill",
+        "Commands & Compulsion",
+        "Memory, Thought, and Will",
+        "Emotion & Morale",
+        "Pain, Stun, and Collapse",
+        "Dreams, Sleep, and Delusion",
+        "Possession & Identity",
+    ],
+    "Transformation": [
+        "Alteration, Growth, and Other Transmutations",
+        "Shapeshifting & Polymorph",
+        "Body Forms & Embodiments",
+        "Creation, Shape, and Matter",
+    ],
+    "Movement": [
+        "Speed, Haste, and Handling",
+        "Ways, Passage, and Travel",
+        "Forced Movement & Restraint",
+    ],
+    "Making & Breaking": [
+        "Weapons & Battlework",
+        "Breaking, Shattering, and Ruin",
+        "Crafting, Repair, and Reshaping",
+        "Locks, Seals, and Traps",
+    ],
+    "Earth": [
+        "Stone, Soil, and Sand",
+        "Metal & Glass",
+        "Earthshape, Passage, and Transmutation",
+    ],
+    "Artillery": [
+        "Missiles, Jets, and Rays",
+        "Battlefield Zones & Fields",
+        "Bursts, Barrages, and Bombardment",
+    ],
+    "Body Control": [
+        "Internal Ruin, Fatigue, and Decline",
+        "Body Forms, Limbs, and Alteration",
+        "Vital Functions & Augmentation",
+    ],
+    "Air": [
+        "Winds, Vapors, and Sky Passage",
+        "Breath & Atmosphere",
+        "Lightning of the Air",
+    ],
+    "Light & Darkness": [
+        "Radiance, Sight, and Reflection",
+        "Glamour, Color, and Prism",
+        "Lightning & Radiant Assaults",
+        "Shadows & Obscurity",
+    ],
+    "Plant": [
+        "Growth, Blessing, and Husbandry",
+        "Wood, Vines, and Plant Forms",
+        "Plant Lore, Speech, and Passage",
+    ],
+    "Fire": [
+        "Flame Assaults & Battlefire",
+        "Heat, Fuel, and Hearthwork",
+    ],
+    "Necromantic": [
+        "Death Curses & Withering",
+        "Undead Animation & Command",
+        "Spirits of the Dead",
+    ],
+    "Water": [
+        "Water Shaping & Passage",
+        "Ice, Snow, and Frost",
+        "Drowning, Dehydration, and Fluid Assaults",
+    ],
+    "Animal": [
+        "Animal Command & Repelling",
+        "Beast Forms & Traits",
+        "Animal Companions, Mounts, and Summons",
+    ],
+    "Weather": [
+        "Tempests, Lightning, and Winter Weather",
+        "Rain, Wind, and Greater Weather",
+    ],
+    "Spirit": [
+        "Spirits, Wards, and the Dead",
+        "Souls, Possession, and Bindings",
+    ],
+}
+
+STABLE_FINAL_TYPES = [
+    "Healing",
+    "Force",
+    "Communication & Empathy",
+    "Energy",
+    "Food",
+    "Technological",
+    "Poison",
+    "Time",
+    "Summoning",
+    "Gate",
+    "Gravity",
+    "Stealth",
+    "Acid",
+    "Sound",
+    "Space",
+    "Illusion & Creation",
+    "Holy",
+    "Dream",
+    "Enchantment",
+    "Radiation",
+]
+
+FINAL_SPELL_TYPE_OVERRIDES: dict[str, list[str]] = {
+    "Accelerate Pregnancy": ["Vital Functions & Augmentation"],
+    "Age": ["Death Curses & Withering"],
+    "Age (Variant)": ["Internal Ruin, Fatigue, and Decline"],
+    "Animal Ageing": ["Internal Ruin, Fatigue, and Decline"],
+    "Avatar": ["Communication & Empathy", "Safeguards & Reliefs"],
+    "Badger Paws": ["Earthshape, Passage, and Transmutation", "Body Forms & Embodiments"],
+    "Burden of Time": ["Death Curses & Withering"],
+    "Decrepify": ["Internal Ruin, Fatigue, and Decline"],
+    "Halt Ageing": ["Healing"],
+    "Irresistible Dance": ["Commands & Compulsion"],
+    "Keen Taste and Smell": ["Senses & Perception"],
+    "Keen Touch": ["Senses & Perception"],
+    "Mass Badger Paws": ["Earthshape, Passage, and Transmutation", "Body Forms & Embodiments"],
+    "Personal Halt Ageing": ["Healing"],
+    "Personal Keen Taste and Smell": ["Senses & Perception"],
+    "Personal Keen Touch": ["Senses & Perception"],
+    "Premature Ageing": ["Internal Ruin, Fatigue, and Decline"],
+    "Protection from Ageing": ["Safeguards & Reliefs"],
+    "Reaper’s Embrace": ["Death Curses & Withering"],
+    "Temporary Ageing": ["Internal Ruin, Fatigue, and Decline"],
+    "Ward Against Ageing": ["Safeguards & Reliefs"],
+}
+
+SPLIT_CHILD_DESCRIPTIONS: dict[str, str] = {
+    child_type: f"Approved finalized child spell type under {parent_type}."
+    for parent_type, child_types in APPROVED_SPLIT_CHILD_TYPES.items()
+    for child_type in child_types
+}
+
+FINAL_SPELL_TYPES: dict[str, str] = {
+    **{spell_type: description for spell_type, description in CANONICAL_TYPES.items() if spell_type in STABLE_FINAL_TYPES},
+    **SPLIT_CHILD_DESCRIPTIONS,
+}
+
+FINAL_TYPE_ORDER = [
+    child_type
+    for parent_type in APPROVED_SPLIT_CHILD_TYPES
+    for child_type in APPROVED_SPLIT_CHILD_TYPES[parent_type]
+] + STABLE_FINAL_TYPES
 
 
 TYPE_ORDER = list(CANONICAL_TYPES)
@@ -576,12 +1095,16 @@ def normalize_ws(text: str) -> str:
     return re.sub(r"\s+", " ", text or "").strip()
 
 
+def repair_sentence_spacing(text: str) -> str:
+    return re.sub(r"([.!?])([A-Z“\"])", r"\1 \2", text or "")
+
+
 def trim_period(text: str) -> str:
     return normalize_ws(text).rstrip(".")
 
 
 def sentence_split(text: str) -> list[str]:
-    normalized = normalize_ws(text)
+    normalized = normalize_ws(repair_sentence_spacing(text))
     if not normalized:
         return []
     protected = normalized
@@ -596,6 +1119,96 @@ def sentence_split(text: str) -> list[str]:
     parts = re.split(r"(?<=[.!?])\s+", protected)
     repaired = [part.replace("§", ".") for part in parts]
     return [part.strip() for part in repaired if part.strip()]
+
+
+def clean_source_prose(text: str) -> str:
+    cleaned = repair_sentence_spacing(text)
+    cleaned = re.sub(r"\([^)]*(?:GURPS|p\.\s*|pp\.\s*|GM['’]s call)[^)]*\)", "", cleaned)
+    cleaned = re.sub(r"\bsee [A-Z][A-Za-z'’\- ]+,\s*p+\.\s*[A-Z]?\d+(?:-\d+)?", "", cleaned)
+    cleaned = re.sub(r"\bp+\.\s*[A-Z]?\d+(?:-\d+)?\b", "", cleaned)
+    cleaned = re.sub(r"\bpp+\.\s*[A-Z]?\d+(?:-\d+)?\b", "", cleaned)
+    cleaned = cleaned.replace("“", "").replace("”", "")
+    cleaned = cleaned.replace("…", "...")
+    cleaned = re.sub(r"\s+([,.;:!?])", r"\1", cleaned)
+    return normalize_ws(cleaned)
+
+
+def is_duration_stub(sentence: str) -> bool:
+    lowered = trim_period(sentence).lower()
+    duration_markers = ("instantaneous", "permanent", "indefinite", "special", "second", "minute", "hour", "day", "week", "month", "year")
+    return len(lowered.split()) <= 4 and any(marker in lowered for marker in duration_markers)
+
+
+def should_skip_summary_sentence(sentence: str, source_field: str) -> bool:
+    lowered = sentence.lower()
+    if source_field == "duration" and (is_duration_stub(sentence) or lowered.startswith(("as ", "like in ", "as per "))):
+        return True
+
+    editorial_markers = (
+        "the gm",
+        "campaign",
+        "this changes the full cost",
+        "setting's tl",
+        "setting’s tl",
+        "hour of play",
+        "game time",
+        "see p.",
+        "see pp.",
+        "gurps ",
+        "pyramid #",
+    )
+    if any(marker in lowered for marker in editorial_markers):
+        return True
+
+    return lowered.startswith((
+        "failure means",
+        "critical failure means",
+        "for example,",
+        "to do so,",
+    ))
+
+
+def rewrite_summary_sentence(sentence: str) -> str:
+    rewritten = normalize_ws(sentence)
+    rewrites = (
+        (r"^The (basic|improved) \([^)]*\) version of this spell ", "This spell "),
+        (r"^The (basic|improved) version of this spell ", "This spell "),
+        (r"^The (basic|improved) \([^)]*\) spell ", "This spell "),
+        (r"^The (basic|improved) spell ", "This spell "),
+        (r"^With the (basic|improved) \([^)]*\) version of this spell,\s*", ""),
+        (r"^With the (basic|improved) version of this spell,\s*", ""),
+    )
+    for pattern, replacement in rewrites:
+        updated = re.sub(pattern, replacement, rewritten, flags=re.IGNORECASE)
+        if updated != rewritten:
+            return normalize_ws(updated)
+    return rewritten
+
+
+def summarize_source_prose(text: str, source_field: str) -> str:
+    sentences = sentence_split(clean_source_prose(text))
+    chosen: list[str] = []
+    current_length = 0
+    for raw_sentence in sentences:
+        sentence = rewrite_summary_sentence(raw_sentence)
+        if should_skip_summary_sentence(sentence, source_field):
+            continue
+        addition = len(sentence) + (1 if chosen else 0)
+        if chosen and (len(chosen) >= 2 or current_length + addition > 320):
+            break
+        chosen.append(sentence)
+        current_length += addition
+
+    if not chosen:
+        for raw_sentence in sentences:
+            sentence = rewrite_summary_sentence(raw_sentence)
+            if source_field == "duration" and is_duration_stub(sentence):
+                continue
+            chosen.append(sentence)
+            if len(chosen) >= 2:
+                break
+
+    return " ".join(chosen)
 
 
 def stable_index(seed: str, size: int) -> int:
@@ -685,9 +1298,9 @@ def infer_text_type_scores(spell: dict[str, Any]) -> Counter[str]:
 
     for spell_type, phrases in TEXT_TYPE_HINTS.items():
         for phrase in phrases:
-            if phrase in name_text:
+            if scored_text_contains(name_text, phrase):
                 scores[spell_type] += 3
-            elif phrase in full_text:
+            elif scored_text_contains(full_text, phrase):
                 scores[spell_type] += 1
     return scores
 
@@ -730,6 +1343,478 @@ def infer_spell_types(raw_spell: dict[str, Any], parsed_keywords: list[str]) -> 
         inferred.extend(fallback_types_from_keywords(parsed_keywords))
 
     return order_unique(inferred, TYPE_ORDER)
+
+
+def spell_text_blob(raw_spell: dict[str, Any]) -> str:
+    return " ".join(
+        normalize_ws(str(part)).lower()
+        for part in [
+            raw_spell.get("spell_name", ""),
+            " ".join(raw_spell.get("spell_types", [])),
+            raw_spell.get("keywords", ""),
+            raw_spell.get("range", ""),
+            raw_spell.get("duration", ""),
+            raw_spell.get("casting_roll", ""),
+            raw_spell.get("description", ""),
+            raw_spell.get("statistics", ""),
+        ]
+        if part
+    )
+
+
+def scored_text_contains(text: str, term: str) -> bool:
+    normalized_term = normalize_ws(term).lower()
+    if not normalized_term:
+        return False
+    if len(normalized_term) <= 4 or " " in normalized_term:
+        return re.search(rf"(?<!\w){re.escape(normalized_term)}(?!\w)", text) is not None
+    return normalized_term in text
+
+
+def name_term_matches(name_text: str, term: str) -> bool:
+    return scored_text_contains(name_text, term)
+
+
+def score_child_type(text: str, parsed_keywords: list[str], *, name_text: str, raw_terms: tuple[str, ...] = (), name_terms: tuple[str, ...] = (), text_terms: tuple[str, ...] = (), keyword_terms: tuple[str, ...] = (), require_keywords: tuple[str, ...] = (), require_absent_keywords: tuple[str, ...] = ()) -> int:
+    if require_keywords and not all(keyword in parsed_keywords for keyword in require_keywords):
+        return 0
+    if require_absent_keywords and any(keyword in parsed_keywords for keyword in require_absent_keywords):
+        return 0
+
+    score = 0
+    for term in raw_terms:
+        if scored_text_contains(text, term):
+            score += 6
+    for term in name_terms:
+        if name_term_matches(name_text, term):
+            score += 4
+    for term in text_terms:
+        if scored_text_contains(text, term):
+            score += 2
+    for keyword in keyword_terms:
+        if keyword in parsed_keywords:
+            score += 3
+    return score
+
+
+def score_split_child_types(parent_type: str, raw_spell: dict[str, Any], parsed_keywords: list[str]) -> dict[str, int]:
+    spell_name = raw_spell["spell_name"]
+    if spell_name in FINAL_SPELL_TYPE_OVERRIDES:
+        override_types = FINAL_SPELL_TYPE_OVERRIDES[spell_name]
+        matching = [spell_type for spell_type in override_types if spell_type in APPROVED_SPLIT_CHILD_TYPES.get(parent_type, [])]
+        if matching:
+            return {child_type: (10_000 if child_type == matching[0] else -10_000) for child_type in APPROVED_SPLIT_CHILD_TYPES[parent_type]}
+
+    text = spell_text_blob(raw_spell)
+    name_text = normalize_ws(raw_spell["spell_name"]).lower()
+
+    def score(**kwargs: Any) -> int:
+        return score_child_type(text, parsed_keywords, name_text=name_text, **kwargs)
+
+    if parent_type == "Meta":
+        return {
+            "Countermagic & Suppression": score(raw_terms=("antimagic",), name_terms=("dispel", "countermagic", "suppression", "protection from magic", "ward against magic", "suspend magic", "suspend spell", "globe of invulnerability"), text_terms=("negates magic", "interferes with magic", "suppresses", "counterspell")),
+            "Mana, Ley, and Power": score(raw_terms=("power spells", "raw magic", "incarnum"), name_terms=("ley ", "mana", "powerstone", "essentia", "mishtai", "tap", "supply", "running"), text_terms=("ley line", "energy reserve", "mana")),
+            "Arcane Siphons & Frailties": score(name_terms=("vulnerability", "steal ", "thirst", "frailty", "debility", "agonize", "pain", "choke", "nauseate", "retch"), text_terms=("temporary st loss", "temporary dx loss", "temporary per loss", "temporary ht loss", "more vulnerable")),
+            "Grand Arcana & Constructs": score(name_terms=("create ", "conjure ", "construct", "chimera", "create life", "mirror duplicate", "spell phylactery", "portrait", "skyhook", "helping hands", "bilocation", "lesser wish", "paradox"), text_terms=("creates an invisible force", "conjure", "create a living being")),
+            "Sorcerous Services & Rites": score(raw_terms=("least spells",), name_terms=("alarm", "prepare game", "telecast", "rail communication", "green telurgy", "grind meat", "hammerhands", "knifehand", "cornucopia", "peacebond"), text_terms=("slow, repetitive actions", "two-way conversation")),
+            "Arcane Utilities & Implements": score(name_terms=("detect magic", "reveal magic", "mind-sending", "projection", "far-feeling", "far-tasting", "file transfer", "ripple sense", "gift of letters", "gift of tongues"), keyword_terms=("Information", "Utility")),
+            "Lesser Hexes & Afflictions": score(name_terms=("curse", "doom", "itch", "numbness", "blistering", "brittle", "cold", "corrode", "fungal", "glitch", "hinder", "leak", "malfunction", "roundabout"), text_terms=("wracked with pain", "fails to resist")),
+        }
+
+    if parent_type == "Knowledge":
+        return {
+            "Senses & Perception": score(raw_terms=("infravision",), name_terms=("vision", "hearing", "taste", "smell", "touch", "blindsight", "tremorsense", "hypervision", "sense emotion"), text_terms=("see through", "bonus to hearing", "bonus to touch", "bonus to taste and smell")),
+            "Thoughts & Memory": score(raw_terms=("memory spells",), name_terms=("memory", "mind-", "thought", "impression", "recall", "memorize"), text_terms=("surface thoughts", "restore subject’s memory")),
+            "Divination & Omens": score(raw_terms=("divination spells", "spells of the past"), name_terms=("mancy", "augury", "astrology", "foretell", "scrying", "predict ", "crystal-gazing", "daybook reading", "extispicy", "geomancy", "hydromancy")),
+            "Seekers & Trackers": score(name_terms=("seek ", "trace ", "find direction", "seeker", "tracker", "remember path"), text_terms=("exact direction and distance", "homes in")),
+            "Detection & Appraisal": score(name_terms=("detect ", "identify ", "reveal ", "know illusion", "test ", "divine purpose"), text_terms=("determine its functions", "identify all currently active")),
+            "Readings & Analysis": score(name_terms=("analyze ", "monitor ", "reading", "body-reading", "appraisal"), keyword_terms=("Information",)),
+        }
+
+    if parent_type == "Protection":
+        return {
+            "Wards, Shields, and Barriers": score(name_terms=("ward", "shield", "barrier", "block", "wall", "globe", "sphere", "dome", "sanctuary"), text_terms=("active defense", "shapeable wall")),
+            "Resistances & Immunities": score(name_terms=("resist ", "immune", "immunity", "endure", "protection from", "ward against", "fireproof", "insulated", "hearing protection"), text_terms=("virtually immune", "protected from")),
+            "Armor & Battle Shells": score(raw_terms=("armor buff",), name_terms=(" armor", "skin", "hide", "shell", "fur", "feathers"), text_terms=("gains dr", "ablative")),
+            "Weapon Boons & Retaliations": score(raw_terms=("weapon buff",), name_terms=("weapon", "fang", "retribution", "icy rune"), text_terms=("the next time the subject is struck",)),
+            "Concealments & Counter-Senses": score(name_terms=("invisibility", "invisible", "conceal", "blur", "blocker", "remove reflection", "remove shadow", "fate of oedipus", "sonar invisibility"), text_terms=("protected from scrying", "difficult to spot", "nearly impossible to detect")),
+            "Battle Blessings & Readiness": score(name_terms=("accuracy", "alertness", "balance", "bless", "bravery", "cadence", "grace", "light step", "melee manager", "presence", "strengthen will", "tongues"), text_terms=("bonus to skill rolls to hit", "becomes braver"), keyword_terms=("Buff",)),
+            "Safeguards & Reliefs": score(name_terms=("cleanliness", "analgesic", "antiemetic", "birth control", "preservation", "gentle repose", "diver’s blessing", "eat crow", "guardian spirit"), text_terms=("prevents the subject from rotting", "sanitized waste")),
+        }
+
+    if parent_type == "Mind Control":
+        return {
+            "Dreams, Sleep, and Delusion": score(raw_terms=("dream spells",), name_terms=("dream", "sleep", "nightmare", "hallucination", "delusion", "morphean")),
+            "Possession & Identity": score(raw_terms=("possession spells",), name_terms=("possession", "avatar", "identity", "machine possession", "beast possession", "projection"), text_terms=("moves his consciousness", "permanent machine possession")),
+            "Emotion & Morale": score(name_terms=("emotion", "terror", "awe", "bravery", "euphoria", "vexation", "hell", "fear", "volatility"), text_terms=("fright check", "undeniable urge")),
+            "Commands & Compulsion": score(name_terms=("command", "dominate", "master", "geas", "hypnotize", "avoid", "dance", "control "), text_terms=("mentally dominate", "strong compulsion", "feels an undeniable urge")),
+            "Pain, Stun, and Collapse": score(name_terms=("stun", "knockout", "daze", "tickle", "pain", "collapse", "touch of idiocy"), text_terms=("physically stunned", "helpless with laughter", "knocked unconscious")),
+            "Memory, Thought, and Will": score(raw_terms=("memory spells", "psychic spells as normal spells"), name_terms=("memory", "mind-reading", "mind-search", "forbidden wisdom", "restore memory", "steal skill", "steal wisdom", "false memory", "recall"), text_terms=("surface thoughts", "temporary iq loss", "knowledge")),
+            "Mental Curses & Counterwill": score(name_terms=("curse", "censure", "suspend ", "destabilize", "foolishness", "dread curse", "sever fate line", "shared doom"), text_terms=("fails to resist",)),
+        }
+
+    if parent_type == "Transformation":
+        return {
+            "Shapeshifting & Polymorph": score(raw_terms=("transformation spells",), name_terms=("shapeshift", "polymorph", "morph", "great shapeshift", "permanent shapeshifting", "shapeshifting")),
+            "Body Forms & Embodiments": score(raw_terms=("more body of (element) spells", "elemental body spells"), name_terms=("body of", "embodiment", "partial shapeshifting", "paws", "tail", "trunk", "jaws", "arms"), text_terms=("meta-trait", "gains the")),
+            "Creation, Shape, and Matter": score(raw_terms=("creation spells", "elemental weapon transformation spells"), name_terms=("create ", "shape ", "matter", "material", "chimera"), text_terms=("transforms matter", "solid but unnatural matter")),
+            "Alteration, Growth, and Other Transmutations": score(name_terms=("alter ", "grow", "shrink", "change", "everchanging", "great haste"), text_terms=("temporarily change", "becomes")),
+        }
+
+    if parent_type == "Movement":
+        return {
+            "Ways, Passage, and Travel": score(raw_terms=("movement spells", "flight spells", "gate spells", "personal gate and gravity spells"), name_terms=("flight", "teleport", "jump", "travel", "timeport", "plane shift", "walk", "journey", "rider", "transfer water", "sanctuary"), keyword_terms=("Travel",)),
+            "Forced Movement & Restraint": score(name_terms=("push", "pull", "cage", "sphere", "root", "vortex", "levitation", "move terrain", "gravity crush", "gravity push"), text_terms=("move distant creatures", "encloses a creature", "move 0"), keyword_terms=("Control",)),
+            "Speed, Haste, and Handling": score(name_terms=("haste", "speed", "step", "fall", "ice movement", "sandstrider", "tolerance", "reading"), text_terms=("basic speed", "basic move", "glide"), keyword_terms=("Buff",)),
+        }
+
+    if parent_type == "Making & Breaking":
+        return {
+            "Locks, Seals, and Traps": score(name_terms=("lock", "seal", "trap", "rune", "block", "binding"), text_terms=("cannot be opened", "triggering conditions")),
+            "Weapons & Battlework": score(raw_terms=("gunman spells",), name_terms=("weapon", "blade", "arrow", "bullet", "gun", "armor", "shield", "battle"), text_terms=("manufactured weapon", "skill rolls to hit")),
+            "Breaking, Shattering, and Ruin": score(name_terms=("break", "shatter", "ruin", "destroy", "corrode", "disintegr", "annihilation"), text_terms=("devour anything", "temporarily corrodes")),
+            "Crafting, Repair, and Reshaping": score(name_terms=("create ", "make ", "repair", "reshape", "shape", "craft", "paper", "glass", "metal"), text_terms=("turn paper", "repair", "conjure")),
+        }
+
+    if parent_type == "Earth":
+        return {
+            "Metal & Glass": score(raw_terms=("metal spells", "glass spells"), name_terms=("metal", "iron", "steel", "silver", "gold", "glass", "crystal", "gem")),
+            "Earthshape, Passage, and Transmutation": score(raw_terms=("essential earth spells",), name_terms=("shape", "pass", "tunnel", "walk", "badger paws", "earth to", "move terrain"), text_terms=("dig", "transmute", "earth")),
+            "Stone, Soil, and Sand": score(name_terms=("stone", "earth", "sand", "mud", "rock", "lava"), text_terms=("solid earth", "stone surface")),
+        }
+
+    if parent_type == "Artillery":
+        return {
+            "Missiles, Jets, and Rays": score(name_terms=("ray", "bolt", "shot", "missile", "jet", "orb", "sphere", "spray", "lance", "touch"), keyword_terms=("Missile", "Jet")),
+            "Battlefield Zones & Fields": score(name_terms=("field", "zone", "wall", "cloud", "rain", "storm", "cage", "circle", "dome", "aura"), text_terms=("area of effect", "mobile circular storm", "lasting duration"), require_keywords=("Area",)),
+            "Bursts, Barrages, and Bombardment": score(name_terms=("burst", "barrage", "bombardment", "blast", "swarm", "explosion", "shards"), keyword_terms=("Area", "Damage")),
+        }
+
+    if parent_type == "Body Control":
+        return {
+            "Vital Functions & Augmentation": score(raw_terms=("boost attribute spells",), name_terms=("pregnancy", "breath", "lungs", "respiration", "vigor", "strength", "intelligence", "health", "resist pain"), text_terms=("raise", "bonus", "breathe", "safe development"), keyword_terms=("Buff",)),
+            "Body Forms, Limbs, and Alteration": score(raw_terms=("limb spells",), name_terms=("limb", "paws", "tail", "claws", "body of", "branch fingers", "slimy skin", "skin"), text_terms=("meta-trait", "grows", "transforms")),
+            "Internal Ruin, Fatigue, and Decline": score(name_terms=("age", "ageing", "fatigue", "decrepify", "embolism", "steal breath", "burden", "progeria", "cold vulnerability"), text_terms=("internal organs", "suffers", "temporary fp", "older at once")),
+        }
+
+    if parent_type == "Air":
+        return {
+            "Lightning of the Air": score(raw_terms=("lightning spells",), name_terms=("lightning", "spark", "shimmering", "storm", "ride the lightning")),
+            "Breath & Atmosphere": score(name_terms=("air", "breath", "odor", "stench", "smoke", "fog", "gas", "vapor"), text_terms=("safe to breathe", "create breathable air", "purify air", "change air", "scent")),
+            "Winds, Vapors, and Sky Passage": score(name_terms=("flight", "wind", "vortex", "cloud", "aerial", "wall of wind"), text_terms=("fly", "hover", "hurls creatures"), keyword_terms=("Travel",)),
+        }
+
+    if parent_type == "Light & Darkness":
+        return {
+            "Shadows & Obscurity": score(name_terms=("shadow", "dark", "obscur", "invisible", "black", "night")),
+            "Glamour, Color, and Prism": score(raw_terms=("yellow spells", "new prismatic spells"), name_terms=("color", "prism", "rainbow", "glamour", "yellow", "illusion")),
+            "Lightning & Radiant Assaults": score(raw_terms=("lightning spells",), name_terms=("lightning", "radiant", "sunbolt", "laser", "flash"), keyword_terms=("Damage",)),
+            "Radiance, Sight, and Reflection": score(name_terms=("light", "vision", "sight", "reflection", "mirror", "true seeing", "radiance"), text_terms=("see through", "shed light")),
+        }
+
+    if parent_type == "Plant":
+        return {
+            "Plant Lore, Speech, and Passage": score(name_terms=("speak", "lore", "identify", "detect", "seek", "passage", "green telurgy"), text_terms=("two-way conversation", "sapient plant")),
+            "Wood, Vines, and Plant Forms": score(raw_terms=("fungus spells",), name_terms=("wood", "vine", "thorn", "root", "branch", "tree", "forest", "entangling", "leaves"), text_terms=("animates plants", "grappled", "living vines")),
+            "Growth, Blessing, and Husbandry": score(name_terms=("grow", "bless", "husbandry", "harvest", "animal spirit", "nature’s favor", "train animal"), text_terms=("plant growth", "animal"), keyword_terms=("Buff",)),
+        }
+
+    if parent_type == "Fire":
+        return {
+            "Heat, Fuel, and Hearthwork": score(raw_terms=("fuel spells", "steam spells"), name_terms=("heat", "warm", "fuel", "hearth", "cook", "cold", "slow fire", "fast fire"), text_terms=("ambient temperature", "burn hotter")),
+            "Flame Assaults & Battlefire": score(name_terms=("fire", "flame", "burn", "inferno", "hellfire", "plasma", "blast", "corona"), keyword_terms=("Damage",)),
+        }
+
+    if parent_type == "Necromantic":
+        return {
+            "Undead Animation & Command": score(raw_terms=("zombie spells",), name_terms=("undead", "zombie", "skeleton", "lich", "animate", "command")),
+            "Spirits of the Dead": score(raw_terms=("spirit spells",), name_terms=("spirit", "ghost", "soul", "dead"), text_terms=("speak with dead", "spirit")),
+            "Death Curses & Withering": score(raw_terms=("death spells",), name_terms=("death", "curse", "wither", "reaper", "age", "doom", "grave", "ghoul", "hellspawn"), keyword_terms=("Damage", "Debuff")),
+        }
+
+    if parent_type == "Water":
+        return {
+            "Ice, Snow, and Frost": score(raw_terms=("ice spells",), name_terms=("ice", "snow", "frost", "cold", "blizzard")),
+            "Drowning, Dehydration, and Fluid Assaults": score(name_terms=("drown", "dehydr", "thirst", "steam", "scald", "fluid assault", "water jet"), keyword_terms=("Damage",)),
+            "Water Shaping & Passage": score(raw_terms=("fluid spells",), name_terms=("water", "wave", "shape", "breathe", "passage", "transfer water", "ice movement"), text_terms=("breathe common air", "aquatic")),
+        }
+
+    if parent_type == "Animal":
+        return {
+            "Animal Companions, Mounts, and Summons": score(name_terms=("summon", "companion", "mount", "rider", "servant"), keyword_terms=("Summoning",)),
+            "Beast Forms & Traits": score(name_terms=("claws", "fur", "tail", "feathers", "paws", "trunk", "jaws", "spider", "serpent", "hawk", "beast form"), text_terms=("meta-trait", "animal")),
+            "Animal Command & Repelling": score(name_terms=("command", "repel", "control", "master", "dominate", "tame", "train animal"), text_terms=("animal behaves", "mentally dominate an animal")),
+        }
+
+    if parent_type == "Weather":
+        return {
+            "Tempests, Lightning, and Winter Weather": score(raw_terms=("lightning spells", "ice spells"), name_terms=("tempest", "lightning", "thunder", "snow", "winter", "storm", "blizzard"), keyword_terms=("Damage",)),
+            "Rain, Wind, and Greater Weather": score(name_terms=("rain", "wind", "weather", "eclipse", "cloud"), text_terms=("forecasts", "weather")),
+        }
+
+    if parent_type == "Spirit":
+        return {
+            "Souls, Possession, and Bindings": score(raw_terms=("possession spells",), name_terms=("soul", "possess", "binding", "bind", "incarnum"), text_terms=("moves his consciousness", "true name")),
+            "Spirits, Wards, and the Dead": score(name_terms=("spirit", "ghost", "dead", "ward"), text_terms=("restless dead", "spirit traffic")),
+        }
+
+    return {child_type: 0 for child_type in APPROVED_SPLIT_CHILD_TYPES.get(parent_type, [])}
+
+
+def choose_split_child_type(parent_type: str, raw_spell: dict[str, Any], parsed_keywords: list[str]) -> str:
+    scores = score_split_child_types(parent_type, raw_spell, parsed_keywords)
+    return max(APPROVED_SPLIT_CHILD_TYPES[parent_type], key=lambda child_type: (scores.get(child_type, 0), -APPROVED_SPLIT_CHILD_TYPES[parent_type].index(child_type)))
+
+
+def load_split_target_counts() -> dict[str, dict[str, int]]:
+    distribution = json.loads((ROOT / "type-split-distribution.json").read_text())
+    return {
+        item["parent_type"]: {child["type"]: child["count"] for child in item["child_types"]}
+        for item in distribution["split_proposals"]
+    }
+
+
+def scale_split_target_counts(targets: dict[str, int], actual_total: int, child_types: list[str]) -> dict[str, int]:
+    if actual_total <= 0:
+        return {child_type: 0 for child_type in child_types}
+
+    source_total = sum(targets.values())
+    if source_total <= 0:
+        raise ValueError("Split target counts must sum to a positive total.")
+
+    if source_total == actual_total:
+        return {child_type: targets.get(child_type, 0) for child_type in child_types}
+
+    positions = {child_type: index for index, child_type in enumerate(child_types)}
+    exact = {
+        child_type: (targets.get(child_type, 0) * actual_total) / source_total
+        for child_type in child_types
+    }
+    scaled = {child_type: int(exact[child_type]) for child_type in child_types}
+    remainder = actual_total - sum(scaled.values())
+    ranked = sorted(
+        child_types,
+        key=lambda child_type: (exact[child_type] - scaled[child_type], targets.get(child_type, 0), -positions[child_type]),
+        reverse=True,
+    )
+    for child_type in ranked[:remainder]:
+        scaled[child_type] += 1
+    return scaled
+
+
+def fit_split_targets_to_locked_counts(targets: dict[str, int], locked_counts: Counter[str], child_types: list[str]) -> dict[str, int]:
+    adjusted = {child_type: targets.get(child_type, 0) for child_type in child_types}
+    positions = {child_type: index for index, child_type in enumerate(child_types)}
+
+    for child_type in child_types:
+        locked_count = locked_counts[child_type]
+        if adjusted[child_type] >= locked_count:
+            continue
+
+        deficit = locked_count - adjusted[child_type]
+        adjusted[child_type] = locked_count
+        for _ in range(deficit):
+            donors = [
+                candidate
+                for candidate in child_types
+                if candidate != child_type and adjusted[candidate] > locked_counts[candidate]
+            ]
+            if not donors:
+                raise ValueError(f"Unable to fit split targets for locked child type '{child_type}'.")
+            donor = max(
+                donors,
+                key=lambda candidate: (adjusted[candidate] - locked_counts[candidate], adjusted[candidate], -positions[candidate]),
+            )
+            adjusted[donor] -= 1
+
+    return adjusted
+
+
+def contract_gate_parent_types(raw_spell: dict[str, Any], parent_spell_types: list[str]) -> list[str]:
+    if "Gate" not in parent_spell_types or len(parent_spell_types) == 1:
+        return parent_spell_types
+
+    source_label = raw_spell["spell_types"][0]
+    if source_label == "Gate Spells":
+        return parent_spell_types
+
+    explicit_gate_keepers = {
+        "Aerial Entombment",
+        "Astral Projection",
+        "Banish",
+        "Dimensional Lock",
+        "Gate Seal",
+        "Phase Trap",
+        "Planar Portal",
+        "Plane Shift",
+        "Plane Shift Other",
+        "Portal",
+        "Portal Architecture",
+        "Sanctuary",
+        "Town Portal",
+        "Underworld Imprisonment",
+    }
+    if raw_spell["spell_name"] in explicit_gate_keepers:
+        return parent_spell_types
+
+    removable_overlap_types = {"Air", "Gravity", "Knowledge", "Movement", "Necromantic", "Space", "Spirit", "Summoning", "Time", "Weather"}
+    if any(spell_type in removable_overlap_types for spell_type in parent_spell_types if spell_type != "Gate"):
+        return [spell_type for spell_type in parent_spell_types if spell_type != "Gate"]
+
+    return parent_spell_types
+
+
+def normalize_source_spell_name(name: str) -> str:
+    cleaned = normalize_ws(name)
+    for prefix in EDITORIAL_NAME_PREFIXES:
+        if cleaned.startswith(prefix):
+            cleaned = cleaned[len(prefix):].strip()
+    cleaned = re.sub(r"\s*\(Unofficial Sorcery Errata\)$", "", cleaned).strip()
+    return normalize_ws(cleaned)
+
+
+def review_display_name(raw_spell: dict[str, Any], override: dict[str, Any]) -> str:
+    source_name = raw_spell["spell_name"]
+    if "display_name" in override:
+        return override["display_name"]
+
+    if source_name in EXACT_DISPLAY_NAME_OVERRIDES:
+        return EXACT_DISPLAY_NAME_OVERRIDES[source_name]
+
+    normalized = normalize_source_spell_name(source_name)
+    if normalized in EXACT_DISPLAY_NAME_OVERRIDES:
+        return EXACT_DISPLAY_NAME_OVERRIDES[normalized]
+
+    if normalized.startswith("Power Word: "):
+        tail = normalized.removeprefix("Power Word: ").strip()
+        return POWER_WORD_DISPLAY_NAMES.get(tail, f"Word of {tail}")
+
+    if normalized.startswith("Curse-Missile: "):
+        tail = normalized.removeprefix("Curse-Missile: ").strip()
+        return f"Missile of {CURSE_MISSILE_DISPLAY_TAILS.get(tail, tail)}"
+
+    if normalized == "Stop Bleeding":
+        return "Staunch Bleeding"
+    if normalized.startswith("Stop "):
+        return f"Halt {normalized.removeprefix('Stop ').strip()}"
+
+    return normalized
+
+
+def build_parent_type_info(raw_spell: dict[str, Any]) -> tuple[list[str], list[str], dict[str, Any], str]:
+    source_name = raw_spell["spell_name"]
+    override = MANUAL_OVERRIDES.get(source_name, {})
+    parsed_source_keywords = parse_raw_keywords(raw_spell["keywords"])
+    parent_spell_types = order_unique(override.get("spell_types", infer_spell_types(raw_spell, parsed_source_keywords)), TYPE_ORDER)
+    parent_spell_types = contract_gate_parent_types(raw_spell, parent_spell_types)
+    return parent_spell_types, parsed_source_keywords, override, review_display_name(raw_spell, override)
+
+
+def compute_split_assignments(source_spells: list[dict[str, Any]], *, enforce_target_distribution: bool = False) -> dict[tuple[str, str], str]:
+    target_counts = load_split_target_counts()
+    parent_entries: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    assignments: dict[tuple[str, str], str] = {}
+
+    for raw_spell in source_spells:
+        parent_spell_types, parsed_source_keywords, override, display_name = build_parent_type_info(raw_spell)
+        override_key = display_name if display_name in FINAL_SPELL_TYPE_OVERRIDES else raw_spell["spell_name"]
+        for parent_type in parent_spell_types:
+            if parent_type not in APPROVED_SPLIT_CHILD_TYPES:
+                continue
+            locked_child = None
+            if override_key in FINAL_SPELL_TYPE_OVERRIDES:
+                locked = [spell_type for spell_type in FINAL_SPELL_TYPE_OVERRIDES[override_key] if spell_type in APPROVED_SPLIT_CHILD_TYPES[parent_type]]
+                locked_child = locked[0] if locked else None
+            parent_entries[parent_type].append(
+                {
+                    "spell_id": raw_spell["spell_id"],
+                    "spell_name": raw_spell["spell_name"],
+                    "display_name": display_name,
+                    "parsed_keywords": parsed_source_keywords,
+                    "scores": score_split_child_types(parent_type, raw_spell, parsed_source_keywords),
+                    "locked_child": locked_child,
+                }
+            )
+
+    for parent_type, entries in parent_entries.items():
+        child_types = APPROVED_SPLIT_CHILD_TYPES[parent_type]
+        if not enforce_target_distribution:
+            for entry in entries:
+                locked_child = entry["locked_child"]
+                if locked_child:
+                    assignments[(entry["spell_id"], parent_type)] = locked_child
+                    continue
+                ranked = sorted(child_types, key=lambda child_type: (entry["scores"].get(child_type, 0), -child_types.index(child_type)), reverse=True)
+                assignments[(entry["spell_id"], parent_type)] = ranked[0]
+            continue
+
+        mutable_entries: list[dict[str, Any]] = []
+        counts = Counter()
+
+        for entry in entries:
+            spell_id = entry["spell_id"]
+            locked_child = entry["locked_child"]
+            if locked_child:
+                assignments[(spell_id, parent_type)] = locked_child
+                counts[locked_child] += 1
+            else:
+                mutable_entries.append(entry)
+
+        targets = scale_split_target_counts(target_counts[parent_type], len(entries), child_types)
+        targets = fit_split_targets_to_locked_counts(targets, counts, child_types)
+        current_assignment: dict[str, str] = {}
+        for entry in mutable_entries:
+            ranked = sorted(child_types, key=lambda child_type: (entry["scores"].get(child_type, 0), -child_types.index(child_type)), reverse=True)
+            current_assignment[entry["spell_id"]] = ranked[0]
+            counts[ranked[0]] += 1
+
+        desired_totals = Counter(targets)
+        while any(counts[child_type] != desired_totals[child_type] for child_type in child_types):
+            overfull = [child_type for child_type in child_types if counts[child_type] > desired_totals[child_type]]
+            underfull = [child_type for child_type in child_types if counts[child_type] < desired_totals[child_type]]
+            if not overfull or not underfull:
+                break
+
+            best_move: tuple[float, str, str, str] | None = None
+            for entry in mutable_entries:
+                spell_id = entry["spell_id"]
+                from_child = current_assignment[spell_id]
+                if from_child not in overfull:
+                    continue
+                from_score = entry["scores"].get(from_child, 0)
+                for to_child in underfull:
+                    penalty = from_score - entry["scores"].get(to_child, 0)
+                    candidate = (penalty, spell_id, from_child, to_child)
+                    if best_move is None or candidate < best_move:
+                        best_move = candidate
+
+            if best_move is None:
+                break
+
+            _, spell_id, from_child, to_child = best_move
+            current_assignment[spell_id] = to_child
+            counts[from_child] -= 1
+            counts[to_child] += 1
+
+        for entry in mutable_entries:
+            assignments[(entry["spell_id"], parent_type)] = current_assignment[entry["spell_id"]]
+
+    return assignments
+
+
+def finalize_spell_types(raw_spell: dict[str, Any], parent_types: list[str], parsed_keywords: list[str], display_name: str, split_assignments: dict[tuple[str, str], str]) -> list[str]:
+    override_key = display_name if display_name in FINAL_SPELL_TYPE_OVERRIDES else raw_spell["spell_name"]
+    if override_key in FINAL_SPELL_TYPE_OVERRIDES:
+        return order_unique(FINAL_SPELL_TYPE_OVERRIDES[override_key], FINAL_TYPE_ORDER)
+
+    finalized: list[str] = []
+    for spell_type in parent_types:
+        if spell_type in APPROVED_SPLIT_CHILD_TYPES:
+            finalized.append(split_assignments.get((raw_spell["spell_id"], spell_type), choose_split_child_type(spell_type, raw_spell, parsed_keywords)))
+        elif spell_type in STABLE_FINAL_TYPES:
+            finalized.append(spell_type)
+    return order_unique(finalized, FINAL_TYPE_ORDER)
 
 
 def infer_role_keywords(raw_spell: dict[str, Any], spell_types: list[str], keywords: list[str]) -> list[str]:
@@ -798,24 +1883,69 @@ def infer_dedupe(raw_spell: dict[str, Any]) -> dict[str, Any]:
 def stylize_summary(summary: str) -> str:
     text = normalize_ws(summary)
     replacements = [
-        ("This spell lets you ", "This working lets you "),
-        ("This spell lets the subject ", "This working lets the subject "),
-        ("This spell allows you to ", "This working allows you to "),
-        ("This spell allows the caster to ", "This working allows the caster to "),
+        ("This spell lets you ", "The caster may "),
+        ("This spell lets the user ", "The caster may "),
+        ("This spell lets the subject ", "The subject may "),
+        ("This spell lets the caster ", "The caster may "),
+        ("This spell allows you to ", "The caster may "),
+        ("This spell allows the caster to ", "The caster may "),
+        ("This spell allows the subject to ", "The subject may "),
         ("This spell allows ", "This working allows "),
         ("This spell causes ", "This working causes "),
+        ("This spell gives the subject ", "The subject gains "),
+        ("This spell gives you ", "The caster gains "),
         ("This spell gives ", "This working grants "),
         ("This spell removes ", "This working removes "),
         ("This spell creates ", "This working creates "),
         ("This spell conjures ", "This working conjures "),
-        ("You can ", "You may "),
+        ("This spell makes the subject ", "The subject becomes "),
+        ("This spell makes you ", "The caster becomes "),
+        ("This spell ", "This working "),
         ("The spell allows ", "The working allows "),
+        ("This working lets you ", "The caster may "),
+        ("This working lets the user ", "The caster may "),
+        ("This working lets the subject ", "The subject may "),
+        ("This working lets the caster ", "The caster may "),
+        ("This working allows you to ", "The caster may "),
+        ("This working allows the caster to ", "The caster may "),
+        ("This working allows the subject to ", "The subject may "),
+        ("This working gives the subject ", "The subject gains "),
+        ("This working grants the subject ", "The subject gains "),
+        ("This working makes the subject ", "The subject becomes "),
+        ("This working makes you ", "The caster becomes "),
     ]
     for source, target in replacements:
         if text.startswith(source):
             text = target + text[len(source):]
             break
-    return text.replace("doesn't", "does not").replace("can't", "cannot")
+
+    regex_replacements = [
+        (r"^You subject gains\b", "The subject gains"),
+        (r"^You subject of this spell becomes\b", "The subject becomes"),
+        (r"^You subject becomes\b", "The subject becomes"),
+        (r"^You and all of your carried equipment\b", "The caster and all carried equipment"),
+        (r"^You gain\b", "The caster gains"),
+        (r"^You become\b", "The caster becomes"),
+        (r"^You do not breathe\b", "The caster does not breathe"),
+        (r"^You touch\b", "The caster touches"),
+        (r"^You throw sphere\b", "The caster throws a sphere"),
+        (r"^You throw\b", "The caster throws"),
+        (r"^You shoot\b", "The caster looses"),
+        (r"^You utter\b", "The caster utters"),
+        (r"^You can\b", "The caster may"),
+        (r"^You may\b", "The caster may"),
+        (r"^Your touch\b", "A touch"),
+        (r"^Lets a caster\b", "The spell lets a caster"),
+        (r"^Subject can\b", "The subject may"),
+    ]
+    for pattern, replacement in regex_replacements:
+        text = re.sub(pattern, replacement, text)
+
+    text = text.replace("doesn't", "does not").replace("can't", "cannot")
+    text = text.replace("does not actually provides", "does not actually provide")
+    text = text.replace("may fist make", "may first make")
+    text = text.replace("  ", " ")
+    return normalize_ws(text)
 
 
 def choose_coda(spell_name: str, keywords: list[str]) -> str:
@@ -842,81 +1972,93 @@ def choose_coda(spell_name: str, keywords: list[str]) -> str:
 def fallback_description(raw_spell: dict[str, Any], spell_types: list[str], keywords: list[str]) -> str:
     duration = concise_field(raw_spell.get("duration", "Special"))
     range_text = concise_field(raw_spell.get("range", "Special range"))
-    if "Buff" in keywords and range_text.lower() == "self":
-        core = f"For {duration.lower()}, you gain the spell's listed {spell_types[0].lower()} benefits."
-    elif "Buff" in keywords:
-        core = f"For {duration.lower()}, the subject gains the spell's listed benefits at {range_text.lower()} range."
-    elif "Area" in keywords:
-        core = f"{raw_spell['spell_name']} lays its effect over an area at {range_text.lower()} for {duration.lower()}."
-    elif any(keyword.startswith("Resisted-") for keyword in keywords):
+    duration_lower = duration.lower()
+    range_lower = range_text.lower()
+    duration_clause = {
+        "instantaneous": "At once",
+        "instantly": "At once",
+        "indefinite": "So long as the spell is maintained",
+        "permanent": "Permanently",
+    }.get(duration_lower, f"For {duration_lower}")
+
+    if "Information" in keywords and range_lower == "self":
+        if duration_clause == "At once":
+            return "The caster instantly learns the spell's listed information."
+        return f"{duration_clause}, the caster gains the spell's listed information."
+    if "Information" in keywords and "Touch" in keywords:
+        return "With a touch, the caster instantly learns the spell's listed information."
+    if "Buff" in keywords and range_lower == "self":
+        if duration_clause == "At once":
+            return "The caster gains the spell's listed benefits at once."
+        return f"{duration_clause}, the caster gains the spell's listed benefits."
+    if "Buff" in keywords:
+        if duration_clause == "At once":
+            if range_lower == "touch":
+                return "With a touch, the subject gains the spell's listed benefits at once."
+            return "The subject gains the spell's listed benefits at once."
+        return f"{duration_clause}, the subject gains the spell's listed benefits."
+    if "Area" in keywords:
+        if duration_clause == "So long as the spell is maintained":
+            return f"This working lays its effect over an area at {range_lower} for so long as it is maintained."
+        return f"This working lays its effect over an area at {range_lower} for {duration_lower}."
+    if any(keyword.startswith("Resisted-") for keyword in keywords):
         resistance = next(keyword for keyword in keywords if keyword.startswith("Resisted-"))
-        core = f"This working is cast at {range_text.lower()}; should the subject fail {resistance.replace('-', ' ').lower()}, it suffers the spell's listed effect."
-    else:
-        core = f"{raw_spell['spell_name']} works at {range_text.lower()} for {duration.lower()}, according to the listed mechanics."
-    return f"{core} {choose_coda(raw_spell['spell_name'], keywords)}"
+        return f"Cast at {range_lower}, this working brings its listed effect upon a subject that fails {resistance.replace('-', ' ').lower()}."
+    if duration_clause == "At once":
+        return f"This working has its listed effect at {range_lower} at once."
+    return f"This working has its listed effect at {range_lower} for {duration_lower}."
 
 
-def pick_source_prose(raw_spell: dict[str, Any]) -> str:
+def pick_source_prose(raw_spell: dict[str, Any]) -> tuple[str, str]:
     description = normalize_ws(raw_spell.get("description", ""))
     if description:
-        return description
+        return description, "description"
 
     duration = normalize_ws(raw_spell.get("duration", ""))
     if len(duration) > 100 and any(mark in duration for mark in [".", ";"]):
-        return duration
+        return duration, "duration"
 
-    return ""
+    return "", ""
 
 
 def generate_description(raw_spell: dict[str, Any], spell_types: list[str], keywords: list[str]) -> tuple[str, str]:
-    if raw_spell["spell_name"] in MANUAL_OVERRIDES:
-        return MANUAL_OVERRIDES[raw_spell["spell_name"]]["description"].strip(), "curated"
-
-    original = pick_source_prose(raw_spell)
+    original, source_field = pick_source_prose(raw_spell)
     if not original:
         return fallback_description(raw_spell, spell_types, keywords), "generated-fallback"
 
-    sentences = sentence_split(original)
-    lead = []
-    current_length = 0
-    for sentence in sentences:
-        addition = len(sentence) + (1 if lead else 0)
-        if lead and (len(lead) >= 2 or current_length + addition > 340):
-            break
-        lead.append(sentence)
-        current_length += addition
-
-    summary = stylize_summary(" ".join(lead))
+    summary = stylize_summary(summarize_source_prose(original, source_field))
+    if not summary:
+        return fallback_description(raw_spell, spell_types, keywords), "generated-fallback"
     if not summary.endswith((".", "!", "?")):
         summary += "."
-    coda = choose_coda(raw_spell["spell_name"], keywords)
-    if coda not in summary:
-        summary = f"{summary} {coda}"
     return summary, "generated-from-source"
 
 
-def build_record(raw_spell: dict[str, Any], index: int) -> dict[str, Any]:
-    name = raw_spell["spell_name"]
-    override = MANUAL_OVERRIDES.get(name)
-    parsed_source_keywords = parse_raw_keywords(raw_spell["keywords"])
+def build_record(raw_spell: dict[str, Any], index: int, split_assignments: dict[tuple[str, str], str]) -> dict[str, Any]:
+    source_name = raw_spell["spell_name"]
+    parent_spell_types, parsed_source_keywords, override, display_name = build_parent_type_info(raw_spell)
+    keyword_seed = order_unique(override.get("keywords", parsed_source_keywords), KEYWORD_ORDER)
+    keywords = infer_role_keywords(raw_spell, parent_spell_types, keyword_seed)
+    description_override = override.get("description") or EXACT_DESCRIPTION_OVERRIDES.get(source_name)
 
-    if override:
-        spell_types = order_unique(override["spell_types"], TYPE_ORDER)
-        keywords = infer_role_keywords(raw_spell, spell_types, order_unique(override["keywords"], KEYWORD_ORDER))
-        description = override["description"].strip()
+    if description_override:
+        description = description_override.strip()
         description_source = "curated"
         dedupe = override.get("dedupe", {"status": "unique", "group": None, "reason": "No duplicate candidate identified during build."})
     else:
-        spell_types = infer_spell_types(raw_spell, parsed_source_keywords)
-        keywords = infer_role_keywords(raw_spell, spell_types, parsed_source_keywords)
-        description, description_source = generate_description(raw_spell, spell_types, keywords)
-        dedupe = infer_dedupe(raw_spell)
+        description, description_source = generate_description(raw_spell, parent_spell_types, keywords)
+        dedupe = override.get("dedupe", infer_dedupe(raw_spell))
+
+    spell_types = finalize_spell_types(raw_spell, parent_spell_types, parsed_source_keywords, display_name, split_assignments)
+    aliases = [source_name] if display_name != source_name else []
+    spell_type_display_names = [APPROVED_CHILD_TYPE_DISPLAY_NAMES.get(spell_type, TYPE_DISPLAY_NAMES.get(spell_type, spell_type)) for spell_type in spell_types]
 
     return {
         "record_index": index,
         "spell_id": raw_spell["spell_id"],
-        "spell_name": name,
+        "spell_name": display_name,
         "spell_types": spell_types,
+        "spell_type_display_names": spell_type_display_names,
         "keywords": keywords,
         "full_cost": raw_spell["full_cost"],
         "casting_roll": raw_spell["casting_roll"],
@@ -926,11 +2068,13 @@ def build_record(raw_spell: dict[str, Any], index: int) -> dict[str, Any]:
         "description_source": description_source,
         "statistics": raw_spell["statistics"],
         "use_example": "",
-        "aliases": [],
+        "aliases": aliases,
         "dedupe": dedupe,
         "source_lineage": {
             "source_spell_id": raw_spell["spell_id"],
+            "source_spell_name": source_name,
             "source_spell_types": raw_spell["spell_types"],
+            "inferred_parent_spell_types": parent_spell_types,
             "source_keywords": raw_spell["keywords"],
             "parsed_source_keywords": parsed_source_keywords,
         },
@@ -944,9 +2088,11 @@ def validate(records: list[dict[str, Any]]) -> dict[str, Any]:
             errors.append(f"{record['spell_name']}: missing spell_types")
         if "Individual Spell" in record["spell_types"]:
             errors.append(f"{record['spell_name']}: contains forbidden raw type")
-        unknown_types = [spell_type for spell_type in record["spell_types"] if spell_type not in CANONICAL_TYPES]
+        unknown_types = [spell_type for spell_type in record["spell_types"] if spell_type not in FINAL_SPELL_TYPES]
         if unknown_types:
             errors.append(f"{record['spell_name']}: unknown spell types {unknown_types}")
+        if len(record.get("spell_type_display_names", [])) != len(record["spell_types"]):
+            errors.append(f"{record['spell_name']}: spell_type_display_names length mismatch")
         if not record["keywords"]:
             errors.append(f"{record['spell_name']}: missing keywords")
         if any(keyword.lower() == "none" for keyword in record["keywords"]):
@@ -956,6 +2102,8 @@ def validate(records: list[dict[str, Any]]) -> dict[str, Any]:
             errors.append(f"{record['spell_name']}: unknown keywords {unknown_keywords}")
         if not record["description"].strip():
             errors.append(f"{record['spell_name']}: blank description")
+        if "source_spell_name" not in record.get("source_lineage", {}):
+            errors.append(f"{record['spell_name']}: source_spell_name missing from source_lineage")
         if "use_example" not in record or record["use_example"] != "":
             errors.append(f"{record['spell_name']}: use_example missing or not blank")
     return {
@@ -1098,7 +2246,8 @@ def main() -> None:
     count = max(1, min(args.count, len(raw_data["spells"])))
     source_spells = raw_data["spells"][:count]
 
-    records = [build_record(spell, index + 1) for index, spell in enumerate(source_spells)]
+    split_assignments = compute_split_assignments(source_spells, enforce_target_distribution=count == len(raw_data["spells"]))
+    records = [build_record(spell, index + 1, split_assignments) for index, spell in enumerate(source_spells)]
     validation = validate(records)
     if not validation["passed"]:
         raise SystemExit("Validation failed:\n" + "\n".join(validation["errors"]))
@@ -1106,19 +2255,51 @@ def main() -> None:
     report_summary, report_markdown = build_reports(records)
     OUTPUT_DIR.mkdir(exist_ok=True)
 
+    spell_name_display_overrides = {
+        record["source_lineage"]["source_spell_name"]: record["spell_name"]
+        for record in records
+        if record["spell_name"] != record["source_lineage"]["source_spell_name"]
+    }
+    changed_name_count = len(spell_name_display_overrides)
+
     dataset_payload = {
         "metadata": {
             "source_file": str(RAW_PATH.name),
             "source_total_spells": raw_data["metadata"]["totalSpells"],
             "processed_scope": args.label,
             "processed_count": len(records),
+            "taxonomy_mode": "approved-finalized-child-types",
+            "taxonomy_plan_sources": [
+                str(ROOT / ".kilo/plans/1779065784000-maester-taxonomy-continuation.md"),
+                str(ROOT / ".kilo/plans/1779065784000-maester-taxonomy-next-pass-addendum.md"),
+                str(ROOT / ".kilo/plans/1779065784000-maester-taxonomy-finalization.md"),
+            ],
             "dedupe_policy": "Option B during build: canonical record with alias capacity.",
             "description_sources": report_summary["description_sources"],
+            "voice_register": "restrained Westerosi maester",
+            "spell_name_reviewed_count": len(records),
+            "spell_name_changed_count": changed_name_count,
+            "spell_name_kept_count": len(records) - changed_name_count,
+            "spell_name_display_override_count": changed_name_count,
+            "description_reviewed_count": len(records),
+            "description_manual_override_count": report_summary["description_sources"].get("curated", 0),
+            "description_generated_from_source_count": report_summary["description_sources"].get("generated-from-source", 0),
+            "description_generated_fallback_count": report_summary["description_sources"].get("generated-fallback", 0),
+            "spell_type_display_change_count": sum(1 for spell_type, display_name in TYPE_DISPLAY_NAMES.items() if spell_type != display_name),
+            "approved_child_type_display_change_count": sum(1 for spell_type, display_name in APPROVED_CHILD_TYPE_DISPLAY_NAMES.items() if spell_type != display_name),
         },
         "spells": records,
     }
     framework_payload = {
-        "canonical_spell_types": CANONICAL_TYPES,
+        "canonical_spell_types": FINAL_SPELL_TYPES,
+        "canonical_spell_type_display_names": {
+            spell_type: APPROVED_CHILD_TYPE_DISPLAY_NAMES.get(spell_type, TYPE_DISPLAY_NAMES.get(spell_type, spell_type))
+            for spell_type in FINAL_TYPE_ORDER
+        },
+        "approved_split_child_types": APPROVED_SPLIT_CHILD_TYPES,
+        "stable_existing_final_types": STABLE_FINAL_TYPES,
+        "approved_child_type_display_names": APPROVED_CHILD_TYPE_DISPLAY_NAMES,
+        "spell_name_display_overrides": spell_name_display_overrides,
         "canonical_keywords": KEYWORD_VOCABULARY,
     }
 

@@ -3,168 +3,168 @@
     "original_name": "Air",
     "recommended_display_name": "Air",
     "alternate_display_name": "Winds, Vapors, and Breath",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Short and learned enough already; the longer alternate works if the final taxonomy leans more literary."
   },
   {
     "original_name": "Animal",
     "recommended_display_name": "Animal",
     "alternate_display_name": "Beasts, Vermin, and Their Masters",
-    "status": "keep-for-now",
-    "notes": "Plain but serviceable as a catalog root; keep the short form unless the whole root layer is made more ornate."
+    "status": "keep",
+    "notes": "Plain but serviceable as a catalog root; the short form remains the better choice unless the whole root layer is deliberately made more ornate."
   },
   {
     "original_name": "Body Control",
     "recommended_display_name": "Body Control",
     "alternate_display_name": "Flesh, Blood, and Bone",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Clinical phrasing already suits a maesterly register; the alternate is stronger flavor, not a clear usability win."
   },
   {
     "original_name": "Communication & Empathy",
     "recommended_display_name": "Messages, Persuasion, and Fellow Feeling",
     "alternate_display_name": "Speech, Sympathy, and Persuasion",
-    "status": "rename-recommended",
+    "status": "rename",
     "notes": "The source name reads modern and the ampersand is tonally out of place; this is one of the clearest root-level rename candidates."
   },
   {
     "original_name": "Earth",
     "recommended_display_name": "Earth",
     "alternate_display_name": "Stone, Soil, and Metal",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "The short root is strong, legible, and already fits the setting tone."
   },
   {
     "original_name": "Enchantment",
     "recommended_display_name": "Enchantment",
     "alternate_display_name": "Forged Charms and Lasting Works",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Already sounds like a learned category heading; the alternate is useful flavor text, not a necessary replacement."
   },
   {
     "original_name": "Fire",
     "recommended_display_name": "Fire",
     "alternate_display_name": "Flame, Ember, and Heat",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Short, strong, and immediately searchable; no rename needed at this stage."
   },
   {
     "original_name": "Food",
     "recommended_display_name": "Victuals, Preservation, and Plenty",
     "alternate_display_name": "Victuals and Preservation",
-    "status": "rename-recommended",
+    "status": "rename",
     "notes": "Food is blunt and slightly flat beside the other roots; the recommended name keeps table meaning while sounding more like a maester's catalog."
   },
   {
     "original_name": "Gate",
     "recommended_display_name": "Gate",
     "alternate_display_name": "Gates, Thresholds, and Far Ways",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "The short original is still crisp and useful; the alternate remains a viable later flavor upgrade."
   },
   {
     "original_name": "Healing",
     "recommended_display_name": "Healing",
     "alternate_display_name": "Healing and Restoration",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Already natural in tone and easy to scan at the table."
   },
   {
     "original_name": "Illusion & Creation",
     "recommended_display_name": "Glamours, Phantoms, and Conjurings",
     "alternate_display_name": "Glamours and Conjurings",
-    "status": "rename-recommended",
+    "status": "rename",
     "notes": "The current name is descriptive but flat; this is a strong tone-aligned replacement that still signals what the bucket contains."
   },
   {
     "original_name": "Knowledge",
     "recommended_display_name": "Knowledge",
     "alternate_display_name": "Signs, Revelations, and Knowing",
-    "status": "keep-for-now",
-    "notes": "Short and scholarly already; no clear gain from replacing it during the structural pass."
+    "status": "keep",
+    "notes": "Short and scholarly already; no clear gain comes from replacing it in the naming pass."
   },
   {
     "original_name": "Light",
     "recommended_display_name": "Light",
     "alternate_display_name": "Light, Shadow, and Radiance",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Simple and usable as a root display name, especially while child buckets are still being settled."
   },
   {
     "original_name": "Making & Breaking",
     "recommended_display_name": "Making & Breaking",
     "alternate_display_name": "Making, Breaking, and Severing",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Already has a faintly old-fashioned cadence and still reads well in rules text."
   },
   {
     "original_name": "Meta",
     "recommended_display_name": "The Higher Mysteries",
     "alternate_display_name": "Higher Mysteries of Sorcery",
-    "status": "rename-recommended",
+    "status": "rename",
     "notes": "Meta is too technical for the desired voice; this is the clearest scholarly replacement without losing the sense of magic-about-magic."
   },
   {
     "original_name": "Mind Control",
     "recommended_display_name": "Command, Influence, and Subjugation",
     "alternate_display_name": "Command and Influence",
-    "status": "rename-recommended",
+    "status": "rename",
     "notes": "The source label is accurate but blunt; the replacement keeps the coercive meaning while sounding more in-world."
   },
   {
     "original_name": "Movement",
     "recommended_display_name": "Movement",
     "alternate_display_name": "Roads, Flight, and Swift Passage",
-    "status": "keep-for-now",
-    "notes": "Functional but acceptable; worth keeping until the movement child taxonomy is reviewed."
+    "status": "keep",
+    "notes": "Functional but acceptable; keeping the short root preserves clarity while the child naming carries more of the flavor work."
   },
   {
     "original_name": "Necromantic",
     "recommended_display_name": "Necromantic",
     "alternate_display_name": "Death, Dust, and the Restless",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Already sounds like a learned category heading and does not need a forced rewrite."
   },
   {
     "original_name": "Plant",
     "recommended_display_name": "Plant",
     "alternate_display_name": "Roots, Vines, and Growing Things",
-    "status": "keep-for-now",
-    "notes": "The short root remains perfectly readable; the alternate is flavorful but not necessary yet."
+    "status": "keep",
+    "notes": "The short root remains perfectly readable; the alternate is flavorful but not necessary for the current voice pass."
   },
   {
     "original_name": "Protection",
     "recommended_display_name": "Protection",
     "alternate_display_name": "Wards, Safeguards, and Defenses",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Clear, learned, and already aligned with maester tone."
   },
   {
     "original_name": "Sound",
     "recommended_display_name": "Sound",
     "alternate_display_name": "Voices, Echoes, and Song",
-    "status": "keep-for-now",
+    "status": "keep",
     "notes": "Short and serviceable; the alternate is useful for later flavor review, not required now."
   },
   {
     "original_name": "Technological",
     "recommended_display_name": "Engines, Powder, and Devices",
     "alternate_display_name": "Engines and Devices",
-    "status": "rename-recommended",
+    "status": "rename",
     "notes": "Technological is the most overtly modern root in the set; this replacement keeps the scope legible while matching the setting voice."
   },
   {
     "original_name": "Water",
     "recommended_display_name": "Water",
     "alternate_display_name": "Waters, Ice, and Mists",
-    "status": "keep-for-now",
-    "notes": "The original is already strong and readable enough to keep during the structural pass."
+    "status": "keep",
+    "notes": "The original is already strong and readable enough to keep in the current voice pass."
   },
   {
     "original_name": "Weather",
     "recommended_display_name": "Weather",
     "alternate_display_name": "Storm, Rain, and Thunder",
-    "status": "keep-for-now",
-    "notes": "Simple and still appropriately in-world; no forced change needed before taxonomy review."
+    "status": "keep",
+    "notes": "Simple and still appropriately in-world; no forced change is needed in the current voice pass."
   }
 ]

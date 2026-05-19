@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "totalSpells": 48,
+    "sourceTitle": "GURPS Thaumatology: Sorcery",
+    "sourceSection": "The Sorcerer's Grimoire",
+    "sourcePages": "12-26",
+    "sourceFile": "resources/gurps-4th-edition-thaumatology-sorcery-p12-26.pdf",
+    "extractedAt": "2026-05-18T21:52:13.336028+00:00",
+    "extractionMethod": "manual transcription and normalization from PDF excerpt",
+    "notes": [
+      "Uses original spell-type headings from the excerpt.",
+      "Includes Cancel Spells from the Early Termination sidebar as No College Spells."
+    ]
+  },
+  "spells": [
+    {
+      "spell_id": "8991d898-176f-58dd-aab8-a284483f30e9",
+      "spell_name": "Air Jet",
+      "spell_types": [
+        "Air Spells"
+      ],
+      "keywords": "Jet, Obvious.",
+      "full_cost": "6 points/level.",
+      "casting_roll": "None. Use Innate Attack (Beam) to hit.",
+      "range": "20 yards.",
+      "duration": "Instantaneous.",
+      "description": "You shoot a thin jet of air from your fingertip, which can strike any target up to 20 yards away (without range or speed penalties). It can be dodged or blocked, but not parried. This jet does 1d crushing damage per level, doubled, for the purposes of knockback only. It can also snuff out candles, sweep the floor, and so on. Against enemies with Injury Tolerance (Diffuse), such as gaseous beings and swarms, this becomes a much more potent attack, doing full damage - including the doubling! Ignore the usual injury cap of 2 HP (Injury to Unliving, Homogenous, and Diffuse Targets, p. B380).",
+      "statistics": "Crushing Attack 1d (Blockable, -5%; Cosmic, Does knockback-based damage against diffuse targets, +50%; Double Knockback, +20%; Increased 1/2D, 2x, +5%; Increased Range, 2x, +10%; Jet, +0%; No Blunt Trauma, -20%; No Wounding*, -25%; Sorcery, -15%) [6/level]. * Except versus diffuse targets, an exception which halves the value of this limitation."
+    },
+    {
+      "spell_id": "a1fccd49-c8b0-51ea-848b-8b6990afa3c8",
+      "spell_name": "No-Smell",
+      "spell_types": [
+        "Air Spells"
+      ],
+      "keywords": "Buff.",
+      "full_cost": "63 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "30 minutes.",
+      "description": "The subject and all of his carried equipment produce no odor for the duration of the spell. This is not limited to just his natural scent; it would even mask someone sprayed by a skunk. No other properties of the subject change. When the spell ends, all scents (including those acquired while odor-masked) return.",
+      "statistics": "Affliction 1 (HT; Advantage, No-Smell, +470%; Extended Duration, 10x, +40%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; No Signature, +20%; Sorcery, -15%) [63]. Note: \"No-Smell\" is Obscure 10 (Smell; Accessibility, Subject's scent only, -5%; Defensive, +50%; Magical, -10%; Stealthy, +100%) [47]."
+    },
+    {
+      "spell_id": "4893bd7b-9a4f-5540-837d-f2dd8527b1f4",
+      "spell_name": "Animal Control",
+      "spell_types": [
+        "Animal Spells"
+      ],
+      "keywords": "Resisted (Will).",
+      "full_cost": "10 points.",
+      "casting_roll": "IQ.",
+      "range": "Unlimited.",
+      "duration": "Special.",
+      "description": "You can take control of any single animal - or of one square yard of a swarm of smaller animals (including insects). Only creatures with a racial IQ of 1-5 or less can be affected, though the GM may make exceptions for animals with IQ 6 and Bestial. In addition to range penalties, your casting roll is at -1 for each other animal currently under your control. If you tie, nothing happens, but if you lose the creature is immune to you for 24 hours and can sense your attempted coercion; the GM will make a new reaction roll at -2, using the worse of its existing or new reaction. While under your control, the animal will follow any general orders you give. You cannot be very specific! \"Protect me\" is a valid order, but \"lead my friend toward the nearest city\" is not. When in doubt, the GM will make an IQ roll for the animal to see how well it interprets what you're saying. This spell has an indefinite duration if you take constant Concentrate maneuvers to keep it active (and pay the usual 1 FP per minute). Once you stop concentrating, it continues to last for a fixed duration (at no FP cost) in minutes equal to the margin by which you won the initial Quick Contest. If you lose consciousness, the spell ends immediately.",
+      "statistics": "Mind Control (Accessibility, Animals only, -25%; Suggestion, -40%; Sorcery, -15%) [10]."
+    },
+    {
+      "spell_id": "1646b1de-a2bd-5ce6-acd4-f0bd47d2b7e9",
+      "spell_name": "Repel Animals",
+      "spell_types": [
+        "Animal Spells"
+      ],
+      "keywords": "Area (Leveled), Resisted (IQ).",
+      "full_cost": "47 points for level 1 + 5 points/additional level.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "50 minutes.",
+      "description": "Animals (defined as for Animal Control, pp. 13-14) become unwilling to enter the area; any already within the area leave immediately. You may exclude specific, known animals or even broad classes of animals from the effects; e.g., \"The spell affects every animal except for livestock, birds, and our five horses here.\" You may also reduce the area effect if you wish to. While this spell is technically resisted by each animal's IQ, in practice the GM should bother only for extraordinary animals. If so, victory allows the animal to remain within the area for three minutes, after which it must roll again.",
+      "statistics": "Affliction 1 (IQ; Accessibility, Animals Only, -25%; Area Effect, 2 yards, +50%; Based on IQ, +20%; Disadvantage, Dread, +30%; Extended Duration on Persistent, 100x, +80%; Fixed Duration, +0%; Malediction 2, +150%; No Signature, +20%; Persistent, +40%; Selective Area, +20%; Sorcery, -15%) [47]. Additional levels add Area Effect (+50%) [+5]."
+    },
+    {
+      "spell_id": "30da0b9b-306b-5219-a5b4-cc4871f625b4",
+      "spell_name": "Haircut",
+      "spell_types": [
+        "Body Control Spells"
+      ],
+      "keywords": "Resisted (HT).",
+      "full_cost": "11 points.",
+      "casting_roll": "DX or Professional Skill (Barber).",
+      "range": "10 yards.",
+      "duration": "Instantaneous.",
+      "description": "The subject, who must be within 10 yards, has his hair (beard, mustache, fur, etc.) trimmed as the caster sees fit. The cut hair falls at the subject's feet. The haircut is permanent, though the hair will grow back normally and the subject can always get it restyled somewhere else immediately if he doesn't mind an even shorter cut. An unsuspecting or unwilling subject resists with HT. A willing target can (and usually will) waive his resistance. This spell can never cause damage or an affliction.",
+      "statistics": "Telekinesis 1 (One Task, Cutting hair, -60%; Reduced Time 10, +200%; Requires DX vs. HT roll, -10%; Sorcery, -15%) [11]. Notes: See below for the One Task limitation. Here, Reduced Time is used to shorten a 10-minute haircut to one second, which was chosen because it costs the same as an Average technique to buy off the -10 for 'instant use.'"
+    },
+    {
+      "spell_id": "71d0fbad-b76b-54b4-ba82-7d9275130854",
+      "spell_name": "Tanglefoot",
+      "spell_types": [
+        "Body Control Spells"
+      ],
+      "keywords": "Resisted (DX).",
+      "full_cost": "30 points.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "Instantaneous.",
+      "description": "The subject immediately falls over, as if his legs (or equivalent) just gave out on him. He may begin getting back up on his very next turn. If flying, he spends one second losing altitude; assume he drops five yards multiplied by local gravity in Gs unless more detailed rules are available. If this is not enough to make him crash, he regains control next turn.",
+      "statistics": "Affliction 1 (DX; Accessibility, Legs and similar supportive body parts only, -20%; Based on DX, +20%; Fixed Duration, +0%; Malediction 2, +150%; No fatigue loss from Seizure, -20%; No Signature, +20%; Seizure, +100%; Reduced Duration, 1/180, -40%; Sorcery, -15%) [30]."
+    },
+    {
+      "spell_id": "8e6fea6a-fc36-533b-928e-7432ec283af8",
+      "spell_name": "Gift of Tongues",
+      "spell_types": [
+        "Communication and Empathy Spells"
+      ],
+      "keywords": "Buff.",
+      "full_cost": "28 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "30 minutes.",
+      "description": "For the duration, the subject speaks and understands one spoken language, chosen when you cast the spell. You do not have to speak the language - in fact, this is an excellent way to get around that problem! However, the GM is within rights to declare certain languages \"secret\" or \"lost\" and thus unavailable unless you first learn the language (to at least Broken) legitimately.",
+      "statistics": "Affliction 1 (HT; Advantage, Gift of Tongues, +120%; Extended Duration, 10x, +40%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; No Signature, +20%; Sorcery, -15%) [28]. Note: \"Gift of Tongues\" is Cosmic Power 3 (Limited, One Spoken Language, -50%; Magical, -10%) [12]."
+    },
+    {
+      "spell_id": "8a2f67c9-07db-51e6-a0fa-74ee9913dfa1",
+      "spell_name": "Sense Life",
+      "spell_types": [
+        "Communication and Empathy Spells"
+      ],
+      "keywords": "Information.",
+      "full_cost": "26 or 56 points.",
+      "casting_roll": "Per. Use IQ for analysis.",
+      "range": "Unlimited.",
+      "duration": "Instantaneous.",
+      "description": "With the basic (26-point) version of this spell, you can immediately sense all nearby living beings, sorted by the direction to each one. The GM will roll against your Per (plus Talent), minus the range penalty to the nearest appropriate being, and inform you if you succeed. If you do succeed, you may immediately make a follow-up IQ roll (plus Talent) to analyze what you're detecting. If successful, the GM will give you details for each being based on your margin of success (e.g., success by 0-1 might just give \"human,\" while success by 4-5 could be \"32-year-old human male in great shape except for a bad leg\"). Any level of success here allows you to weed out \"false positives\" from known living beings. In practice, it's easiest to tell the GM what you are and aren't looking for (e.g., \"I want to find anything bigger than a mouse who isn't one of us\") and wait until both rolls are made for him to give you the details. The improved (56-point) version of this spell works as above, except that you know the precise location of each subject. This allows you to cast spells on any of them for as long as each remains in that location - or for the next second, if one is already on the move.",
+      "statistics": "Detect (Life; Sorcery, -15%) [26]. The improved version adds Precise (+100%) [+30]."
+    },
+    {
+      "spell_id": "81e7d694-bfb4-5f11-93ad-5cebad8ad264",
+      "spell_name": "Flesh to Stone",
+      "spell_types": [
+        "Earth Spells"
+      ],
+      "keywords": "Resisted (HT).",
+      "full_cost": "61 points.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "Permanent.",
+      "description": "You can turn a living subject into stone! If he fails to resist, his body and anything he is carrying become stone. This cannot be undone via Dispel Magic (p. 21); countering it requires Remove Curse (p. 21) or the equivalent of Stone to Flesh (GURPS Magic, p. 53).",
+      "statistics": "Affliction 1 (HT; Cosmic, Immune to Dispel Magic, +50%; Extended Duration, Permanent, +150%; Malediction 2, +150%; No Signature, +20%; Paralysis, Variant, +150%; Sorcery, -15%) [61]."
+    },
+    {
+      "spell_id": "72eddbfc-3bb9-5a72-b500-42ab87f547de",
+      "spell_name": "Walk Through Earth",
+      "spell_types": [
+        "Earth Spells"
+      ],
+      "keywords": "Buff.",
+      "full_cost": "56 or 72 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "Nine minutes.",
+      "description": "The basic (56-point) version of this spell allows the subject to pass through dirt, clay, mud, and sand as if they were not even there. He does not automatically sink into the ground; the earth beneath his feet is as solid as he wishes it to be. He will need to hold his breath on long trips (this spell does not provide air) and gains no special ability to see through earth. He may carry up to Light encumbrance while doing this. The improved (72-point) spell allows him to walk through stone or metal in addition to earth.",
+      "statistics": "Affliction 1 (HT; Advantage, Walk Through Earth, +440%; Extended Duration, 3x, +20%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; Sorcery, -15%) [56]. The improved version changes the advantage to Improved Walk Through Earth (+600%) [+16]. Notes: \"Walk Through Earth\" is Permeation (Earth; Can Carry Objects, Light Encumbrance, +20%; Magical, -10%) [44]. \"Improved Walk Through Earth\" is Permeation (Earth; Can Carry Objects, Light Encumbrance, +20%; Extended, Metal and Stone, +40%; Magical, -10%) [60]."
+    },
+    {
+      "spell_id": "8d09402b-3d1d-5d44-9966-c88a3bc27d77",
+      "spell_name": "Enchant",
+      "spell_types": [
+        "Enchantment Spells"
+      ],
+      "keywords": "Obvious.",
+      "full_cost": "37 points.",
+      "casting_roll": "IQ.",
+      "range": "Touch.",
+      "duration": "Truly Permanent.",
+      "description": "See Chapter 3 for details on this spell and enchanting items in general. The Enchant spell itself cannot be enchanted into an item!",
+      "statistics": "Affliction 1 (Accessibility, Only to build magical items, -40%; Based on IQ, Own Roll, +20%; Cumulative, +400%; Extended Duration, Truly Permanent, +300%; Limited Use, 1/day, -40%; Melee Attack, Reach C, -30%; Sorcery, -15%; Special Enhancements, see p. 31, +1,080%) [36] + Extra Option (Limited access to meditative study for enchanting) [1]. Note: The actual cost of 178 points is divided by five due to this ability being character-point powered."
+    },
+    {
+      "spell_id": "8844dac3-2804-5d79-9108-13032545daad",
+      "spell_name": "Penetrating Weapon",
+      "spell_types": [
+        "Enchantment Spells"
+      ],
+      "keywords": "Weapon Buff.",
+      "full_cost": "44 points for level 1 + 16 points/additional level.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "Three minutes.",
+      "description": "The weapon enhanced gains an armor divisor for the duration. The divisor depends on the level of the spell (maximum 6): level 1 gives (2), level 2 gives (3), level 3 gives (5), level 4 gives (10), level 5 gives (100), and level 6 ignores DR. If the weapon already had a natural armor divisor, multiply the two together; e.g., a superfine sword that does 2d+2(2) cutting, enchanted by Penetrating Weapon 2, would end up with damage 2d+2(6). This does not apply to magical armor divisors; as with all Buff spells, use only the highest magical effect.",
+      "statistics": "Affliction 1 (HT; Accessibility, Only on weapons, -20%; Advantage, Penetrating Weapon (2), +340%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; No Signature, +20%; Sorcery, -15%) [44]. Additional levels add further Penetrating Weapon to the Advantage enhancement (+160%) [+16]. Notes: \"Penetrating Weapon (2)\" is 34 points, per Enhances or Transforms an Existing Attack (p. 11). Each additional level removes -2 in effect penalties."
+    },
+    {
+      "spell_id": "054c2111-6888-5b4a-8f1e-dbe6a91651bb",
+      "spell_name": "Ignite Fire",
+      "spell_types": [
+        "Fire Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "1 or 4 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim the improved version.",
+      "range": "Touch or 100 yards.",
+      "duration": "Instantaneous.",
+      "description": "The basic (1-point) version of this spell must be cast on a subject you are holding or touching and staring intently at. The improved (4-point) one may be cast at a distance, using Innate Attack (Gaze) for targeting; in theory, this can be dodged, but the subject must have some way to know it's coming. Consult Making Things Burn (p. B433) - a target rated from Super-Flammable to Resistant ignites immediately. Anything more resistant to fire may catch if this spell is cast repeatedly and continuously. Roll 3d after every 10 seconds of uninterrupted casting; Highly Resistant materials (including flesh) catch on a 16 or less, while Nonflammable ones catch only on a 6 or less. This spell does no actual damage to the object, though it will likely take damage from the resultant fire.",
+      "statistics": "Burning Attack 3 points (Incendiary, +10%; Melee Attack, Reach C, Cannot Parry, -35%; No Signature, +20%; No Wounding, -50%; Sorcery, -15%; Vision-Based, Reversed, -20%) [1]. The improved version replaces Melee Attack and Vision-Based with Increased 1/2D, 10x, for a net +70% [+3]."
+    },
+    {
+      "spell_id": "e63df911-9465-522e-8a43-0c09e8d65314",
+      "spell_name": "Shape Fire",
+      "spell_types": [
+        "Fire Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "19 points/level.",
+      "casting_roll": "IQ.",
+      "range": "100 yards.",
+      "duration": "Indefinite.",
+      "description": "You can control the shape of a fire, which must have an initial radius (in yards) no greater than your level of this spell. This even allows you to \"walk\" the fire, with a Move equal to your spell level. You cannot split the fire into multiple components - it must remain one continuous fire - but you do not have to leave it in a circular shape. You must actively concentrate while shaping or moving the fire, but may otherwise maintain this spell normally (no concentration required).",
+      "statistics": "Control Fire (Accessibility, Only to shape and move fire, -30%; Ranged, +40%; Sorcery, -15%) [19/level]."
+    },
+    {
+      "spell_id": "daa385f0-510d-5280-9ded-87d1785eb37f",
+      "spell_name": "Planar Visit",
+      "spell_types": [
+        "Gate Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "30 or 50 points.",
+      "casting_roll": "IQ. Special casting time (see below).",
+      "range": "Self.",
+      "duration": "Indefinite.",
+      "description": "You leave your body behind, unconscious, while your spirit visits another plane of existence. While there, you cannot cast spells or otherwise affect the world in any meaningful way. Your spirit form is visible, but insubstantial. This spell can be maintained indefinitely, but your body's need to eat, drink, sleep, etc. effectively limits the duration to a day or so - longer if your body is left with friends, in a hospital, or otherwise cared for. The basic (30-point) version of this spell allows you to visit one other plane, chosen when you learn the spell. The improved (50-point) version opens this up to any dimension you are familiar with. You can become familiar with new planes by hitching a ride there - with another sorcerer using this spell, a magician using an equivalent spell, a creature with an innate ability, etc. - or via tomes of knowledge which contain detailed instructions on where and how to travel. Unlike most spells, Planar Visit takes 10 or 11 seconds to cast instead of one or two. You can speed this up by taking -1 to skill for each second omitted (maximum -10).",
+      "statistics": "Jumper (World; Improved, +10%; Limited Access, -20%; Magical, -10%; Projection, Cannot affect new world, -50%) [30]. The improved version removes Limited Access [+20]. Note: The Improved enhancement removes the auto-fail on 14+."
+    },
+    {
+      "spell_id": "2eb2a105-21e3-511d-9df6-73df4ba18cdd",
+      "spell_name": "Suspend Time",
+      "spell_types": [
+        "Gate Spells"
+      ],
+      "keywords": "Area (Leveled), Resisted (Will, Special).",
+      "full_cost": "141 points for level 1 + 5 points/additional level.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "30 minutes.",
+      "description": "The affected area is temporarily frozen in time. Every person, thing, movement of nature, etc., is completely immobilized (even in midair) - and nothing that anyone outside of the area does will affect them. Anyone entering the \"time bubble\" is frozen as well. Those within are completely immune to damage, poison, aging, and so on. This spell can thus save the lives of people about to be caught in a mudslide - or freeze your foes while you fire a few hundred arrows at them. (The arrows will stop once they enter the \"bubble,\" but once time resumes, so do they ...) Unless everyone within the area is willing, the person with the highest effective Will resists. The spell is all-or-nothing; if that one person resists, then the spell fails, but if not, then it works. If the GM is uncertain of who has the best resistance roll (e.g., one person has high Will while another has modest Will but also Luck), he can pick two, roll for both, and average their margins of success for the Quick Contest. This spell cannot be countered via Dispel Magic (p. 21), only by Remove Curse (p. 21).",
+      "statistics": "Affliction 1 (Will; All or Nothing, below, -10%; Area Effect, 2 yards, +50%; Based on Will, +20%; Cosmic, Immune to Dispel Magic, +50%; Extended Duration, 10x, +40%; Fixed Duration, +0%; Malediction 2, +150%; No Signature, +20%; Sorcery, -15%; Temporal Stasis, +1,000%; Variable, Area, +5%) [141]. Additional levels add Area Effect (+50%) [+5]."
+    },
+    {
+      "spell_id": "48b37d83-c195-5b4b-9ea1-7477a34eb079",
+      "spell_name": "Minor Healing",
+      "spell_types": [
+        "Healing Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "32 points.",
+      "casting_roll": "IQ.",
+      "range": "Touch.",
+      "duration": "Instantaneous.",
+      "description": "By making physical contact with a subject, you may immediately heal him 1d HP. This also automatically stops any bleeding. You may heal subjects of your own race and any \"similar\" races (GM's call); e.g., a human can heal other humans but not dogs or plants. Your casting roll is at -2 if the subject is unconscious. In addition, if used more than once per day on a given subject, you are at a cumulative -3 per successful healing. Failure costs you 1d FP instead of the usual 1 FP!",
+      "statistics": "Healing (Affects Self, +50%; Cannot restore crippled limbs, -10%; Capped, 2 FP, -25%; Injuries Only, -20%; Magical, -10%; Reduced Fatigue Cost 1, +20%) [32]. Note: The 4 HP of healing has been converted to dice per p. B269."
+    },
+    {
+      "spell_id": "b5a1dffa-1d71-542c-963e-fd8698ca5727",
+      "spell_name": "Relieve Madness",
+      "spell_types": [
+        "Healing Spells"
+      ],
+      "keywords": "Resisted (Will).",
+      "full_cost": "10 points.",
+      "casting_roll": "IQ. Use IQ (again) or Brainwashing to remove disadvantages.",
+      "range": "Unlimited.",
+      "duration": "Three days.",
+      "description": "You can temporarily remove any mental disadvantages in a subject that the GM agrees represent \"insanity.\" Valid examples include Berserk, Chronic Depression, Flashbacks, Megalomania, and Phantom Voices. Some disadvantages - such as Compulsive Behavior, Delusion, Odious Personal Habit, and Phobia - may count, depending on the severity and specific details. Self-imposed disadvantages (p. B121) never qualify. If the subject is willing, no resistance roll is needed. If not, he resists with Will and must be completely immobilized or otherwise under your control while you cast the spell. Successful casting gets you inside of his head, where you can \"see\" his insanity; the GM will reveal his insanity-related disadvantages. You must then win a second Quick Contest of IQ vs. Will - or make another unopposed IQ roll, for a willing subject - at -1 for every full -5 points in disadvantages you wish to remove. You may substitute Brainwashing for IQ, if better. A critical success here gives the subject an excuse to buy off his problem, if he has the character points!",
+      "statistics": "Mind Control (Accessibility, Only to remove \"insane\" mental disadvantages, -20%; Conditioning Only, -50%; Fixed Duration, +0%; Sorcery, -15%) [10]."
+    },
+    {
+      "spell_id": "445c21ba-94fd-5b4b-b9f3-ef59cd295088",
+      "spell_name": "Complex Illusion",
+      "spell_types": [
+        "Illusion and Creation Spells"
+      ],
+      "keywords": "Area (Leveled).",
+      "full_cost": "42 points for level 1 + 12.5 points/additional level*.",
+      "casting_roll": "None. Use IQ or Artist (Illusion) to determine how convincing it is.",
+      "range": "100 yards.",
+      "duration": "Indefinite.",
+      "description": "You can create an illusion anywhere that you can see within 100 yards; see Area (p. 9) for the size. It affects hearing as well as vision, but special senses such as Infravision or Vibration Sense are not fooled. You must win a Quick Contest of IQ - or Artist (Illusion), if better - against the Per of anyone you want to fool; otherwise they notice something \"off.\" Do not apply range penalties to your roll. Their roll is at +4 if they have reason to be alert for illusions or +10 if you made it appear from out of nowhere. However, even if they successfully \"disbelieve,\" your illusion doesn't disappear. Thus, even an obvious illusion can be useful to block line of sight or act as white noise to mask quiet conversation. You must concentrate to change the illusion or to have it behave \"intelligently\" (e.g., to make an illusionary person talk). Without concentration, it will conform to your expectations for how it should behave; e.g., an illusionary wolf will shy from a torch or snarl if someone comes close.",
+      "statistics": "Illusion (Independence, +40%; Ranged, +40%; Sorcery, -15%) [42]. Additional levels add Area Effect (+50%) [+12.5*]. * Calculate the total cost and then round down (because the base ability costs just 41.25 points before rounding). Level 2 costs 54 points, level 3 costs 67 points, level 4 costs 79 points, level 5 costs 92 points, and so on."
+    },
+    {
+      "spell_id": "bd29e962-3d7f-5404-bec5-26d895420b26",
+      "spell_name": "Create Object",
+      "spell_types": [
+        "Illusion and Creation Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "56 points for level 1 + 4 points/additional level.",
+      "casting_roll": "IQ. Special casting time (see below).",
+      "range": "Touch.",
+      "duration": "Indefinite.",
+      "description": "You can create any simple, common object weighing 3 lbs. or less; it appears in your hand. The GM should be generous in determining what's \"simple\" and \"common\"; this rule primarily exists to prevent players from summoning 3-lb. diamonds, prototype technology, and so on. Note that, e.g., \"a loaded gun\" would be a single object; you do not have to create the gun and bullets separately! Unlike most spells, Create Object requires 10 or 11 seconds to cast instead of the normal one or two seconds. If your roll fails, you create the wrong thing. The difference depends on your margin of failure; if you're trying to conjure a broadsword, failure by 1 might give you a shortsword, while failure by 5 would give you a wooden toy sword! If you fail, you can try again, but repeated attempts cost 3 FP (instead of the usual 1 FP) and take a cumulative -1 to the IQ roll, until you succeed or wait an hour. A created object lasts indefinitely. That means, however, that if you want to cast this spell again, the first object goes away as soon as you begin casting to create the second one. If you can maintain multiple spells (Simultaneous Spells, p. 8), you can keep multiple versions of Create Object \"on\" to get around that problem. Higher levels of this spell allow you to create heavier, larger objects. However, in no case can you create an object weighing more than 2xBL; it must always be something you could hold in one hand. Spell level 1 creates 3 lbs. (Min. ST 3), 2 creates 5 lbs. (Min. ST 4), 3 creates 7 lbs. (Min. ST 5), 4 creates 10 lbs. (Min. ST 5), 5 creates 15 lbs. (Min. ST 7), 6 creates 20 lbs. (Min. ST 8), 7 creates 30 lbs. (Min. ST 9), 8 creates 50 lbs. (Min. ST 12), 9 creates 70 lbs. (Min. ST 14), and 10 creates 100 lbs. (Min. ST 16). For higher levels, look up the spell level in the \"Size\" column of the Size and Speed/Range Table (p. B550) and then read the corresponding \"Linear Measurement\" as pounds instead of yards. (Or note that every +6 levels corresponds to 10x weight.) See p. B17 to find minimum ST.",
+      "statistics": "Snatcher (Accessibility, Only common objects that exist in your own world, -20%; Improved, +10%; Less Weight, 3 lbs., -5%; Magical, -10%; Reduced Fatigue Cost 1, +20%; Unpredictable, -25%) [56]. Level 2 removes Less Weight (+5%) [+4] and additional levels add More Weight (+5%) [+4]. Note: The Improved enhancement eliminates the auto-fail on 14+."
+    },
+    {
+      "spell_id": "1c220310-6dff-5152-8284-5fddd047f77d",
+      "spell_name": "Detect Magic",
+      "spell_types": [
+        "Knowledge Spells"
+      ],
+      "keywords": "Information.",
+      "full_cost": "7 points.",
+      "casting_roll": "IQ.",
+      "range": "Unlimited.",
+      "duration": "Instantaneous.",
+      "description": "Determines whether the subject (person, object, or area) is under the effects of magic; enchanted items definitely count. The GM will secretly roll against the caster's IQ minus range penalties (p. B550) to the subject, which the caster must be able to see or touch. If the sorcerer is familiar with the spells in question, this will reveal them. Otherwise, the GM will use the margin of success to determine how much information to give the sorcerer.",
+      "statistics": "Detect (Magic; Sorcery, -15%; Touch- or Vision-Based, -15%) [7]."
+    },
+    {
+      "spell_id": "7eed7350-ef47-531d-8e3a-a41125da36b0",
+      "spell_name": "Divination",
+      "spell_types": [
+        "Knowledge Spells"
+      ],
+      "keywords": "Information.",
+      "full_cost": "48 or 98 points.",
+      "casting_roll": "IQ. Special casting time (see below).",
+      "range": "Touch.",
+      "duration": "Instantaneous.",
+      "description": "You receive a vision about the subject's future, tailored toward the question you ask or topic you specify. If the subject is not yourself, he must be within reach when the spell is cast. You may ask a general question that affects many people (e.g., \"Will the tsunami hit our coast?\") as long as at least one of those people is present. In all cases, the GM may apply penalties if he feels that the topic in question is not something with a fixed answer - such as the outcome of an upcoming battle - particularly if the PCs will be using this information to influence it! (If so, he should divulge this penalty to the sorcerer's player, who may then decide whether it's worth casting the spell.) In all cases, the GM is not obliged to give a straightforward answer; this spell produces a vision, which may require some interpretation. The margin of success should determine the clarity of the vision and how easy it is to interpret. The basic (48-point) version of this spell requires 10 minutes to cast! The improved (98-point) version requires only the usual one or two seconds.",
+      "statistics": "Precognition (Active Only, -60%; Directed, +100%; Magical, -10%; Reduced Fatigue Cost 1, +20%; Reliable 8, +40%) [48]. The improved version adds Reduced Time 10 (+200%) [+50]."
+    },
+    {
+      "spell_id": "72be1ad4-71fa-50e9-9eb5-72a9ce793a82",
+      "spell_name": "Light",
+      "spell_types": [
+        "Light and Darkness Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "11 points for level 1 + 4 points/additional level.",
+      "casting_roll": "IQ.",
+      "range": "100 yards.",
+      "duration": "One minute.",
+      "description": "You can summon light equivalent to full daylight; you may make this light manifest anywhere within 100 yards. The light is bright enough to eliminate all darkness penalties in a 10-yard radius. By concentrating, you can move this \"zone of light\" at up to (spell level) yards per second.",
+      "statistics": "Create Visible Light 1 (Accessibility, Limited to lighting a 10-yard radius for one minute, -40%; Magical, -10%; Ranged, +40%; Reduced Fatigue Cost 1, +20%) [11]. Additional levels add Mobile (+40%) [+4]."
+    },
+    {
+      "spell_id": "c0747674-3ce2-5afd-8269-00cfcc180e9b",
+      "spell_name": "Sunbolt",
+      "spell_types": [
+        "Light and Darkness Spells"
+      ],
+      "keywords": "Missile, Obvious.",
+      "full_cost": "4 points/level.",
+      "casting_roll": "None. Use Innate Attack (Beam) to hit.",
+      "range": "100 yards.",
+      "duration": "Instantaneous.",
+      "description": "You fire a beam of concentrated sunlight that does 1d burning damage per level! This is a tight-beam burning attack; see p. B399. Beings with Weakness (Sunlight) take an additional 1d of injury when first struck, though they are then immune for the duration of their Weakness; e.g., someone with Weakness (1d per minute) would take no more than an additional 1d per minute from Sunbolt. The beam is easily reflected. Normally it cannot be blocked, but someone may use a mirror or a highly polished shield to do so; this causes the attack to bounce off in a random direction, possibly striking the wrong target (p. B389). The mirror-wielder may even attempt to reflect it back at the caster, but this gives -2 to Block; the sorcerer defends normally. On the upside, the caster may make use of mirrored surfaces to \"ricochet\" the beam. This inflicts -2 per bounce to the attack roll, but may allow the attacker to bypass cover; in addition, the target is at -1 per bounce to defend. Sunbolt is a standard ranged attack, and is thus affected normally by spells like Reverse Missiles.",
+      "statistics": "Burning Attack (Nuisance Effect, Reflective, -5%; Sorcery, -15%) [4/level]. Notes: The beam counting as sunlight is not a modifier, simply the attack's description. The Nuisance Effect covers the collective rules for mirrors, which are slightly more punitive than useful."
+    },
+    {
+      "spell_id": "ea3ca5a6-2dbb-5d1a-8433-02096e20d9ba",
+      "spell_name": "Disintegrate",
+      "spell_types": [
+        "Making and Breaking Spells"
+      ],
+      "keywords": "Resisted (HT).",
+      "full_cost": "47 points.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "Three minutes or instantaneous.",
+      "description": "This spell has the potential to turn any inanimate object to dust! The sorcerer must roll a Quick Contest of Will vs. the object's HT+SM. As usual, apply Talent and range penalties to his roll. If the target's HT is unknown, assume that machines have HT 10 and simple objects have HT 12, modified for quality: -2 for cheap, +1 for fine, +2 for very fine. If he wins by 5 or more, the target immediately disintegrates. It cannot be repaired or recovered by any mundane means. If he wins by less, the object survives, but for the next three minutes, its HT is at -5 and its DR is reduced by 10; if it's a weapon, treat it as cheap for breakage purposes, or an extra +2 to break if already cheap. (Most casters will follow up with a second Disintegrate casting, as the target is nearly guaranteed to lose by a large margin.) If he loses or ties, there is no effect. Disintegrate must affect objects as a whole; it cannot target part of an object. The GM has the final say over what constitutes a \"whole\" object.",
+      "statistics": "Affliction 1 (HT; Accessibility, Inanimate objects only, -10%; Attribute Penalty, HT-5, +50%; Cosmic, Object disintegrates if destroyed, +50%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; Malediction 2, +150%; Negated Advantage, Reduced DR 10, +50%; No Signature, +20%; Secondary Destruction, +60%; Sorcery, -15%) [47]. Note: \"Destruction\" is a variant of Heart Attack appropriate for inanimate objects, which simply break rather than suffering mortal conditions."
+    },
+    {
+      "spell_id": "58936404-6390-581f-b15b-be9b94dd6ec9",
+      "spell_name": "Inspired Creation",
+      "spell_types": [
+        "Making and Breaking Spells"
+      ],
+      "keywords": "Buff.",
+      "full_cost": "30 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "Special.",
+      "description": "Helps a crafter create one work - a weapon, suit of armor, painting, spreadsheet, etc. - of amazing quality. It must be a mundane creation; this spell will not assist a magical enchanter! The sorcerer must be present throughout the entire creation process (a condition fulfilled automatically if the sorcerer and maker are the same person!), casting this spell at the end. If the spell is successful, the maker does not even need to roll; instead, treat it as an automatic critical success. However, the crafter immediately loses 6 FP from the strain on his mind and body. The sorcerer can cast this spell only once per day; the universe only has so much spare inspiration! At the GM's option, this spell may be available in levels (for an additional 20 points/level), in which case it can be cast a number of times per day equal to its level.",
+      "statistics": "Affliction 1 (HT; Advantage, Inspired Creation, +200%; Increased 1/2D, 10x, +15%; Sorcery, -15%) [30]. Additional levels, if allowed, add more Inspired Creation to Advantage (+200%) [+20]. Notes: \"Inspired Creation\" is Super Luck (Accessibility, Critical successes only, -10%; Accessibility, Only if caster present throughout crafting process, -10%; Aspected, Crafting, -20%; Costs Fatigue, 6 FP, -30%; Game Time, +0%; Magical, -10%) [20]. Since the caster must be present the entire time, the duration is \"as long as it takes the crafter to make his skill roll,\" but he only gets one chance to cast it; this is a 0-point special effect."
+    },
+    {
+      "spell_id": "a01e83fd-0ac9-55ac-9449-3ac1778ef63b",
+      "spell_name": "Cancel Spells",
+      "spell_types": [
+        "No College Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "10 points.",
+      "casting_roll": "Will.",
+      "range": "Self.",
+      "duration": "Instantaneous.",
+      "description": "You may immediately terminate one or more ongoing spells that you had cast. They do not resist; they immediately end. Don't apply any range penalties; you are always the subject of Cancel Spells, even for spells that were not cast upon your mind or body. Cancel Spells works on spells that are immune to Dispel Magic - but only if they're your spells. This does not undo any secondary effects that happened due to those spells; e.g., if your magical campfire has set the forest ablaze, that tiny part of the conflagration is all that snuffs out when you dispel it.",
+      "statistics": "Neutralize Magic (Accessibility, Own spells only, -50%; Interruption, -50%; Precise, +20%; Sorcery, -15%) [10]."
+    },
+    {
+      "spell_id": "f6c5cd1b-2b15-5ef2-8860-15f894a204dd",
+      "spell_name": "Dispel Magic",
+      "spell_types": [
+        "Meta-Spells"
+      ],
+      "keywords": "Area (Leveled), Resisted (Will or spell).",
+      "full_cost": "60 points for level 1 + 25 points/additional level.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "Instantaneous.",
+      "description": "Attempts to negate every instance of magic within the area. Dispel Magic does not care if the spell is beneficial or harmful; if the subject of that spell is within the area, this spell attempts to counter it. Casting Dispel Magic on another magician will remove any Buff spells and such that he'd previously cast upon himself, but does not affect any of his more distant ongoing spells nor his spellcasting ability. Note how much the sorcerer's Will roll (minus range penalties) succeeds by; every spell in the area resists separately with a Quick Contest. Use the spell's level (if a skill) or the caster's Will + Talent (if a power); for the latter, the Talent is usually Sorcery Talent or some type of Magery. If the sorcerer wins, the spell dissipates; it may be recast normally. Dispel Magic has no effect on instantaneous spells (which don't stick around) or on the secondary effects of lasting spells (e.g., if a mind-controlled bear has mauled people, their wounds don't go away). Also, some spells explicitly state that they are unaffected by Dispel Magic; such spells require more powerful countermagic, usually Remove Curse (below). It also cannot end Truly Permanent effects, such as the magic of enchanted items.",
+      "statistics": "Neutralize Magic (Accessibility, Must target subject, not caster, -10%; Area Effect, 2 yards, +50%; Interruption, -50%; Ranged, +40%; Sorcery, -15%; Variable, Area, +5%) [60]. Additional levels add Area Effect (+50%) [+25]."
+    },
+    {
+      "spell_id": "e7d43227-e190-50fd-940c-3b440f5ab230",
+      "spell_name": "Remove Curse",
+      "spell_types": [
+        "Meta-Spells"
+      ],
+      "keywords": "Resisted (Will or spell).",
+      "full_cost": "65 points.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "Instantaneous.",
+      "description": "Attempts to dispel a single instance of magic. Remove Curse must target the subject of the spell, which can be a person, object, or area. For areas, calculate range to the center of the area. The sorcerer must state which spell he is attempting to counter. Treat the resistance roll as for Dispel Magic (above). Remove Curse differs from Dispel Magic primarily in that it cannot counter all magic in the area, just one spell, but it can remove powerful magic such as Lesser Geas (below), Flesh to Stone (p. 15), and Suspend Time (p. 17). It cannot end Truly Permanent effects, such as the magic of enchanted items.",
+      "statistics": "Neutralize Magic (Accessibility, Must target subject, not caster, -10%; Accessibility, One spell at a time, -5%; Cosmic, Can dispel spells that are immune to Dispel Magic, +50%; Interruption, -50%; Precise, +20%; Ranged, +40%; Sorcery, -15%) [65]."
+    },
+    {
+      "spell_id": "3e8f4800-507c-521d-af62-fe19410bbe3a",
+      "spell_name": "Scryguard",
+      "spell_types": [
+        "Meta-Spells"
+      ],
+      "keywords": "Buff.",
+      "full_cost": "68 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "Five hours.",
+      "description": "The subject is nearly impossible to detect, see, or divine with any Information spells, regardless of the magic system used to cast them. Scryguard reduces the diviner's effective margin of success by 10 for these purposes - so a spell that succeeded by 0-9 completely fails to find the subject, while one that succeeded by 10+ provides less information than normal and is at a huge disadvantage if it's resisted. A spell like Detect Magic (p. 19) will reveal the existence of the Scryguard spell, but that's all - and the caster would have to first see the subject with his own eyes to cast it.",
+      "statistics": "Affliction 1 (HT; Advantage, Scryguard, +480%; Extended Duration, 100x, +80%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; No Signature, +20%; Sorcery, -15%) [68]. Note: \"Scryguard\" is Obscure 10 (Information Spells; Defensive, +50%; Magical, -10%; Stealthy, +100%) [48]."
+    },
+    {
+      "spell_id": "c42bf3ec-2ad6-5f28-b1b1-4b79fd1e83ab",
+      "spell_name": "Lesser Geas",
+      "spell_types": [
+        "Mind Control Spells"
+      ],
+      "keywords": "Resisted (Will).",
+      "full_cost": "54 points.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "Permanent (until fulfilled).",
+      "description": "Give a subject a command to do one specific thing. It must be something a person could feasibly, realistically accomplish; \"destroy every tree in the world\" would not be valid but \"destroy every tree in this town\" would be. If the subject fails to resist, he must make this command his first priority at all times. He is free to decide how to go about it, however, and may approach the situation intelligently; e.g., rather than grabbing an axe, he could contact a temp agency to hire a small army of woodcutters. In effect, he has an Obsession (p. B146) with no self-control roll. Once the subject accomplishes the goal, the geas ends. The only way to remove the geas before then is with Remove Curse (above); Dispel Magic (above) has no effect.",
+      "statistics": "Affliction 1 (Will; Based on Will, +20%; Cosmic, Immune to Dispel Magic, +50%; Extended Duration, Permanent, +150%; Malediction 2, +150%; No Signature, +20%; Sorcery, -15%; Variable Enhancement, +65%) [54]. Note: Variable Enhancement provides +13% of enhancements (+130%) but is limited by \"Accessibility, Only for Obsession with no self-control roll\" (-50%) for a net +65%."
+    },
+    {
+      "spell_id": "1c50ecbe-68b5-5fab-bbb6-8e7ff1dbb072",
+      "spell_name": "Terror",
+      "spell_types": [
+        "Mind Control Spells"
+      ],
+      "keywords": "Area (Fixed).",
+      "full_cost": "45 points for level 1 + 15 points/additional level.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "Instantaneous.",
+      "description": "You strike fear into the hearts of others. You can target any area within 100 yards and affect everyone within a 10-yard radius - this is not selective and (unlike most Area spells) you cannot reduce the area! Those in the area must roll a Fright Check, applying any Magic Resistance as a bonus. Your victims get +1 per Fright Check after the first within 24 hours, and anyone who succeeds is immune to this spell for an hour. Each additional level of this spell imposes -1 to the Fright Check. For example, with Terror 4, the subjects must make Fright Checks at -3. This spell is not Resisted; the chance to succeed at the Fright Check takes the place of a normal resistance roll.",
+      "statistics": "Terror (Presence, +25%; Ranged, +40%; Sorcery, -15%) [45]. Additional levels add -1 to the Fright Check [+15]."
+    },
+    {
+      "spell_id": "330ba817-9b13-53b6-81ee-68a5d2404296",
+      "spell_name": "Grease",
+      "spell_types": [
+        "Movement Spells"
+      ],
+      "keywords": "Area (Special).",
+      "full_cost": "45 points for level 1 + 15 points/additional level.",
+      "casting_roll": "IQ.",
+      "range": "100 yards.",
+      "duration": "30 seconds.",
+      "description": "Make a patch of ground extremely slippery. This may affect an area up to (Grease level)+1 yards in radius. There is no visible clue that the ground has been greased. All DX-based activities, including attack and defense rolls, are at -2 in the greased area. In addition, those moving into or through the area must roll against DX-2 every turn or fall; this roll is at +1 if walking at Move/2, +2 at Move/4, and +3 at Move/8 (round down, minimum 0). Critical failure causes 1d-2 injury to a randomly chosen limb. Anyone with Perfect Balance or Terrain Adaptation (Slippery) may ignore the effects of this spell. Anything less, including special footwear, doesn't help.",
+      "statistics": "Control Ground Friction 2 (Accessibility, Only to reduce friction, -25%; Cannot concentrate to extend duration, -10%; Extended Duration on Persistent, 3x, +20%; Persistent, +40%; Ranged, +40%; Sorcery, -15%) [45]. Additional levels add Control Ground Friction (Accessibility, Only to reduce friction, -25%; Cannot concentrate to extend duration, -10%; Extended Duration on Persistent, 3x, +20%; Only to increase area, -50%; Persistent, +40%; Ranged, +40%; Sorcery, -15%) [15/level]. Notes: Based on Control Friction from GURPS Supers."
+    },
+    {
+      "spell_id": "05e9e4fb-c89f-5226-9b52-1cb60e507a59",
+      "spell_name": "Locksmith",
+      "spell_types": [
+        "Movement Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "10 points.",
+      "casting_roll": "None. Use IQ (at -1) or Lockpicking (at +4) to open locks.",
+      "range": "10 yards.",
+      "duration": "Indefinite.",
+      "description": "You can perform fine manipulation that allows you to unlock a door without even touching it. The door must be within 10 yards and you must be able to see it clearly. Roll against Lockpicking at +4, or IQ at -1 if you lack Lockpicking skill. (Add Talent, as usual.) This is not an instantaneous attempt. It takes as long as the GM decrees - about a minute for a typical lock, but possibly shorter or longer for particularly easy or hard specimens. While this spell is optimized for picking locks, it can also be used for any fine manipulation where a set of extra (though very weak) hands would help. Such tasks get +2 or +4, depending on how useful the GM feels this assistance will be.",
+      "statistics": "Accessory (TK Lockpicks) [1] + Telekinesis 2 (Sorcery, -15%) [9]. Note: The +4 is the usual fine-work task bonus for Lockpicking."
+    },
+    {
+      "spell_id": "a37b8579-494a-53ef-921c-2f83a7cfc0ac",
+      "spell_name": "Steal Vitality",
+      "spell_types": [
+        "Necromantic Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "19 points for level 1 + 3 points/additional level.",
+      "casting_roll": "None.",
+      "range": "Touch.",
+      "duration": "Indefinite.",
+      "description": "You can steal HP from a victim to replenish your own. There is no resistance roll, but the subject must be either willing or completely helpless. You must touch him constantly while stealing vitality. Every two seconds, he loses HP equal to the level of this spell; for every full 3 HP he loses, you recover 1 HP.",
+      "statistics": "Leech 1 (Sorcery, -15%; Takes Extra Time 1, -10%) [19 + 3/additional level]."
+    },
+    {
+      "spell_id": "b8c59edd-0897-5d98-962f-467e0ef54061",
+      "spell_name": "Turn Zombie",
+      "spell_types": [
+        "Necromantic Spells"
+      ],
+      "keywords": "Area (Leveled).",
+      "full_cost": "47 points for level 1 + 7.5 points/additional level*.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "Instantaneous. Undead who flee will remain affected for 15 hours.",
+      "description": "Every zombie in the area takes 1d of crushing damage. (Here, \"zombie\" means any mindless undead creature animated by magic.) Their DR does not protect! In addition, every zombie must immediately roll against HT+DR; this is an unopposed roll, not a Quick Contest. If that roll fails, that zombie immediately flees from the caster and will not approach him again for the next 15 hours.",
+      "statistics": "Affliction 1 (HT; Accessibility, Zombies only, -50%; Area Effect, 2 yards, +50%; Disadvantage, Dread, +30%; Extended Duration, 300x, +100%; Fixed Duration, +0%; Link, +10%; No Signature, +20%; Sorcery, -15%; Variable, Area, +5%) [25] + Crushing Attack 1d (Accessibility, Zombies only, -50%; Area Effect, 2 yards, +50%; Cosmic, Irresistible Attack, +300%; Link, +10%; Magical, -10%; No Signature, +20%; Variable, Area, +5%) [22]. Additional levels add Area Effect (+50%) to Affliction [+5*] and Crushing Attack [+2.5*]. * Calculate the total cost and then round down (because the total cost before rounding is 46.25). Level 2 costs 54 points, level 3 costs 62 points, level 4 costs 69 points, level 5 costs 77 points, and so on."
+    },
+    {
+      "spell_id": "4ac19255-beae-5505-b883-5d70418ccd0f",
+      "spell_name": "Blight",
+      "spell_types": [
+        "Plant Spells"
+      ],
+      "keywords": "Area (Leveled), Resisted (HT, special).",
+      "full_cost": "44 points for level 1 + 5 points/additional level.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "Permanent.",
+      "description": "Plants in the area grow more slowly and weakly: crops produce half the usual yield, vegetation grows half as tall, and any mundane HT rolls made by the plants are at -2. This spell affects only inanimate plants; mobile or sentient ones are immune. This spell is resisted by the plant with the single best HT+SM value in the area. (If a plant's HT is unknown, assume HT 12.) If it resists, the spell fails and no plants are affected; otherwise, all of the plants are. Blight is permanent until countered (e.g., by Dispel Magic, p. 21), but it targets the plants, not the area. Once the plants die or are harvested, the soil is fine for growing new plants. (Plants designed to stick around for years, such as trees, continue to suffer.)",
+      "statistics": "Affliction 1 (HT; Accessibility, Sessile plants only, -30%; All or Nothing, p. 17, -10%; Area Effect, 2 yards, +50%; Disadvantages, Slow Healing 1 and Very Unfit, Variants, +20%; Extended Duration, Permanent, +150%; Fixed Duration, +0%; Malediction 2, +150%; No Signature, +20%; Sorcery, -15%; Variable, Area, +5%) [44]. Additional levels add Area Effect (+50%) [+5]."
+    },
+    {
+      "spell_id": "7dcb6a07-64ad-5b93-80d7-0d2a1878a437",
+      "spell_name": "Body of Wood",
+      "spell_types": [
+        "Plant Spells"
+      ],
+      "keywords": "Buff.",
+      "full_cost": "98 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "30 minutes.",
+      "description": "The subject gains the Body of Wood meta-trait; see the footnote below for details. Clothing and gear weighing no more than his BL change with him. He cannot shift back on his own; he must wait for the spell to expire or be dispelled. (This does not change if the sorcerer is the subject.)",
+      "statistics": "Affliction 1 (HT; Advantage, Body of Wood, +840%; Extended Duration, 10x, +40%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; Sorcery, -15%) [98]. Notes: \"Body of Wood\" is Alternate Form (Body of Wood*; Can Carry Objects, No Encumbrance, +10%; Magical, -10%) [84]. If turned into a \"usually on\" magical item (pp. 27-28), the wearer can shift at will but it takes 10 seconds to do so. * A meta-trait from p. 165 of GURPS Magic: Basic Speed-1 [-20]; Blunt Claws [3]; DR 2 (Semi-Ablative, -20%) [8]; Doesn't Breathe [20]; Immunity to Metabolic Hazards [30]; Injury Tolerance (Homogenous) [40]; Lifting ST 5 [15]; Numb [-20]; and Affected by Plant Spells [0]. 76 points."
+    },
+    {
+      "spell_id": "4d12eced-05bb-546a-8668-7bce0997a65a",
+      "spell_name": "Magelock",
+      "spell_types": [
+        "Protection and Warning Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "25 points for level 1 + 15 points/additional level.",
+      "casting_roll": "None.",
+      "range": "Touch.",
+      "duration": "Five hours.",
+      "description": "The sorcerer must touch a portal - here defined as a door, window, or similar entrance that can be opened and closed. This spell locks the portal, even if it had no lock, and physically prevents it from opening. Attempts to pick the lock fail, as the lock itself is essentially \"frozen\" in place. Intruders must break the door down to enter. However, every level of Magelock past the first gives +5 DR to the portal (including its lock, hinges, and so on). This DR only hinders attempts to force the door; it does not provide cover DR to those behind it, nor does it help if enemies use area effects or explosions to blow up the portal as a whole!",
+      "statistics": "Affliction 1 (HT; Accessibility, Only portals, -50%; Extended Duration, 100x, +80%; Fixed Duration, +0%; Melee Attack, Reach C, -30%; No Signature, +20%; Nuisance Effect, Can be overcome by Lockmaster, -5%; Paralysis, Variant, +150%; Sorcery, -15%) [25]. Additional levels add \"Advantage, DR 5 limited to breakdown attempts\" (+150%) [+15]."
+    },
+    {
+      "spell_id": "9fbf3491-f96f-5b90-b5e4-a610ebeba712",
+      "spell_name": "Reverse Missiles",
+      "spell_types": [
+        "Protection and Warning Spells"
+      ],
+      "keywords": "Buff.",
+      "full_cost": "75 points for level 1 + 63 points/additional level.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "Three minutes.",
+      "description": "Any successful ranged attack made against the subject is turned around so that it hits the attacker instead - so long as the basic damage of the attack (in dice) is less than (Reverse Missiles level)x2. For example, Reverse Missiles 3 would redirect any ranged attack up to 6d while allowing those of 6d+1 or higher through. Convert all flat damage to dice (as per p. B269) for this determination. An attacker unaware that this spell is in place must roll against the lower of IQ or Per, at +3 for Danger Sense and +3 for Combat Reflexes, to realize it in time to get a defense. If the attacker is not physically present at the time of the attack, the missiles are just deflected harmlessly. Do not roll damage or apply special effects until after determining who (if anyone) is hit. This spell protects against all types of damaging ranged attacks, from thrown weapons to energy-beam spells. It also reflects non-damaging ranged attacks; each level of Reverse Missiles can repel two levels of Affliction or 10 levels of Binding. Against most area effects and explosions, it will stop only the fragmentation damage (shrapnel), not the explosion itself.",
+      "statistics": "Affliction 1 (HT; Advantage, Reverse Missiles 1, +630%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; No Signature, +20%; Sorcery, -15%) [75]. Additional levels add further Reverse Missiles to the Advantage enhancement (+630%) [+63]. Note: Each level of \"Reverse Missiles\" is Damage Resistance 7 (All or Nothing, p. 17, -10%; Force Field, +20%; Limited, Ranged, -20%; Magical, -10%; Reflection, +100%) [63] with each DR 7 converted into 2d per p. B269. The ruling on Affliction and Binding is from p. 168 of GURPS Powers."
+    },
+    {
+      "spell_id": "315cc6ac-ead9-5ee0-9883-584ae5bd4eab",
+      "spell_name": "Delayed Message",
+      "spell_types": [
+        "Sound Spells"
+      ],
+      "keywords": "Area (Special).",
+      "full_cost": "38 points.",
+      "casting_roll": "IQ.",
+      "range": "Unlimited.",
+      "duration": "Permanent until triggered.",
+      "description": "The sorcerer leaves a spoken message, up to about a minute long, which delays going off until the intended subject enters the area. The caster may specify either a named individual or a class of individuals (e.g., \"priests of O'm\"); in the latter case, the subject is the first such person to enter the area. At that point, the subject (only!) hears the message once. The spell then ends. The size of the area in question is determined when the spell is cast. First, roll against IQ (plus Talent) to cast the spell, applying range penalties if the area is distant. If successful, look up the margin of success in the \"Size\" column of the Size and Speed/Range Table (p. B550); the corresponding linear measurement is the maximum radius of the area. The caster may always choose a smaller area. Once cast, this spell \"hangs around\" indefinitely, but does not require maintenance; the sorcerer can walk away and forget about it. It is still vulnerable to Dispel Magic (p. 21), can be spotted via Detect Magic (p. 19), and so on.",
+      "statistics": "Telesend (Delay, Triggered, Subject entering area, +50%; Short-Range 1, -10%; Sorcery, -15%) [38]."
+    },
+    {
+      "spell_id": "89abc4bc-753d-5595-87c6-441b170d6d54",
+      "spell_name": "Thunderclap",
+      "spell_types": [
+        "Sound Spells"
+      ],
+      "keywords": "Area (Leveled), Resisted (HT).",
+      "full_cost": "36 points for level 1 + 5 points/additional level.",
+      "casting_roll": "Will.",
+      "range": "Unlimited.",
+      "duration": "Instantaneous (but see below).",
+      "description": "A loud sound, like an explosion or thunder, fills the area. Everyone within must resist with HT; Protected Hearing gives +5, Hard of Hearing gives +4, and those with Deafness are immune. If the caster is within the area, he must roll as well, but at +5. Everyone who fails to resist is deafened for 10 minutes times their margin of failure.",
+      "statistics": "Affliction 1 (HT; Area Effect, 2 yards, +50%; Disadvantage, Deafness, +20%; Extended Duration, 10x, +40%; Hearing-Based, -20%; Malediction 2, +150%; No Signature, +20%; Nuisance Effect, Loud, -5%; Sorcery, -15%; Variable, Area, +5%) [35] + Protected Hearing (Accessibility, Only versus own Thunderclap, -80%) [1]. Additional levels add Area Effect (+50%) [+5]."
+    },
+    {
+      "spell_id": "57cd9354-71f9-510c-a8b1-5857daa07449",
+      "spell_name": "Awaken Computer",
+      "spell_types": [
+        "Technology Spells"
+      ],
+      "keywords": "None.",
+      "full_cost": "45 points/level (maximum four levels).",
+      "casting_roll": "None.",
+      "range": "Touch.",
+      "duration": "One hour.",
+      "description": "This spell awakens the spirit within a computer. It is friendly, honest, and helpful toward the sorcerer, and able to communicate either using peripheral devices (such as a monitor and speakers) or telepathically with those touching it. It has complete access to all of its databases and peripherals; treat it as having an effective skill of 12 for anything involving its own hardware or software. It cannot automatically decrypt files, though it may attempt a single effort at doing so; roll its skill, at -5 on top of whatever penalty the encryption method imposes. (Or resolve it as a Quick Contest against the encrypter's skill, with the spirit rolling at -5.) Once the spell ends, the spirit vanishes and cannot be resummoned for at least the next five minutes. Each level past the first gives +3 to the spirit's effective skill, to a maximum skill of 21 at level four.",
+      "statistics": "Contact! (Computer spirit; Computer Operation-12; Constantly Available; Completely Reliable; Highly Accessible, +50%; Maximum Duration, One hour, -10%; Sorcery, -15%) [45]. Additional levels improve skill to 15, 18, or 21, multiplying cost by 2, 3, or 4. Note: This is a wildcard Contact (triple cost) to reflect access to spirits from a variety of computers, rather than to represent a single Contact with a wildcard skill."
+    },
+    {
+      "spell_id": "07e79c45-f071-5312-bf85-7e670572573b",
+      "spell_name": "Preserve Fuel",
+      "spell_types": [
+        "Technology Spells"
+      ],
+      "keywords": "Area (Leveled).",
+      "full_cost": "45 points for level 1 + 5 points/additional level.",
+      "casting_roll": "Will.",
+      "range": "100 yards.",
+      "duration": "Two months.",
+      "description": "All fuel in the area ceases to spoil, decay, or otherwise become unusable. Wood does not rot, gasoline does not evaporate, radioactive material does not decay, and so on. If the fuel is stored within a sealed container, the sorcerer's casting roll is penalized by its DR as well as the normal range penalties. To convert area of effect (in yards) to cubic yards, square the radius and multiply the result by 12.5. To convert to gallons, square the radius and multiply the result by 2,500 for liquids or 2,150 for powders.",
+      "statistics": "Affliction 1 (HT; Accessibility, Only on fuels, -40%; Advantage, Unaging, Variant, +150%; Area Effect, 2 yards, +50%; Extended Duration, 30,000x, +180%; Fixed Duration, +0%; No Signature, +20%; Sorcery, -15%; Variable, Area, +5%) [45]. Additional levels add Area Effect (+50%) [+5]. Note: The DR subtracting from the casting roll rather than forcing a resistance roll (as for Buff spells) is a special effect."
+    },
+    {
+      "spell_id": "7e16b9e2-24ad-51ce-b64e-d507fc28a6f7",
+      "spell_name": "Icy Weapon",
+      "spell_types": [
+        "Water Spells"
+      ],
+      "keywords": "Weapon Buff.",
+      "full_cost": "14 points.",
+      "casting_roll": "None. Use Innate Attack (Gaze) to aim.",
+      "range": "100 yards.",
+      "duration": "Three minutes.",
+      "description": "Once cast upon a weapon, this spell causes it to do an additional 1d of follow-up (p. B105) burning damage. This damage is from extreme cold, not fire; it will never set anything ablaze. The wielder will find the weapon cool to the touch, but not uncomfortable to use.",
+      "statistics": "Affliction 1 (HT; Accessibility, Only on weapons, -20%; Advantage, Icy Weapon, +40%; Fixed Duration, +0%; Increased 1/2D, 10x, +15%; No Signature, +20%; Sorcery, -15%) [14]. Notes: \"Icy Weapon\" is Burning Attack 1d (Follow-Up, This weapon, +0%; Magical, -10%; No Incendiary Effect, -10%; Visible, -10%) [4]."
+    },
+    {
+      "spell_id": "baeeeab8-7662-5d9e-8612-93614482576c",
+      "spell_name": "Whirlpool",
+      "spell_types": [
+        "Water Spells"
+      ],
+      "keywords": "Area (Special).",
+      "full_cost": "6 points/level (minimum four levels).",
+      "casting_roll": "IQ.",
+      "range": "100 yards.",
+      "duration": "Indefinite.",
+      "description": "The caster creates a circular whirlpool on any nearby body of water; this includes lakes, rivers, seas, and ponds, but has no effect on water in buckets, bathtubs, etc. The maelstrom may be any size up to (Whirlpool level) yards in radius, with a funnel at its center that has a radius equal to 1/4 of that of the whirlpool (round up). Swimming and boating in the whirlpool are difficult, taking a penalty equal in size to Whirlpool level minus the distance in yards from the center. Those within the maelstrom must make such a roll each turn; a failed roll pulls the person or boat one yard closer to the center (if possible). Those in the funnel are also pulled one yard down, below the water's surface! The whirlpool does not form instantly. The spell takes only the usual one or two seconds to cast, but after that, the vortex takes seconds equal to its radius in yards to form. Treat it as a \"level 1 whirlpool\" on the first second, a \"level 2\" on the second second, and so on, though a proper funnel does not form until the whirlpool is complete. Those in the area can easily see what's happening and may be able to escape before it achieves full strength. Once the sorcerer stops maintaining this spell, its funnel collapses and it shrinks at the same rate at which it grew.",
+      "statistics": "Control Bodies of Water (Accessibility, Only to create a whirlpool, -30%; Dissipation, -50%; Nuisance Effect, Takes several seconds to form and vanish, -5%; Ranged, +40%; Sorcery, -15%) [6/level]."
+    },
+    {
+      "spell_id": "1296143a-7acb-5b96-ba49-c5e5f41c8b27",
+      "spell_name": "Cool",
+      "spell_types": [
+        "Weather Spells"
+      ],
+      "keywords": "Area (Leveled).",
+      "full_cost": "7 points for level 1 + 5 points/additional level (or more).",
+      "casting_roll": "None.",
+      "range": "100 yards.",
+      "duration": "Indefinite.",
+      "description": "This spell lowers the ambient temperature of the area. The basic version can reduce the temperature by up to 40°F. This will never do damage directly, but see Cold (p. B430) for effects. More potent versions of Cool exist. Increasing the full cost of the spell increases the degree of potential temperature change by the same factor, as indicated by the table below. Cool (40°F): 7 points for level 1 + 5 points/additional level. Cool (80°F): 14 points for level 1 + 10 points/additional level. Cool (120°F): 21 points for level 1 + 15 points/additional level. Cool (160°F): 28 points for level 1 + 20 points/additional level. Cool (200°F): 35 points for level 1 + 25 points/additional level.",
+      "statistics": "Temperature Control 2 (Cold, -50%; Increased Range, 10x, +30%; Sorcery, -15%; Variable, Area, +5%) [7]. Additional levels add Area Effect (+50%) [+5]. The expanded versions raise the Temperature Control level."
+    },
+    {
+      "spell_id": "d49c2808-c2d1-55fc-b2af-049704dcacc6",
+      "spell_name": "Predict Weather",
+      "spell_types": [
+        "Weather Spells"
+      ],
+      "keywords": "Information.",
+      "full_cost": "13 or 25 points.",
+      "casting_roll": "IQ. Special casting time (see below).",
+      "range": "Local or Unlimited.",
+      "duration": "Instantaneous.",
+      "description": "This spell forecasts the weather accurately for a given area over time. Successful casting tells the sorcerer what the weather will be like for the next day, plus a further day for every two full points of success. The GM should sum up each day with a few words: \"Tomorrow will be pretty rainy; Tuesday, sunny and bright; Wednesday, cloudy with a chance of tornadoes.\" Alternatively, the caster can ask for an hourly forecast, in which case use the rules above but read \"day\" as \"hour.\" This provides far more detailed information, but at the cost of a much shorter timespan. Unlike most spells, Predict Weather takes 10 minutes to cast. The basic (13-point) version only allows the caster to ask about the local weather. The improved (25-point) version lets him predict the weather anywhere; apply long-distance modifiers (p. B241).",
+      "statistics": "Precognition (Active Only, -60%; One Event, Weather, -40%; Reduced Fatigue Cost 1, +20%; Reliable 8, +40%; Magical, -10%) [13]. The improved version adds \"Cosmic, Can divine distant subjects\" (+50%) [+12]."
+    }
+  ]
+}
